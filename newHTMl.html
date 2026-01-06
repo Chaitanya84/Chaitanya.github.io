@@ -14,19 +14,9 @@
         }
 
         body {
-            background: linear-gradient(
-                135deg,
-                #ff9933 0%,      /* Saffron */
-                #ff9933 33%,
-                #ffffff 33%,    /* White */
-                #ffffff 66%,
-                #138808 66%,    /* Green */
-                #138808 100%
-            );
-            color: #eaeaea;
-            line-height: 1.6;
+            background-color: #000;
+            color: #fff;
         }
-
 
         /* NAVBAR */
         .navbar {
@@ -53,10 +43,10 @@
             font-size: 16px;
         }
 
-        /* HERO SECTION */
+        /* HERO */
         .hero {
             height: 100vh;
-            background-image: url("priya.jpeg");
+            background-image: url("hero.jpg");
             background-size: cover;
             background-position: center;
             position: relative;
@@ -98,10 +88,10 @@
             border-radius: 4px;
         }
 
-        /* CANDIDATES SECTION */
+        /* CANDIDATES */
         .candidates {
             padding: 80px 60px;
-            background-color: transparent;
+            background-color: #111;
         }
 
         .candidates h2 {
@@ -124,12 +114,6 @@
             background-color: #1a1a1a;
             border-radius: 8px;
             padding: 25px;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-
-        .card:hover {
-            transform: translateY(-6px);
-            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.6);
         }
 
         .avatar {
@@ -139,11 +123,7 @@
             background-color: #333;
             margin-bottom: 15px;
         }
-        .priya-avatar {
-            background-image: url("priya.jpeg");
-            background-size: cover;
-            background-position: center;
-        }
+
         .card h3 {
             font-size: 20px;
             margin-bottom: 6px;
@@ -176,18 +156,80 @@
             color: #000;
         }
 
+        /* FORM SECTION */
+        .form-section {
+            background-color: #000;
+            padding: 80px 60px;
+        }
+
+        .form-section h2 {
+            font-size: 36px;
+            margin-bottom: 10px;
+        }
+
+        .form-section p {
+            color: #aaa;
+            margin-bottom: 40px;
+        }
+
+        .form-container {
+            max-width: 600px;
+            background-color: #111;
+            padding: 40px;
+            border-radius: 8px;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        input, textarea {
+            background-color: #1a1a1a;
+            border: 1px solid #333;
+            padding: 12px;
+            border-radius: 4px;
+            color: #fff;
+            font-size: 15px;
+        }
+
+        input::placeholder,
+        textarea::placeholder {
+            color: #777;
+        }
+
+        textarea {
+            resize: vertical;
+            min-height: 120px;
+        }
+
+        button.submit-btn {
+            background-color: #ff7a18;
+            border: none;
+            padding: 14px;
+            font-size: 16px;
+            color: #fff;
+            cursor: pointer;
+            border-radius: 4px;
+        }
+
+        button.submit-btn:hover {
+            background-color: #e6680f;
+        }
+
         /* RESPONSIVE */
         @media (max-width: 768px) {
-            .hero-content {
-                padding: 80px 30px;
-            }
-
-            .hero h1 {
-                font-size: 36px;
-            }
-
-            .candidates {
+            .hero-content,
+            .candidates,
+            .form-section {
                 padding: 60px 30px;
+            }
+
+            .hero h1,
+            .candidates h2,
+            .form-section h2 {
+                font-size: 32px;
             }
         }
     </style>
@@ -205,18 +247,14 @@
         <div class="hero-content">
             <h1>Welcome to Help a Friend</h1>
             <p>
-                Germany is seeing many talented professionals suddenly facing layoffs.You can make a real difference today.
-                Choose a profile from this site and refer them to a role in your organization—or share an open position you know of.
-                A small gesture from you could help someone find their next opportunity.
-                Let’s turn this challenge into a chance for hope, growth, and new beginnings—together.
+                Discover skilled professionals seeking opportunities or
+                refer your friends for their next role.
             </p>
-            <a href="Candidate_List.html">
-                <button>Browse Candidates</button>
-            </a>
+            <button>Browse Candidates</button>
         </div>
     </section>
 
-    <!-- CANDIDATE GRID -->
+    <!-- CANDIDATES -->
     <section class="candidates">
         <h2>Featured Candidates</h2>
         <p>Explore top professionals open to new opportunities</p>
@@ -231,13 +269,11 @@
             </div>
 
             <div class="card">
-                <div class="avatar priya-avatar"></div>
+                <div class="avatar"></div>
                 <h3>Priya Sharma</h3>
                 <div class="role">Backend Engineer</div>
                 <div class="skills">Node.js • Python • AWS</div>
-                <a href="PriyaSharma.html" class="btn-link">
-                <button class="btn">View Profile</button>
-                </a> 
+                <button>View Profile</button>
             </div>
 
             <div class="card">
@@ -257,7 +293,22 @@
             </div>
         </div>
     </section>
-    
+
+    <!-- SUBMISSION FORM -->
+    <section class="form-section">
+        <h2>Submit Your Profile</h2>
+        <p>Are you looking for new opportunities? Add your details below.</p>
+
+        <div class="form-container">
+            <form>
+                <input type="text" name="name" placeholder="Full Name" required>
+                <input type="email" name="email" placeholder="Email Address" required>
+                <input type="url" name="linkedin" placeholder="LinkedIn Profile URL" required>
+                <textarea name="bio" placeholder="Short Bio (skills, experience, interests)" required></textarea>
+                <button type="submit" class="submit-btn">Submit Profile</button>
+            </form>
+        </div>
+    </section>
 
 </body>
 </html>
