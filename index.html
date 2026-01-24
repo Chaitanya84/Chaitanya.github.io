@@ -2,262 +2,339 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Help a Friend</title>
+    <title>Chaitanya Priya | Senior Technical Lead</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
     <style>
+        :root {
+            --primary: #0f172a;
+            --secondary: #2563eb;
+            --text: #1f2933;
+            --muted: #6b7280;
+            --bg: #ffffff;
+            --card: #f9fafb;
+            --border: #e5e7eb;
+        }
+
         * {
+            box-sizing: border-box;
             margin: 0;
             padding: 0;
-            box-sizing: border-box;
-            font-family: "Segoe UI", Arial, sans-serif;
         }
 
-        body {
-            background: linear-gradient(
-                135deg,
-                #ff9933 0%,      /* Saffron */
-                #ff9933 33%,
-                #ffffff 33%,    /* White */
-                #ffffff 66%,
-                #138808 66%,    /* Green */
-                #138808 100%
-            );
-            color: #eaeaea;
-            line-height: 1.6;
+        html, body {
+            background-color: #ffffff;
+            font-family: 'Inter', sans-serif;
+            color: var(--text);
+            scroll-behavior: smooth;
         }
 
+        a {
+            color: var(--secondary);
+            text-decoration: none;
+        }
 
-        /* NAVBAR */
-        .navbar {
-            height: 60px;
-            background-color: #000;
+        .container {
+            max-width: 1100px;
+            margin: auto;
+            padding: 60px 24px;
+        }
+
+        /* ---------- Header ---------- */
+        header {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 24px;
+            margin-bottom: 60px;
+        }
+
+        header h1 {
+            font-size: 40px;
+            font-weight: 700;
+            color: var(--primary);
+        }
+
+        header h2 {
+            font-size: 20px;
+            font-weight: 500;
+            color: var(--secondary);
+        }
+
+        .contact {
             display: flex;
-            align-items: center;
-            justify-content: space-between;
-            padding: 0 40px;
-            position: fixed;
-            top: 0;
-            width: 100%;
-            z-index: 100;
+            flex-wrap: wrap;
+            gap: 20px;
+            font-size: 14px;
+            color: var(--muted);
         }
 
-        .navbar .logo {
+        /* ---------- Section ---------- */
+        section {
+            margin-bottom: 64px;
+        }
+
+        section h3 {
             font-size: 22px;
             font-weight: 600;
+            margin-bottom: 24px;
+            border-bottom: 2px solid var(--border);
+            padding-bottom: 8px;
+            color: var(--primary);
+        }
+        /* ---------- Action Buttons ---------- */
+        .actions {
+            display: flex;
+            gap: 16px;
+            flex-wrap: wrap;
+            margin: 40px 0 60px 0;
         }
 
-        .navbar a {
-            color: #fff;
-            text-decoration: none;
-            font-size: 16px;
+        .action-btn {
+            padding: 12px 22px;
+            border-radius: 10px;
+            font-size: 14px;
+            font-weight: 600;
+            border: 1px solid var(--border);
+            background: var(--secondary);
+            color: #ffffff;
+            transition: all 0.2s ease;
         }
 
-        /* HERO SECTION */
-        .hero {
-            height: 100vh;
-            background-image: url("priya.jpeg");
-            background-size: cover;
-            background-position: center;
-            position: relative;
-            margin-top: 60px;
+        .action-btn.secondary {
+            background: #ffffff;
+            color: var(--secondary);
         }
 
-        .hero::before {
-            content: "";
-            position: absolute;
-            inset: 0;
-            background: rgba(0, 0, 0, 0.55);
+        .action-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.08);
         }
 
-        .hero-content {
-            position: relative;
-            z-index: 1;
-            max-width: 700px;
-            padding: 120px 60px;
-        }
-
-        .hero h1 {
-            font-size: 48px;
-            margin-bottom: 20px;
-        }
-
-        .hero p {
-            font-size: 18px;
-            margin-bottom: 30px;
-            color: #ddd;
-        }
-
-        .hero button {
-            background-color: #ff7a18;
-            border: none;
-            padding: 14px 28px;
-            font-size: 16px;
-            color: #fff;
-            cursor: pointer;
-            border-radius: 4px;
-        }
-
-        /* CANDIDATES SECTION */
-        .candidates {
-            padding: 80px 60px;
-            background-color: transparent;
-        }
-
-        .candidates h2 {
-            font-size: 36px;
-            margin-bottom: 10px;
-        }
-
-        .candidates p {
-            color: #aaa;
-            margin-bottom: 40px;
-        }
-
-        .grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-            gap: 30px;
-        }
-
+        /* ---------- Cards ---------- */
         .card {
-            background-color: #1a1a1a;
-            border-radius: 8px;
-            padding: 25px;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            background: var(--card);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 24px;
+            margin-bottom: 24px;
         }
 
-        .card:hover {
-            transform: translateY(-6px);
-            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.6);
-        }
-
-        .avatar {
-            width: 70px;
-            height: 70px;
-            border-radius: 50%;
-            background-color: #333;
-            margin-bottom: 15px;
-        }
-        .priya-avatar {
-            background-image: url("priya.jpeg");
-            background-size: cover;
-            background-position: center;
-        }
-        .card h3 {
-            font-size: 20px;
+        .card h4 {
+            font-size: 18px;
+            font-weight: 600;
             margin-bottom: 6px;
         }
 
-        .role {
+        .meta {
             font-size: 14px;
-            color: #ff7a18;
+            color: var(--muted);
             margin-bottom: 12px;
         }
 
+        ul {
+            padding-left: 18px;
+        }
+
+        li {
+            margin-bottom: 8px;
+            font-size: 15px;
+        }
+/* ---------- Profile Header ---------- */
+.profile-header {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 32px;
+    flex-wrap: nowrap; /* IMPORTANT: prevents stacking */
+}
+
+.profile-image {
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid var(--border);
+    flex-shrink: 0; /* IMPORTANT: prevents image from shrinking */
+}
+
+/* Stack ONLY on very small screens */
+@media (max-width: 600px) {
+    .profile-header {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
+        /* ---------- Skills ---------- */
         .skills {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .skill {
+            background: #eef2ff;
+            color: #1e3a8a;
+            padding: 6px 12px;
+            border-radius: 999px;
+            font-size: 13px;
+            font-weight: 500;
+        }
+
+        /* ---------- Footer ---------- */
+        footer {
+            text-align: center;
             font-size: 14px;
-            color: #ccc;
-            margin-bottom: 20px;
+            color: var(--muted);
+            padding-bottom: 40px;
         }
 
-        .card button {
-            width: 100%;
-            padding: 10px;
-            background-color: transparent;
-            border: 1px solid #ff7a18;
-            color: #ff7a18;
-            border-radius: 4px;
-            cursor: pointer;
-        }
-
-        .card button:hover {
-            background-color: #ff7a18;
-            color: #000;
-        }
-
-        /* RESPONSIVE */
+        /* ---------- Responsive ---------- */
         @media (max-width: 768px) {
-            .hero-content {
-                padding: 80px 30px;
-            }
-
-            .hero h1 {
-                font-size: 36px;
-            }
-
-            .candidates {
-                padding: 60px 30px;
+            header h1 {
+                font-size: 32px;
             }
         }
     </style>
 </head>
+
 <body>
 
-    <!-- NAVBAR -->
-    <div class="navbar">
-        <div class="logo">Help a Friend</div>
-        <a href="#">Home</a>
-    </div>
+<div class="container">
 
-    <!-- HERO -->
-    <section class="hero">
-        <div class="hero-content">
-            <h1>Welcome to Help a Friend</h1>
-            <p>
-                Germany is seeing many talented professionals suddenly facing layoffs.You can make a real difference today.
-                Choose a profile from this site and refer them to a role in your organization—or share an open position you know of.
-                A small gesture from you could help someone find their next opportunity.
-                Let’s turn this challenge into a chance for hope, growth, and new beginnings—together.
-            </p>
-            <a href="Candidate_List.html">
-                <button>Browse Candidates</button>
+    <!-- HEADER -->
+    <header>
+        <div class="profile-header">
+            <!-- PROFILE IMAGE -->
+            <img src="priya.png" alt="Chaitanya Priya" class="profile-image">
+    
+            <!-- NAME & TITLE -->
+            <div>
+                <h1>Chaitanya Priya</h1>
+                <h2>Senior Technical Lead | Automotive Embedded Systems</h2>
+    
+                <div class="contact">
+                    <span>📍 Stuttgart, Germany</span>
+                    <span>📞 +49 172 2950530</span>
+                    <span>✉️ 
+                        <a href="mailto:priya.chaitanya.87@gmail.com">
+                            priya.chaitanya.87@gmail.com
+                        </a>
+                    </span>
+                </div>
+            </div>
+        </div>
+    </header>
+    
+        <!-- ACTION BUTTONS -->
+        <div class="actions">
+            <a href="projects.html" class="action-btn">
+                🚀 View Projects
+            </a>
+
+            <a href="https://www.linkedin.com/in/chaitanya-priya/"
+            target="_blank"
+            class="action-btn secondary">
+                🔗 LinkedIn Profile
+            </a>
+
+            <a href="certificates.html" class="action-btn secondary">
+                📜 View Certificates
             </a>
         </div>
+
+    <!-- EXPERIENCE -->
+    <section>
+        <h3>Work Experience</h3>
+
+        <div class="card">
+            <h4>Senior Technical Lead</h4>
+            <div class="meta">Vector Informatik GmbH | Jul 2023 – Present</div>
+            <ul>
+                <li>Designed complex device drivers for EVCC charging systems.</li>
+                <li>Integrated global supplier libraries for time and memory critical ECUs.</li>
+                <li>Optimized linker configurations for ISO 26262 compliance.</li>
+                <li>Configured AUTOSAR MCAL and RTE using EB Tresos and DaVinci.</li>
+                <li>Executed unit, integration, and static analysis testing.</li>
+            </ul>
+        </div>
+
+        <div class="card">
+            <h4>Lead Embedded Software Engineer</h4>
+            <div class="meta">American Axle & Manufacturing | Oct 2019 – Jul 2023</div>
+            <ul>
+                <li>Feature owner for motor control ECU complex device drivers.</li>
+                <li>Led full V-model development lifecycle.</li>
+                <li>Designed diagnostic applications using MATLAB/Simulink (ISO 14229).</li>
+                <li>Represented software in ASPICE & Functional Safety audits.</li>
+                <li>Reduced production defects through improved CI/CD and testing.</li>
+            </ul>
+        </div>
+
+        <div class="card">
+            <h4>Lead Engineer</h4>
+            <div class="meta">John Deere (HCL Technologies) | Sep 2017 – Oct 2019</div>
+            <ul>
+                <li>Developed off-road vehicle features using Simulink & Stateflow.</li>
+                <li>Performed MIL/SIL testing and code generation.</li>
+                <li>Conducted root cause analysis using FMEA & 8D.</li>
+            </ul>
+        </div>
+
     </section>
 
-    <!-- CANDIDATE GRID -->
-    <section class="candidates">
-        <h2>Featured Candidates</h2>
-        <p>Explore top professionals open to new opportunities</p>
+    <!-- EDUCATION -->
+    <section>
+        <h3>Education & Certifications</h3>
 
-        <div class="grid">
-            <div class="card">
-                <div class="avatar"></div>
-                <h3>Alex Johnson</h3>
-                <div class="role">Frontend Developer</div>
-                <div class="skills">React • TypeScript • CSS</div>
-                <button>View Profile</button>
-            </div>
-
-            <div class="card">
-                <div class="avatar priya-avatar"></div>
-                <h3>Priya Sharma</h3>
-                <div class="role">Backend Engineer</div>
-                <div class="skills">Node.js • Python • AWS</div>
-                <a href="PriyaSharma.html" class="btn-link">
-                <button class="btn">View Profile</button>
-                </a> 
-            </div>
-
-            <div class="card">
-                <div class="avatar"></div>
-                <h3>Daniel Müller</h3>
-                <div class="role">DevOps Engineer</div>
-                <div class="skills">Docker • Kubernetes • CI/CD</div>
-                <button>View Profile</button>
-            </div>
-
-            <div class="card">
-                <div class="avatar"></div>
-                <h3>Sofia Rossi</h3>
-                <div class="role">UI/UX Designer</div>
-                <div class="skills">Figma • UX Research • Prototyping</div>
-                <button>View Profile</button>
-            </div>
+        <div class="card">
+            <ul>
+                <li>ISO 21434:2021 – Automotive Cybersecurity Practitioner (TÜV SÜD)</li>
+                <li>ISO 26262:2018 – Functional Safety Engineer (Omnex)</li>
+                <li>Bachelor of Science Engineering – Magadh University (Distinction)</li>
+            </ul>
         </div>
     </section>
-    
+
+    <!-- SKILLS -->
+    <section>
+        <h3>Technical Skills</h3>
+        <div class="skills">
+            <span class="skill">AUTOSAR</span>
+            <span class="skill">ISO 26262</span>
+            <span class="skill">ISO 21434</span>
+            <span class="skill">Embedded C</span>
+            <span class="skill">MATLAB / Simulink</span>
+            <span class="skill">Vector CANoe</span>
+            <span class="skill">EB Tresos</span>
+            <span class="skill">DaVinci</span>
+            <span class="skill">UDS (ISO 14229)</span>
+            <span class="skill">CAN / CAN-FD</span>
+            <span class="skill">Git</span>
+            <span class="skill">JIRA</span>
+        </div>
+    </section>
+
+    <!-- LANGUAGES -->
+    <section>
+        <h3>Languages</h3>
+        <div class="card">
+            <ul>
+                <li>Hindi – Native</li>
+                <li>English – C2</li>
+                <li>German – A1</li>
+            </ul>
+        </div>
+    </section>
+
+    <footer>
+        © 2026 Chaitanya Priya · Automotive Embedded Systems
+    </footer>
+
+</div>
 
 </body>
 </html>
