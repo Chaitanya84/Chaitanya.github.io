@@ -1,0 +1,91 @@
+<!-- 
+Author: Chaitanya Priya
+Date: 2024-06-01 
+Create a page which shows the certificates obtained by you in the last 6 months. 
+Each certificate should include the name of the course, the platform where it was obtained, image of the the certificate. 
+Use HTML and CSS to style the page.
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Certificates</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 20px;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+        .certificates {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+        }
+        .certificate {
+            background-color: #e0e0e0;
+            border-radius: 8px;
+            padding: 20px;
+            width: 300px;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+        .certificate img {
+            max-width: 100%;
+            border-radius: 4px;
+        }
+        .course-name {
+            font-size: 18px;
+            margin: 10px 0;
+            color: #555;
+        }
+        .platform {
+            font-size: 14px;
+            color: #777;
+        }
+    </style></head>
+<body>
+    <div class="container">
+        <h1>My Certificates</h1>
+        <div class="certificates">
+            <div class="certificate">
+                <img src="AI_ML.jpg" alt="Certificate 3">
+                <div class="course-name">Certficate in AI and ML</div>
+                <div class="platform">Indian Institute Of Technology</div>
+            </div>
+            <div class="certificate">             
+                <img src="CertFusa.jpg" alt="Certificate 1">
+                <div class="course-name">ISO 26262 Level 1</div>
+                <div class="platform">Omnex</div>
+            </div>
+            <div class="certificate">
+                <img src="CertCyber.jpg" alt="Certificate 2">
+                <div class="course-name">Automotive Cyber Security</div>
+                <div class="platform">TÜV SÜD</div>
+            </div>            
+            <div class="certificate">
+                <img src="certificate4.jpg" alt="Certificate 4">
+                <div class="course-name">Machine Learning Basics</div>
+                <div class="platform">LinkedIn Learning</div>
+            </div>
+            <div class="certificate">
+                <img src="certificate5.jpg" alt="Certificate 5">
+                <div class="course-name">Cloud Computing Essentials</div>
+                <div class="platform">Pluralsight</div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

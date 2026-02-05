@@ -1,0 +1,216 @@
+<!-- 
+Author: Chaitanya Priya
+Date: 2024-06-01 
+Create a page which shows list of project i have done in past.
+Each project should include the name of the project, Image of the product, brief description, technologies used, link to the project repository.
+Use HTML and CSS to style the page.
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Projects</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 20px;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+        .projects {
+            display: flex;
+            flex-direction: column; /* Stacks the horizontal tiles vertically */
+            gap: 30px;
+        }
+        .project {
+            display: flex; /* Aligns image and text side-by-side */
+            background-color: #e0e0e0;
+            border-radius: 8px;
+            padding: 20px;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+            gap: 25px; /* Space between image and description */
+            align-items: flex-start;
+        }
+        .project img {
+            flex: 0 0 300px; /* Image will take exactly 300px width */
+            max-width: 300px;
+            height: auto;
+            border-radius: 4px;
+            object-fit: cover; /* Keeps image aspect ratio clean */
+        }
+        .project-info {
+            flex: 1; /* Description takes up remaining space */
+        }
+        .project-name {
+            font-size: 22px;
+            font-weight: bold;
+            margin-top: 0;
+            color: #333;
+        }
+        .description {
+            font-size: 14px;
+            color: #444;
+            margin: 10px 0;
+            text-align: justify;
+        }
+        .technologies {
+            font-weight: bold;
+            font-size: 14px;
+            color: #555;
+            margin: 15px 0 5px 0;
+        }
+        .repo-link {
+            font-size: 14px;
+            color: #1a73e8;
+        }
+    
+        /* Responsive: Stack image on top for small screens */
+        @media (max-width: 768px) {
+            .project {
+                flex-direction: column;
+            }
+            .project img {
+                max-width: 100%;
+                flex: 0 0 auto;
+            }
+        }
+    </style>
+    
+</head>
+<body>
+    <div class="container">
+        <h1>My Projects</h1>
+        <div class="projects">
+            
+            <div class="project">
+                <!-- Left Side -->
+                <img src="Skid.png" alt="Project 1">
+            
+                <!-- Right Side -->
+                <div class="project-info">
+                    <div class="project-name">Skid-Steer Loader</div>
+                    <div class="description">
+                        <section>
+                            <h3>1. Core System Migration &amp; Performance Upgrading</h3>
+                            <p>"During my tenure, we transitioned the Skid Steer’s control logic from legacy 16-bit hardware to a 32-bit Renesas-based ECU. This wasn't just a porting exercise; it was a performance upgrade that allowed for more complex hydraulic control algorithms and better diagnostic capabilities. I personally handled the application layer migration, ensuring that the machine’s behavior remained consistent and safe despite the total change in underlying silicon."</p>
+                        </section>
+                        
+                        <section>
+                            <h3>2. Communication &amp; Data Integrity (CAN/SPI/I2C)</h3>
+                            <p>"The 'nervous system' of the loader relies on seamless communication. I developed the low-level drivers that allowed the main processor to talk to external CAN controllers and memory modules via SPI and I2C. This ensured that the loader could handle high-bus-load telematics data and critical sensor feedback without latency, which is vital for real-time machine stability."</p>
+                        </section>
+                        
+                        <section>
+                            <h3>3. Model-Based Feature Development (MBD)</h3>
+                            <p>"I worked on the 'brains' of the vehicle using Model-Based Design. By utilizing Embedded Coder, I transformed control models into production C/C++ code. To ensure these features—like bucket leveling or traction control—functioned perfectly, I ran them through MIL and SIL simulation loops. This allowed us to catch logic errors in a virtual environment long before the software ever touched a physical Skid Steer."</p>
+                        </section>
+                        
+                        <section>
+                            <h3>4. JDOS (John Deere RTOS) Integration</h3>
+                            <p>"I integrated these software features into JDOS, the proprietary real-time operating system. This involved managing the 'heartbeat' of the machine—ensuring that safety-critical tasks (like emergency shut-offs) always had priority over non-critical tasks (like cabin climate control display) within the RTOS scheduler."</p>
+                        </section>
+                        
+                        <section>
+                            <h3>5. Product Reliability &amp; Safety (8D/FMEA)</h3>
+                            <p>"To ensure the loader could withstand 10,000+ hours of operation in harsh environments, I applied DFMEA (Design Failure Mode and Effects Analysis) to the software. If a defect was found in the field, I led the 8D root cause analysis to find the 'why' and implement a permanent fix. My focus was on ensuring that a software glitch would never result in a 'machine down' situation in the field."</p>
+                        </section>
+                        
+                        <section>
+                            <h3>6. Lifecycle &amp; Delivery (CI/CD)</h3>
+                            <p>"I managed the Vehicle Payload Delivery pipeline. This is essentially the factory-to-field software delivery system. I maintained the CI/CD environment to ensure that every software build destined for the assembly line or a dealer's service tool was fully validated, signed, and ready for deployment into the loader's ECU."</p>
+                        </section>
+                    </div>
+                    <div class="technologies">Technologies: C, STM32, PID Control, RS-485</div>
+                    <div class="repo-link"><a href="#">View Repository</a></div>
+                </div>
+            </div>   
+
+            <div class="project">
+                <!-- Left Side -->
+                <img src="PRC.png" alt="Project 1">
+            
+                <!-- Right Side -->
+                <div class="project-info">
+                    <div class="project-name">STM32 Based temperature controller</div>
+                    <div class="description">
+                        <section>
+                            <h3>1. Architecture &amp; Concurrency</h2>
+                            <p>"The core of the system is an STM32 microcontroller where I managed six independent control loops. I designed the firmware to handle simultaneous PID and On/Off control for six zones. This required efficient task scheduling to ensure that sensor sampling, PID calculations, and SSR pulse-width modulation occurred with precise timing without jitter."</p>
+                        </section>
+                        
+                        <section>
+                            <h3>2. Sensor Interfacing &amp; Signal Integrity</h2>
+                            <p>"I implemented the driver logic for six K-type thermocouple inputs. This involved handling analog-to-digital conversion, cold-junction compensation, and digital filtering to ensure stable readings in noisy industrial environments. I also integrated a dedicated safety routine that monitors for thermocouple faults and triggers a global hardware interrupt/fault relay."</p>
+                        </section>
+                        
+                        <section>
+                            <h3>3. Control Logic &amp; Profile Programming</h2>
+                            <p>"One of the key challenges was the Ramp/Soak profile engine. I developed a state machine that allows for 1 to 4 programmable steps per zone. I also implemented a 'Servo Start' feature, which synchronizes the profile start with the current process temperature, and a Deviation Hold logic to ensure all zones stay within a specific thermal window during critical heating cycles."</p>
+                        </section>
+                        
+                        <section>
+                            <h3>4. Peripherals &amp; Communication</h2>
+                            <p>"For the HMI, I integrated a Graphical LCD and a matrix keyboard, allowing users to switch between Auto/Manual modes and visualize real-time curves. On the connectivity side, I implemented RS-485 serial communication using a custom protocol for PC-based data logging and a Master/Slave architecture that allows for cascading up to 60 control zones across 10 devices."</p>
+                        </section>
+                    </div>
+                    <div class="technologies">Technologies: C, STM32, PID Control, RS-485</div>
+                    <div class="repo-link"><a href="#">View Repository</a></div>
+                </div>
+            </div>
+            <div class="project">
+                <!-- Left Side -->
+                <img src="PRC-309-side.png" alt="Project 1">
+            
+                <!-- Right Side -->
+                <div class="project-info">
+                    <div class="project-name">Silabs MicroController Based Temprature controller</div>
+                    <div class="description">
+                        <section>
+                            <h3>1. System Architecture & Memory Management</h3>
+                            <p>"I designed the firmware architecture around a robust state machine capable of managing complex thermal profiles. Given the constraints of an 8-bit environment, I prioritized efficient memory mapping to handle up to 10 distinct patterns of 16 ramp/soak steps each. A critical component of this architecture was the integration of non-volatile flash memory routines, ensuring that all programmed parameters and process states are preserved and can auto-resume following a power disruption."</p>
+                        </section>
+                        
+                        <section>
+                            <h3>2. Sensor Interfacing & Signal Conditioning</h3>
+                            <p>"To ensure the controller's versatility, I developed an adaptable analog front-end driver that supports a wide range of inputs, including K, R, S, and B-type thermocouples and RTDs. This involved implementing precise linearization algorithms and cold-junction compensation to maintain high accuracy. I also focused on signal integrity, utilizing digital filtering techniques to provide stable temperature readings even in the electrically noisy environments typical of industrial furnaces."</p>
+                        </section>
+                        
+                        <section>
+                            <h3>3. Control Logic & Profile Execution</h3>
+                            <p>"The core control logic features a sophisticated PID engine that supports both switching and linear outputs. I implemented a 'Servo Start' function to synchronize the profile execution with the actual process temperature at startup, preventing thermal shock. Whether the system is driving an SSR via pulse-width modulation or a modulating motor valve via 4-20mA analog control, the logic is tuned to maintain tight tolerances during critical ramp and soak transitions."</p>
+                        </section>
+                        
+                        <section>
+                            <h3>4. Peripherals & Serial Communication</h3>
+                            <p>"For the user interface, I managed a multi-display driver and a membrane keyboard interrupt routine to allow for simultaneous monitoring of process and set values. On the connectivity side, I implemented an RS-485 serial communication port to facilitate remote monitoring. This allows the device to interface with Windows-based software for real-time data logging and graphical analysis, providing a comprehensive view of the heating system's performance."</p>
+                        </section>
+                    </div>
+                    <div class="technologies">Technologies: C, STM32, PID Control, RS-485</div>
+                    <div class="repo-link"><a href="#">View Repository</a></div>
+                </div>
+            </div>
+            
+            <div class="project">
+                <img src="project3_image.jpg" alt="Project 3">
+                <div class="project-name">Project Three</div>
+                <div class="description">A brief description of Project Three.</div>
+                <div class="technologies">Technologies: Java, Spring Boot</div>
+                <div class="repo-link"><a href="https://github.com/Chaitanya84/iso14229">View Repository</a></div>
+            </div>
+            <!-- Add more projects as needed -->
+        </div>
+    </div>
+</body>
+</html> 
