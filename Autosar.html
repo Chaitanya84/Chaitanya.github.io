@@ -1,0 +1,78 @@
+<style>
+    .autosar-wrapper {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        max-width: 650px;
+        margin: 20px auto;
+        border: 2px solid #333;
+        padding: 15px;
+        background-color: #f9f9f9;
+    }
+    .full-width {
+        width: 100%;
+        padding: 15px 0;
+        margin-bottom: 5px;
+        text-align: center;
+        color: white;
+        font-weight: bold;
+        border-radius: 4px;
+    }
+    .flex-container {
+        display: flex;
+        gap: 5px;
+        margin-bottom: 5px;
+    }
+    .bsw-stack {
+        flex: 3;
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+    }
+    .complex-drivers {
+        flex: 1;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: #d32f2f; /* Red */
+        color: white;
+        font-weight: bold;
+        text-align: center;
+        border-radius: 4px;
+        padding: 10px;
+    }
+    .app-layer { background-color: #2e7d32; } /* Dark Green */
+    .rte-layer { background-color: #1565c0; } /* Dark Blue */
+    .services { background-color: #ef6c00; }  /* Orange */
+    .ecu-abs { background-color: #ffa000; }   /* Light Orange */
+    .mcal { background-color: #ffb300; }      /* Amber */
+    .hw-layer { background-color: #424242; }  /* Grey */
+    
+    .stack-item {
+        padding: 12px;
+        color: white;
+        text-align: center;
+        font-weight: bold;
+        border-radius: 4px;
+        font-size: 0.9em;
+    }
+</style>
+
+<div class="autosar-wrapper">
+    <div class="full-width app-layer">Application Layer</div>
+    <div class="full-width rte-layer">Runtime Environment (RTE)</div>
+    
+    <div class="flex-container">
+        <!-- Standard BSW Stack -->
+        <div class="bsw-stack">
+            <div class="stack-item services">Services Layer</div>
+            <div class="stack-item ecu-abs">ECU Abstraction Layer</div>
+            <div class="stack-item mcal">Microcontroller Abstraction (MCAL)</div>
+        </div>
+        
+        <!-- Parallel Complex Drivers -->
+        <div class="complex-drivers">
+            Complex<br>Drivers<br>(CDD)
+        </div>
+    </div>
+    
+    <div class="full-width hw-layer">Microcontroller / Hardware</div>
+</div>

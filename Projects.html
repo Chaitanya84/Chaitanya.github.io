@@ -43,12 +43,34 @@ Use HTML and CSS to style the page.
             gap: 25px; /* Space between image and description */
             align-items: flex-start;
         }
+
+        /* Grouping Image and Stats */
+        .left-column {
+            flex: 0 0 300px; /* Fixed width for the left side */
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
         .project img {
-            flex: 0 0 300px; /* Image will take exactly 300px width */
-            max-width: 300px;
+            width: 100%;
             height: auto;
             border-radius: 4px;
-            object-fit: cover; /* Keeps image aspect ratio clean */
+            object-fit: cover;
+        }
+        /* Stats List Styling */
+        .project-stats {
+            background: rgba(255, 255, 255, 0.5);
+            padding: 15px;
+            border-radius: 6px;
+            font-size: 13px;
+            color: #333;
+        }
+        .project-stats ul {
+            margin: 0;
+            padding-left: 20px;
+        }
+        .project-stats li {
+            margin-bottom: 5px;
         }
         .project-info {
             flex: 1; /* Description takes up remaining space */
@@ -81,9 +103,9 @@ Use HTML and CSS to style the page.
             .project {
                 flex-direction: column;
             }
-            .project img {
-                max-width: 100%;
+            .left-column {
                 flex: 0 0 auto;
+                width: 100%;
             }
         }
     </style>
@@ -93,28 +115,70 @@ Use HTML and CSS to style the page.
     <div class="container">
         <h1>My Projects</h1>
         <div class="projects">
-            
             <div class="project">
-                <!-- Left Side -->
-                <img src="Skid.png" alt="Project 1">
+                <!-- Left Side: Image and Stats -->
+                <div class="left-column">
+                    <img src="AAM.jpg" alt="Project 1">
+                    
+                    <div class="project-stats">
+                        <strong>Project Highlights:</strong>
+                        <ul>
+                            <li><strong>Devices Sold:</strong> 5,000+ Units</li>
+                            <li><strong>Customer:</strong> Global Agriculture Lead</li>
+                            <li><strong>Client:</strong> John Deere</li>
+                            <li><strong>Region:</strong> North America & Europe</li>
+                        </ul>
+                    </div>
+                </div>
             
-                <!-- Right Side -->
+                <!-- Right Side: Description -->
+                <div class="project-info">
+                    <div class="project-name">Electric Drive Unit</div>
+                    <div class="description">
+                        <section>
+                            <h3>Description</h3>
+                            <p>"In my role as the Lead Embedded Software Engineer for our Motor Control ECU, I focused on delivering high-quality, safety-critical firmware for Aurix based Electronic control unit. I developed device drivers in  Embedded C and Micrcontroller Abstraction Layer(MCAL) configuration. I also configured RTOS services (RTA-OS) and Basic Software (BSW) in AUTOSAR configuration tool. During my time at American Axle and manufacturing I was also responsible for integrating specialized third-party libraries like Infineon’s SafeTlib and Cycurlib for security and safety compliance."</p>
+                            <p>To ensure production-grade reliability, It was also my responsibility to keep participating in customer and internal audit and noticing gaps in development lifecycle and define action items to overcome Non compliance. This activity involved revisiting ASPICE SWE.1 through SWE.5 and build checks like coding guideline documentation template and bring standard to the development process. This involves everything from Software Requirements Analysis (SWE.1) and Architectural Design (SWE.2) to the Detailed Design and Unit Construction (SWE.3). By implementing systematic Software Unit Verification (SWE.4) and Integration Testing (SWE.5), I ensure that every component is not only functionally sound but also fully traceable and compliant with ISO, ASPICE and latest automotive standards. This structured approach has allowed company to catch bugs early in the lifecycle and maintain the high quality expected in automotive systems. As added responsibility I was responsible for coaching my team to meet  demanding delivery milestones."</p>
+                        </section>                     
+                        
+                    </div>
+                    <div class="technologies">Technologies used: C, RTOS, MATLAB/Simulink, PCAN-USB, J1939, CAN, SPI, I2C, MISRA, Polyspace, MAAB Guideline, SVN, Jira, Eclipse, Make</div>
+                    <div class="repo-link"><a href="Autosar.html">View Repository</a></div>
+                </div>
+            </div>
+            <div class="project">
+                <!-- Left Side: Image and Stats -->
+                <div class="left-column">
+                    <img src="Skid.png" alt="Project 1">
+                    
+                    <div class="project-stats">
+                        <strong>Project Highlights:</strong>
+                        <ul>
+                            <li><strong>Devices Sold:</strong> 5,000+ Units</li>
+                            <li><strong>Customer:</strong> Global Agriculture Lead</li>
+                            <li><strong>Client:</strong> John Deere</li>
+                            <li><strong>Region:</strong> North America & Europe</li>
+                        </ul>
+                    </div>
+                </div>
+            
+                <!-- Right Side: Description -->
                 <div class="project-info">
                     <div class="project-name">Skid-Steer Loader</div>
                     <div class="description">
                         <section>
                             <h3>1. Core System Migration &amp; Performance Upgrading</h3>
-                            <p>"During my tenure, we transitioned the Skid Steer’s control logic from legacy 16-bit hardware to a 32-bit Renesas-based ECU. This wasn't just a porting exercise; it was a performance upgrade that allowed for more complex hydraulic control algorithms and better diagnostic capabilities. I personally handled the application layer migration, ensuring that the machine’s behavior remained consistent and safe despite the total change in underlying silicon."</p>
+                            <p>"During my tenure, we transitioned the Skid Steer’s control logic from legacy 16-bit hardware to a 32-bit Renesas-based ECU. I personally handled the application layer migration, ensuring that the machine’s behavior remained consistent and safe despite the total change in underlying silicon."</p>
                         </section>
                         
                         <section>
                             <h3>2. Communication &amp; Data Integrity (CAN/SPI/I2C)</h3>
-                            <p>"The 'nervous system' of the loader relies on seamless communication. I developed the low-level drivers that allowed the main processor to talk to external CAN controllers and memory modules via SPI and I2C. This ensured that the loader could handle high-bus-load telematics data and critical sensor feedback without latency, which is vital for real-time machine stability."</p>
+                            <p>I developed the low-level drivers that allowed the main processor to talk to external CAN controllers and memory modules via SPI and I2C. This ensured that the loader could handle high-bus-load telematics data and critical sensor feedback without latency, which is vital for real-time machine stability."</p>
                         </section>
                         
                         <section>
                             <h3>3. Model-Based Feature Development (MBD)</h3>
-                            <p>"I worked on the 'brains' of the vehicle using Model-Based Design. By utilizing Embedded Coder, I transformed control models into production C/C++ code. To ensure these features—like bucket leveling or traction control—functioned perfectly, I ran them through MIL and SIL simulation loops. This allowed us to catch logic errors in a virtual environment long before the software ever touched a physical Skid Steer."</p>
+                            <p>"I worked on the 'brains' of the vehicle using Model-Based Design. By utilizing Embedded Coder, I transformed control models into production C/C++ code. To ensure these features—like bucket leveling or traction control—functioned perfectly, I ran them through MIL and SIL simulation loops."</p>
                         </section>
                         
                         <section>
@@ -132,26 +196,34 @@ Use HTML and CSS to style the page.
                             <p>"I managed the Vehicle Payload Delivery pipeline. This is essentially the factory-to-field software delivery system. I maintained the CI/CD environment to ensure that every software build destined for the assembly line or a dealer's service tool was fully validated, signed, and ready for deployment into the loader's ECU."</p>
                         </section>
                     </div>
-                    <div class="technologies">Technologies: C, STM32, PID Control, RS-485</div>
-                    <div class="repo-link"><a href="#">View Repository</a></div>
+                    <div class="technologies">Technologies used: C, RTOS, MATLAB/Simulink, PCAN-USB, J1939, CAN, SPI, I2C, MISRA, Polyspace, MAAB Guideline, SVN, Jira, Eclipse, Make</div>
+                    <div class="repo-link"><a href="Propriety.html">View Repository</a></div>
                 </div>
             </div>   
 
             <div class="project">
                 <!-- Left Side -->
-                <img src="PRC.png" alt="Project 1">
+                <div class="left-column">
+                    <img src="PRC.png" alt="Project 2">
+                    
+                    <div class="project-stats">
+                        <strong>Project Highlights:</strong>
+                        <ul>
+                            <li><strong>Devices Sold:</strong> 5,000+ Units</li>
+                            <li><strong>Customer:</strong> Global Agriculture Lead</li>
+                            <li><strong>Client:</strong> John Deere</li>
+                            <li><strong>Region:</strong> North America & Europe</li>
+                        </ul>
+                    </div>
+                </div>             
             
                 <!-- Right Side -->
                 <div class="project-info">
-                    <div class="project-name">STM32 Based temperature controller</div>
+                    <div class="project-name">STM32 Based Ramp Soak temperature controller</div>
                     <div class="description">
                         <section>
                             <h3>1. Architecture &amp; Concurrency</h2>
-                            <p>"The core of the system is an STM32 microcontroller where I managed six independent control loops. I designed the firmware to handle simultaneous PID and On/Off control for six zones. This required efficient task scheduling to ensure that sensor sampling, PID calculations, and SSR pulse-width modulation occurred with precise timing without jitter."</p>
-                        </section>
-                        
-                        <section>
-                            <h3>2. Sensor Interfacing &amp; Signal Integrity</h2>
+                            <p>"The core of the system is an STM32 microcontroller where I managed six independent control loops. I designed the firmware to handle simultaneous PID and On/Off control for six zones. This required efficient task scheduling to ensure that sensor sampling, PID calculations, and SSR pulse-width modulation occurred with precise timing without jitter."</p>                        
                             <p>"I implemented the driver logic for six K-type thermocouple inputs. This involved handling analog-to-digital conversion, cold-junction compensation, and digital filtering to ensure stable readings in noisy industrial environments. I also integrated a dedicated safety routine that monitors for thermocouple faults and triggers a global hardware interrupt/fault relay."</p>
                         </section>
                         
@@ -166,12 +238,25 @@ Use HTML and CSS to style the page.
                         </section>
                     </div>
                     <div class="technologies">Technologies: C, STM32, PID Control, RS-485</div>
-                    <div class="repo-link"><a href="#">View Repository</a></div>
+                    <div class="repo-link"><a href="Propriety.html">View Repository</a></div>
                 </div>
             </div>
             <div class="project">
                 <!-- Left Side -->
-                <img src="PRC-309-side.png" alt="Project 1">
+                <div class="left-column">
+                    <img src="PRC-309-side.png" alt="Project 3">
+                    
+                    <div class="project-stats">
+                        <strong>Project Highlights:</strong>
+                        <ul>
+                            <li><strong>Devices Sold:</strong> 5,000+ Units</li>
+                            <li><strong>Customer:</strong> Global Agriculture Lead</li>
+                            <li><strong>Client:</strong> John Deere</li>
+                            <li><strong>Region:</strong> North America & Europe</li>
+                        </ul>
+                    </div>
+                </div>
+                
             
                 <!-- Right Side -->
                 <div class="project-info">
@@ -198,16 +283,90 @@ Use HTML and CSS to style the page.
                         </section>
                     </div>
                     <div class="technologies">Technologies: C, STM32, PID Control, RS-485</div>
-                    <div class="repo-link"><a href="#">View Repository</a></div>
+                    <div class="repo-link"><a href="Propriety.html">View Repository</a></div>
                 </div>
             </div>
+            <div class="project">
+                <!-- Left Side -->
+                <div class="left-column">
+                    <img src="GlassHeater.png" alt="Project 1">
+                    
+                    <div class="project-stats">
+                        <strong>Project Highlights:</strong>
+                        <ul>
+                            <li><strong>Devices Sold:</strong> 5,000+ Units</li>
+                            <li><strong>Customer:</strong> Global Agriculture Lead</li>
+                            <li><strong>Client:</strong> John Deere</li>
+                            <li><strong>Region:</strong> North America & Europe</li>
+                        </ul>
+                    </div>
+                </div>
+                
+            
+                <!-- Right Side -->
+                <div class="project-info">
+                    <div class="project-name">Precision Thermal Conditioning System</div>
+                    <div class="description">
+                        <section>
+                            <h3>1. Architecture &amp; Concurrency</h3>
+                            <p>"The firmware is built on an C8051F35x microcontroller using a real-time bare-metal scheduler to manage the simultaneous rotation and vertical linear motion. I utilized hardware timers to drive the ball screw stepper motor while running a background countdown timer for the heating process. This concurrent architecture ensures that the burner maintains a steady reciprocating motion without interrupting the user interface or safety monitoring."</p>
+                        </section>
+                        
+                        <section>
+                            <h3>2. Sensor Interfacing &amp; Signal Integrity</h3>
+                            <p>"I configured the top and bottom proximity sensors as external interrupts to provide instantaneous feedback when the burner reaches its travel limits. To eliminate false triggers from motor vibration or electrical noise, I implemented a software debouncing algorithm and opto-isolation at the hardware level. This approach guarantees precise reversal points for the ball screw, ensuring the heat is applied consistently across the entire length of the glass tube."</p>
+                        </section>
+                        
+                        <section>
+                            <h3>3. Control Logic &amp; Profile Programming</h3>
+                            <p>"The control logic follows a finite state machine that transitions from parameter entry to active heating based on the time value provided via the keypad. I programmed a synchronized reversal logic that flips the motor direction bit the moment a limit sensor is tripped, maintaining a continuous vertical 'scan.' Additionally, a safety watchdog monitors the rotation plate's RPM to automatically retract the burner if the tube stops spinning, preventing material failure."</p>
+                        </section>
+                        
+                        <section>
+                            <h3>4. Peripherals &amp; Communication</h3>
+                            <p>"I integrated a 4x4 membrane keypad for user input and a character LCD to display real-time process status and remaining cycle time. The system uses an EEPROM peripheral to store the last-used heating parameters, allowing for quick setup after power cycles. For diagnostics, I implemented a UART serial interface that outputs cycle counts and sensor status to a PC for maintenance logging."</p>
+                        </section>
+                    </div>
+                    <div class="technologies">Technologies: C, STM32, PID Control, RS-485</div>
+                    <div class="repo-link"><a href="Propriety.html">View Repository</a></div>
+                </div>
+            </div> 
+            <div class="project">
+                <!-- Left Side -->
+                <div class="left-column">
+                    <img src="Helium.png" alt="Project 1">
+                    
+                    <div class="project-stats">
+                        <strong>Tools and technologies used:</strong>
+                        <ul>
+                            <li><strong><a href="https://www.delta-emea.com/en-gb/products/PLC-Programmable-Logic-Controllers/ispsoft-programming-software">ISPSoft Programming Software</a></strong></li>
+                            <li><strong>Structure text, Instruction List</strong></li>
+                            <li><strong>C#, MySQL</strong></li>
+                            <li><strong>Power Electronics</strong></li>
+                        </ul>
+                    </div>
+                </div>  
+                <!-- Right Side -->
+                <div class="project-info">
+                    <div class="project-name">Helium Leak detector machine</div>
+                    <div class="description">
+                        <section>
+                            <h3>System Description</h3>
+                            <p>"Helium leak test systems was designed for high-precision integrity verification of jobs used in HIGH voltage application, using helium's small molecular size and inert properties as a tracer gas. The systems operate by subjecting parts to pressures up to 300 bar and can detect leak rates as low as 10⁻⁸ mbar l/sec. These can be integrated into production lines with automated material movement, performing continuous self-monitoring, automatic calibration, and may include an integrated helium recovery station. Operations are managed via a SCADA interface for control and remote maintenance.This product contains 3 main module. One moduler helium dector a control PLC(SPS) and a Windows based Software developed in C#. PC was connected to PLC using a Modbus RTU comminication on the PLC side and a RS-485 to USB converter on the PC side. The PLC was also in turn connected to the PLC over Profinet bus. My role was to develop the control software for the machine on the PLC.
+                                The software on the PLC side was developed in structure text and Instruction list. I also supported PC software developer in understand ModBus RTU Protocol and data retrieval and control logic."</p>
+                        </section>
+                    </div>
+                    <div class="technologies">Customer/Client/Employer website: <a href="https://www.tekman.co.in/">Link</a></div>
+                    <div class="repo-link"><a href="Propriety.html">View Repository</a></div>
+                </div>
+            </div> 
             
             <div class="project">
                 <img src="project3_image.jpg" alt="Project 3">
                 <div class="project-name">Project Three</div>
                 <div class="description">A brief description of Project Three.</div>
                 <div class="technologies">Technologies: Java, Spring Boot</div>
-                <div class="repo-link"><a href="https://github.com/Chaitanya84/iso14229">View Repository</a></div>
+                <div class="repo-link"><a href="StatsTable.html">View Repository</a></div>
             </div>
             <!-- Add more projects as needed -->
         </div>
