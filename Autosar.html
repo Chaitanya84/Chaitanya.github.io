@@ -1,78 +1,172 @@
 <style>
-    .autosar-wrapper {
-        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        max-width: 650px;
-        margin: 20px auto;
-        border: 2px solid #333;
-        padding: 15px;
-        background-color: #f9f9f9;
+    /* Centering the entire setup on the page */
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      margin: 0;
+      background-color: #f4f4f9;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     }
-    .full-width {
-        width: 100%;
-        padding: 15px 0;
-        margin-bottom: 5px;
-        text-align: center;
-        color: white;
-        font-weight: bold;
-        border-radius: 4px;
+  
+    /* Main wrapper to hold Diagram + Legend side-by-side */
+    .main-wrapper {
+      display: flex;
+      align-items: flex-start;
+      gap: 40px;
+      padding: 20px;
     }
-    .flex-container {
-        display: flex;
-        gap: 5px;
-        margin-bottom: 5px;
+  
+    .autosar-container {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      width: 550px;
+      color: white;
+      text-align: center;
+      font-weight: 600;
     }
-    .bsw-stack {
-        flex: 3;
-        display: flex;
-        flex-direction: column;
-        gap: 5px;
+  
+    /* Base Layer Style */
+    .layer {
+      padding: 12px;
+      border-radius: 6px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
     }
-    .complex-drivers {
-        flex: 1;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        background-color: #d32f2f; /* Red */
-        color: white;
-        font-weight: bold;
-        text-align: center;
-        border-radius: 4px;
-        padding: 10px;
+  
+    /* Step Box Styling */
+    .step-container {
+      display: flex;
+      justify-content: space-around;
+      gap: 8px;
     }
-    .app-layer { background-color: #2e7d32; } /* Dark Green */
-    .rte-layer { background-color: #1565c0; } /* Dark Blue */
-    .services { background-color: #ef6c00; }  /* Orange */
-    .ecu-abs { background-color: #ffa000; }   /* Light Orange */
-    .mcal { background-color: #ffb300; }      /* Amber */
-    .hw-layer { background-color: #424242; }  /* Grey */
-    
-    .stack-item {
-        padding: 12px;
-        color: white;
-        text-align: center;
-        font-weight: bold;
-        border-radius: 4px;
-        font-size: 0.9em;
+  
+    .step-box {
+      background-color: white;
+      padding: 4px;
+      border-radius: 4px;
+      flex: 1;
+      font-size: 0.75em;
+      box-shadow: inset 0 0 3px rgba(0,0,0,0.1);
     }
-</style>
-
-<div class="autosar-wrapper">
-    <div class="full-width app-layer">Application Layer</div>
-    <div class="full-width rte-layer">Runtime Environment (RTE)</div>
-    
-    <div class="flex-container">
-        <!-- Standard BSW Stack -->
+  
+    /* Layer Colors & Legend Colors */
+    .color-asw { background-color: #2E7D32; } 
+    .color-rte { background-color: #1565C0; } 
+    .color-services { background-color: #EF6C00; }
+    .color-abstraction { background-color: #7B1FA2; }
+    .color-mcal { background-color: #C2185B; }
+    .color-cdd { background-color: #5D4037; }
+    .color-hw { background-color: #455A64; }
+    .color-me { background-color: whitesmoke; }
+  
+    /* Apply text colors to step boxes based on parent */
+    .asw .step-box { color: #2E7D32; }
+    .rte .step-box { color: #1565C0; }
+    .abstraction .step-box { color: #7B1FA2; }
+    .mcal .step-box { color: #C2185B; }
+    .cdd .step-box { color: #5D4037; }
+  
+    .middle-section { display: flex; gap: 10px; }
+    .bsw-stack { display: flex; flex-direction: column; gap: 10px; flex: 3; }
+    .cdd { flex: 1; justify-content: center; }
+    .cdd .step-container { flex-direction: column; }
+  
+    /* Legend Styling */
+    .legend {
+      background: #80e5ff;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+    .legend-title {
+      font-weight: bold;
+      margin-bottom: 5px;
+      color: #333;
+      border-bottom: 2px solid #eee;
+      padding-bottom: 5px;
+    }
+    .legend-item {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 0.9em;
+      color: #555;
+    }
+    .color-box {
+      width: 20px;
+      height: 20px;
+      border-radius: 3px;
+    }
+  </style>
+  
+  <div class="main-wrapper">
+    <!-- AUTOSAR Diagram -->
+    <div class="autosar-container">
+      <div class="layer color-asw asw">
+        <div>Application Software Layer</div>
+        <div class="step-container">
+          <div class="step-box">Diagnostics</div>
+          <div class="step-box">Safety Feature</div>
+        </div>
+      </div>
+      
+      <div class="layer color-rte rte">
+        <div>Runtime Environment (RTE)</div>
+        <div class="step-container">
+          <div class="step-box">Configuration of RTE interfaces</div>
+        </div>
+      </div>
+      
+      <div class="middle-section">
         <div class="bsw-stack">
-            <div class="stack-item services">Services Layer</div>
-            <div class="stack-item ecu-abs">ECU Abstraction Layer</div>
-            <div class="stack-item mcal">Microcontroller Abstraction (MCAL)</div>
+          <div class="layer color-services">Services Layer</div>
+          <div class="layer color-abstraction abstraction">
+            <div>ECU Abstraction Layer</div>
+            <div class="step-container">
+              <div class="step-box">Watchdog Interface</div>
+            </div>
+          </div>
+          <div class="layer color-mcal mcal">
+            <div>Microcontroller Abstraction (MCAL)</div>
+            <div class="step-container">
+              <div class="step-box">Timers</div>
+              <div class="step-box">GPIO</div>
+              <div class="step-box">Watchdog Driver</div>
+            </div>
+          </div>
         </div>
-        
-        <!-- Parallel Complex Drivers -->
-        <div class="complex-drivers">
-            Complex<br>Drivers<br>(CDD)
+  
+        <div class="layer color-cdd cdd">
+          <div style="margin-bottom: 5px;">CDD</div>
+          <div class="step-container">
+            <div class="step-box">Actuators</div>
+            <div class="step-box">Temprature sensor</div>
+          </div>
         </div>
+      </div>
+  
+      <div class="layer color-hw">Microcontroller Hardware</div>
     </div>
-    
-    <div class="full-width hw-layer">Microcontroller / Hardware</div>
-</div>
+  
+    <!-- Legend -->
+    <div class="legend">
+      <div class="legend-title">Color Legend</div>
+      <div class="legend-item" style="font-weight: bold;"><div class="color-box color-me"></div> Things I worked on</div>
+      <div class="legend-item"><div class="color-box color-asw"></div> Application</div>
+      <div class="legend-item"><div class="color-box color-rte"></div> RTE</div>
+      <div class="legend-item"><div class="color-box color-services"></div> Services</div>
+      <div class="legend-item"><div class="color-box color-abstraction"></div> Abstraction</div>
+      <div class="legend-item"><div class="color-box color-mcal"></div> MCAL</div>
+      <div class="legend-item"><div class="color-box color-cdd"></div> Complex Drivers</div>
+      <div class="legend-item"><div class="color-box color-hw"></div> Hardware</div>
+    </div>
+  </div>
+  

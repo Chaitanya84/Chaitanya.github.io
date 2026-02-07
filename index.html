@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!-- Google Font -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com" rel="stylesheet">
 
     <style>
         :root {
@@ -148,19 +148,28 @@
     align-items: center;
     justify-content: flex-start;
     gap: 32px;
-    flex-wrap: nowrap; /* IMPORTANT: prevents stacking */
+    flex-wrap: nowrap;
 }
 
 .profile-image {
-    width: 140px;
-    height: 140px;
+    width: 200px;
+    height: 200px;
     border-radius: 50%;
     object-fit: cover;
     border: 3px solid var(--border);
-    flex-shrink: 0; /* IMPORTANT: prevents image from shrinking */
+    flex-shrink: 0;
 }
 
-/* Stack ONLY on very small screens */
+/* New About Text Styles */
+.about-text {
+    margin-top: 16px;
+    line-height: 1.6;
+    color: var(--text);
+    font-size: 15px;
+    max-width: 800px;
+    text-align: justify;
+}
+
 @media (max-width: 600px) {
     .profile-header {
         flex-direction: column;
@@ -190,9 +199,9 @@
             font-size: 14px;
             color: var(--muted);
             padding-bottom: 40px;
+            margin-top: 40px;
         }
 
-        /* ---------- Responsive ---------- */
         @media (max-width: 768px) {
             header h1 {
                 font-size: 32px;
@@ -208,10 +217,8 @@
     <!-- HEADER -->
     <header>
         <div class="profile-header">
-            <!-- PROFILE IMAGE -->
             <img src="priya.png" alt="Chaitanya Priya" class="profile-image">
     
-            <!-- NAME & TITLE -->
             <div>
                 <h1>Chaitanya Priya</h1>
                 <h2>Senior Technical Lead | Automotive Embedded Systems</h2>
@@ -219,46 +226,56 @@
                 <div class="contact">
                     <span>📍 Stuttgart, Germany</span>
                     <span>📞 +49 172 2950530</span>
-                    <span>✉️ 
-                        <a href="mailto:priya.chaitanya.87@gmail.com">
-                            priya.chaitanya.87@gmail.com
-                        </a>
-                    </span>
+                    <span>✉️ <a href="mailto:priya.chaitanya.87@gmail.com">priya.chaitanya.87@gmail.com</a></span>
+                </div>
+
+                <!-- ABOUT ME SECTION -->
+                <div class="about-text">
+                    <p>I’m an automotive tech specialist with a decade under my belt, specifically focusing on keeping vehicles safe and secure. I’m certified in both Automotive Cybersecurity (ISO 21434) and Functional Safety (ISO 26262), so I know my way around the standards that keep modern cars reliable.</p>
+                        <p>Most of my career has been spent 'under the hood' of the software. I’ve led projects ranging from bare-metal coding to complex AUTOSAR stacks and model-based development. Whether it’s debugging low-level drivers or streamlining software processes to meet ASPICE requirements, I’m at home in the nitty-gritty of microcontroller environments.
+                        </p><p>I’ve had the chance to lead some great teams at places like American Axle, where I focused on AUTOSAR implementation, and HCL Technologies, where I managed features for heavy-duty off-road vehicles. Earlier on at Libratherm, I really sharpened my skills in firmware and system design.
+                        </p><p>I’m basically a mix of a technical lead and a safety-first engineer who loves solving the complex puzzles that come with next-gen vehicle tech.</p>
                 </div>
             </div>
         </div>
     </header>
     
-        <!-- ACTION BUTTONS -->
-        <div class="actions">
-            <a href="Projects.html" class="action-btn">
-                🚀 View Projects
-            </a>
-
-            <a href="https://www.linkedin.com/in/chaitanya-priya/"
-            target="_blank"
-            class="action-btn secondary">
-                🔗 LinkedIn Profile
-            </a>
-
-            <a href="Certificate.html" class="action-btn secondary">
-                📜 View Certificates
-            </a>
-        </div>
+    <!-- ACTION BUTTONS -->
+    <div class="actions">
+        <a href="Projects.html" class="action-btn secondary">🚀 View Projects</a>
+        <a href="https://www.linkedin.com" target="_blank" class="action-btn secondary">🔗 LinkedIn Profile</a>
+        <a href="Certificate.html" class="action-btn secondary">📜 View Certificates</a>
+        <a href="Chaitanya.pdf" class="action-btn">📜 Download Resume</a>
+    </div>
 
     <!-- EXPERIENCE -->
     <section>
         <h3>Work Experience</h3>
-
         <div class="card">
             <h4>Senior Technical Lead</h4>
-            <div class="meta">Vector Informatik GmbH | Jul 2023 – Present</div>
+            <div class="meta">Mercedes-Benz (Soorce Professional GmBH) | Oct 2024 – Present</div>
             <ul>
-                <li>Designed complex device drivers for EVCC charging systems.</li>
-                <li>Integrated global supplier libraries for time and memory critical ECUs.</li>
-                <li>Optimized linker configurations for ISO 26262 compliance.</li>
-                <li>Configured AUTOSAR MCAL and RTE using EB Tresos and DaVinci.</li>
-                <li>Executed unit, integration, and static analysis testing.</li>
+                <li>Developed and maintained the Power State Manager (PSM) for Aurix TCx-based boards and multi-OS SoCs.</li>
+                <li>Engineered multi-stage hardware initialization logic for transitioning control between Aurix, QNX, and Linux.</li>
+                <li>Architected an automated Jira triage pipeline using RAG to classify and redirect out-of-scope tickets.</li>
+                <li>Implemented AI-driven root cause analysis to identify software defects and generate targeted code suggestions.</li>
+                <li>Collaborated with the Architecture Team to refine the "OnOff" system for safety-critical power states.</li>
+                <li>Resolved complex hardware-software interface defects by owning the end-to-end bug resolution lifecycle.</li>
+
+            </ul>
+        </div>
+        <div class="card">
+            <h4>Senior Technical Lead</h4>
+            <div class="meta">Vector Informatik GmBH (MSK ENgineering and IT services GmBH)| Jul 2023 – Sep 2024</div>
+            <ul>
+                <li>Led requirement elicitation and developed comprehensive design documentation for EV charging sequences.</li>
+                <li>Engineered complex device drivers and designed robust low-level software architectures.</li>
+                <li>Designed software solutions and integrated third-party libraries into existing architectural frameworks.</li>
+                <li>Configured and maintained AUTOSAR base software to ensure optimal system performance.</li>
+                <li>Coordinated with global customers and vendors to facilitate the integration of third-party libraries.</li>
+                <li>Developed rigorous test and safety plans to ensure full compliance with ISO 26262 standards.</li>
+                <li>Executed comprehensive unit, static code analysis, SIL, and integration testing as Feature Owner.</li>
+                <li>Represented the team in ASPICE Quality and ISO 21434 Cybersecurity Audits to ensure compliance.</li>
             </ul>
         </div>
 
@@ -266,11 +283,14 @@
             <h4>Lead Embedded Software Engineer</h4>
             <div class="meta">American Axle & Manufacturing | Oct 2019 – Jul 2023</div>
             <ul>
-                <li>Feature owner for motor control ECU complex device drivers.</li>
-                <li>Led full V-model development lifecycle.</li>
-                <li>Designed diagnostic applications using MATLAB/Simulink (ISO 14229).</li>
-                <li>Represented software in ASPICE & Functional Safety audits.</li>
-                <li>Reduced production defects through improved CI/CD and testing.</li>
+                <li>Developed device drivers using Embedded C for Motor Control ECU integration with RTA-OS.</li>
+                <li>Created robust test plans and performed SIL/HIL testing to reduce bugs in production.</li>
+                <li>Developed Embedded C/C++ software for vehicle diagnostics in accordance with ISO 14229.</li>
+                <li>Integrated third-party libraries including Infineon SafeTlib and Cycurlib.</li>
+                <li>Configured AUTOSAR Base Software (BSW) and Microcontroller Abstraction Layer (MCAL).</li>
+                <li>Executed unit testing, static code analysis, and SIL/integration testing as Feature Owner.</li>
+                <li>Managed board bring-up, driver development, and BSP configuration for POCs and new platforms.</li>
+                <li>Coached team members on technical blockers to ensure the successful achievement of delivery milestones.</li>
             </ul>
         </div>
 
@@ -278,60 +298,83 @@
             <h4>Lead Engineer</h4>
             <div class="meta">John Deere (HCL Technologies) | Sep 2017 – Oct 2019</div>
             <ul>
-                <li>Developed off-road vehicle features using Simulink & Stateflow.</li>
-                <li>Performed MIL/SIL testing and code generation.</li>
-                <li>Conducted root cause analysis using FMEA & 8D.</li>
+                <li>Developed device drivers for SPI and I2C-based CAN and external memory modules.</li>
+                <li>Migrated application layer features from 16-bit microcontrollers to the 32-bit Renesas platform.</li>
+                <li>Tested features using Model-in-the-Loop (MIL) and Software-in-the-Loop (SIL) methodologies.</li>
+                <li>Generated and integrated C/C++ code using Embedded Coder for model-based development.</li>
+                <li>Maintained and developed CI/CD pipelines to ensure smooth vehicle payload deliveries.</li>
+                <li>Integrated, built, and debugged code for JDOS (John Deere RTOS) based vehicle projects.</li>
+                <li>Resolved defects and performed root cause analysis using 8D, FMEA, and DFMEA techniques.</li>
+                <li>Conducted reviews of specifications, code, and quality reports to recommend necessary improvements.</li>
+                <li>Evaluated the technical feasibility and commercial impact of change requests with offshore management.</li>
             </ul>
         </div>
+        <div class="card">
+            <h4>Embedded systems software developer</h4>
+            <div class="meta">Libratherm Instruments Pvt. Ltd. | Feb 2015 – Sep 2017</div>
+            <ul>
+                <li>Developed and maintained firmware for medical devices, ensuring compliance with FDA regulatory standards.</li>
+                <li>Programmed applications and modules for STM32 microcontrollers using C/C++.</li>
+                <li>Integrated communication technologies and IoT protocols, including MQTT and ModBus RTU/ASCII.</li>
+                <li>Created comprehensive documentation required for product approval and certification processes.</li>
+                <li>Led the full product lifecycle from initial concept through mass production and aftersales support.</li>
+                <li>Conducted rigorous unit tests to ensure firmware reliability and system performance.</li>
+            </ul>
+        </div>
+    </section>
 
+    <!-- SKILLS SECTION (Restored) -->
+    <section>
+        <h3>Technical Skills</h3>
+        <div class="skills">
+            <span class="skill">Embedded C/C++</span>
+            <span class="skill">CAN/CAN FD</span>
+            <span class="skill">UDS (ISO 14229)</span>
+            <span class="skill">I2C/UART/SPI</span>
+            <span class="skill">FreeRTOS</span>
+            <span class="skill">MISRA C</span>
+            <span class="skill">OpenOCD/JTAG</span>
+            <span class="skill">Microcontrollers (16/32-bit)</span>
+            <span class="skill">IBM RTC/DOORS NG</span>
+            <span class="skill">Polyspace (BF & CP)</span>
+            <span class="skill">PCB Design (KiCAD/Altium)</span>
+            <span class="skill">Lauterbach Trace32</span>
+            <span class="skill">GIT/GitHub</span>
+            <span class="skill">Semaphores</span>
+            <span class="skill">Schematics/Electronic Circuits</span>
+            <span class="skill">ISO 21434</span>
+            <span class="skill">ISO 26262 (Functional Safety)</span>
+            <span class="skill">Vector CANoe</span>
+            <span class="skill">DaVinci Configurator</span>
+            <span class="skill">ETAS RTA BSW/OS</span>
+            <span class="skill">MATLAB & Simulink</span>
+            <span class="skill">VectorCast (Unit Test)</span>
+            <span class="skill">SAE J1939</span>
+            <span class="skill">Python</span>
+            <span class="skill">Vector vTESTstudio</span>
+            <span class="skill">JIRA/Confluence</span>
+            <span class="skill">AUTOSAR MCAL & BSW</span>
+       </div>
     </section>
 
     <!-- EDUCATION -->
     <section>
         <h3>Education & Certifications</h3>
-
         <div class="card">
+            <ul>
+                <li>Certified in AI ML for Professionals (Indian Institute of Technology)</li>
+            </ul>
             <ul>
                 <li>ISO 21434:2021 – Automotive Cybersecurity Practitioner (TÜV SÜD)</li>
-                <li>ISO 26262:2018 – Functional Safety Engineer (Omnex)</li>
-                <li>Bachelor of Science Engineering – Magadh University (Distinction)</li>
             </ul>
-        </div>
-    </section>
-
-    <!-- SKILLS -->
-    <section>
-        <h3>Technical Skills</h3>
-        <div class="skills">
-            <span class="skill">AUTOSAR</span>
-            <span class="skill">ISO 26262</span>
-            <span class="skill">ISO 21434</span>
-            <span class="skill">Embedded C</span>
-            <span class="skill">MATLAB / Simulink</span>
-            <span class="skill">Vector CANoe</span>
-            <span class="skill">EB Tresos</span>
-            <span class="skill">DaVinci</span>
-            <span class="skill">UDS (ISO 14229)</span>
-            <span class="skill">CAN / CAN-FD</span>
-            <span class="skill">Git</span>
-            <span class="skill">JIRA</span>
-        </div>
-    </section>
-
-    <!-- LANGUAGES -->
-    <section>
-        <h3>Languages</h3>
-        <div class="card">
             <ul>
-                <li>German – A2</li>                
-                <li>English – C2 (Professional)</li>
-                
+                <li>ISO 26262 : 2018 – Functional safety Level 1 (Omnex)</li>
             </ul>
         </div>
     </section>
 
     <footer>
-        © 2026 Chaitanya Priya · Automotive Embedded Systems
+        &copy; 2024 Chaitanya Priya. All rights reserved.
     </footer>
 
 </div>
