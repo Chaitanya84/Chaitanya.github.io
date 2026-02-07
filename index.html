@@ -142,6 +142,44 @@
             margin-bottom: 8px;
             font-size: 15px;
         }
+
+        
+.cert-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 12px 0;
+    border-bottom: 1px solid var(--border);
+}
+
+.cert-item:last-child {
+    border-bottom: none;
+}
+
+.cert-left {
+    display: flex;
+    align-items: center;
+    gap: 16px; /* Space between logo and text */
+    flex: 1;
+}
+
+.cert-logo {
+    width: 40px; /* Adjust size as needed */
+    height: 40px;
+    object-fit: contain;
+    border-radius: 4px;
+}
+
+.cert-name {
+    font-weight: 500;
+}
+
+.cert-grade {
+    font-weight: 600;
+    color: var(--primary); /* Or your preferred accent color */
+    margin-left: 20px;
+    white-space: nowrap;
+}
 /* ---------- Profile Header ---------- */
 .profile-header {
     display: flex;
@@ -253,7 +291,7 @@
         <h3>Work Experience</h3>
         <div class="card">
             <h4>Senior Technical Lead</h4>
-            <div class="meta">Mercedes-Benz (Soorce Professional GmBH) | Oct 2024 – Present</div>
+            <div class="meta">Mercedes-Benz (Soorce Professional GmbH) | Oct 2024 – Present</div>
             <ul>
                 <li>Developed and maintained the Power State Manager (PSM) for Aurix TCx-based boards and multi-OS SoCs.</li>
                 <li>Engineered multi-stage hardware initialization logic for transitioning control between Aurix, QNX, and Linux.</li>
@@ -266,7 +304,7 @@
         </div>
         <div class="card">
             <h4>Senior Technical Lead</h4>
-            <div class="meta">Vector Informatik GmBH (MSK ENgineering and IT services GmBH)| Jul 2023 – Sep 2024</div>
+            <div class="meta">Vector Informatik GmbH (MSK ENgineering and IT services GmbH)| Jul 2023 – Sep 2024</div>
             <ul>
                 <li>Led requirement elicitation and developed comprehensive design documentation for EV charging sequences.</li>
                 <li>Engineered complex device drivers and designed robust low-level software architectures.</li>
@@ -361,17 +399,44 @@
     <section>
         <h3>Education & Certifications</h3>
         <div class="card">
-            <ul>
-                <li>Certified in AI ML for Professionals (Indian Institute of Technology)</li>
-            </ul>
-            <ul>
-                <li>ISO 21434:2021 – Automotive Cybersecurity Practitioner (TÜV SÜD)</li>
-            </ul>
-            <ul>
-                <li>ISO 26262 : 2018 – Functional safety Level 1 (Omnex)</li>
-            </ul>
+            
+            <!-- Item 1 -->
+            <div class="cert-item">
+                <div class="cert-left">
+                    <img src="iit-logo.png" alt="IIT" class="cert-logo">
+                    <span class="cert-name">Certified in ML and Generative AI for Professionals (Indian Institute of Technology)</span>
+                </div>
+                <div class="cert-grade">Grade: A+</div>
+            </div>
+    
+            <!-- Item 2 -->
+            <div class="cert-item">
+                <div class="cert-left">
+                    <img src="tuv-logo.png" alt="TÜV SÜD" class="cert-logo">
+                    <span class="cert-name">ISO 21434:2021 – Automotive Cybersecurity Practitioner (TÜV SÜD)</span>
+                </div>
+                <div class="cert-grade">Certified</div>
+            </div>
+    
+            <!-- Item 3 -->
+            <div class="cert-item">
+                <div class="cert-left">
+                    <img src="omnex-logo.png" alt="Omnex" class="cert-logo">
+                    <span class="cert-name">ISO 26262:2018 – Functional Safety Level 1 (Omnex)</span>
+                </div>
+                <div class="cert-grade">Certified</div>
+            </div>
+            <!-- Item 3 -->
+            <div class="cert-item">
+                <div class="cert-left">
+                    <img src="magadh.png" alt="Magadh" class="cert-logo">
+                    <span class="cert-name">B.Sc. Engineering (Magadh University)</span>
+                </div>
+                <div class="cert-grade">Distinction</div>
+            </div>    
         </div>
     </section>
+    
 
     <footer>
         &copy; 2024 Chaitanya Priya. All rights reserved.
