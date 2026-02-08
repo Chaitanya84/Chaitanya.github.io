@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Centered ECU Architecture</title>
+    <style>
+        /* Flexbox on body ensures the entire content block is dead center */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh; /* Takes full viewport height */
+            margin: 0;
+            background-color: #f0f2f5;
+        }
+
+        /* Wrapper to keep ECU and Legend side-by-side */
+        .main-wrapper {
+            display: flex;
+            align-items: center;
+            gap: 30px;
+            padding: 20px;
+        }
+
+        /* Main ECU Box */
+        .ecu-box {
+            border: 3px solid #34495e;
+            border-radius: 15px;
+            padding: 30px;
+            background-color: #ffffff;
+            width: 550px;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+
+        .ecu-title {
+            font-size: 28px;
+            font-weight: 800;
+            margin-bottom: 25px;
+            color: #34495e;
+        }
+
+        /* Grid layout for the 4 internal boxes */
+        .sub-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+            grid-template-rows: 1fr 1fr;
+            gap: 20px;
+        }
+
+        .sub-box {
+            border-radius: 10px;
+            padding: 20px;
+            color: white;
+            font-weight: bold;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        /* Box Colors */
+        .color-vcpu   { background-color: #5c6bc0; 
+                        grid-row: 2;
+                        grid-column: 1/-1;} /* Indigo */
+        .color-qnx    { background-color: #ef5350; 
+                        grid-row: 1;
+                        grid-column: 2;} /* Red */
+        .color-richos { background-color: #66bb6a; 
+                        grid-row: 1;
+                        grid-column: 3;} /* Green */
+        .color-extra  { background-color: #ffa726; 
+                        grid-row: 1;
+                        grid-column: 4;} /* Orange */
+
+        /* Internal Steps Box */
+        .steps {
+            background-color: rgba(255, 255, 255, 0.3);
+            border: 2px solid rgba(255, 255, 255, 0.6);
+            border-radius: 5px;
+            margin-top: 15px;
+            padding: 8px;
+            width: 90%;
+            font-size: 13px;
+            text-transform: uppercase;
+        }
+
+        /* Legend Box */
+        .legend-box {
+            background: white;
+            border: 1px solid #d1d8e0;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 5px 5px 15px rgba(0,0,0,0.05);
+            min-width: 160px;
+        }
+
+        .legend-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 12px;
+            font-size: 14px;
+            color: #444;
+        }
+
+        .swatch {
+            width: 18px;
+            height: 18px;
+            margin-right: 12px;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="main-wrapper">
+        <!-- ECU Architecture -->
+        <div class="ecu-box">
+            <div class="ecu-title">ECU</div>
+            <div class="sub-grid">
+                <div class="sub-box color-vcpu">
+                    VCPU
+                    <div class="steps">PSM for Instrument Cluster by me</div>
+                    <div class="steps">PSM for Head Unit by me</div>
+                </div>
+                <div class="sub-box color-qnx">
+                    QNX
+                    <div class="steps">PSM by me</div>
+                </div>
+                <div class="sub-box color-richos">
+                    RichOS (Linux or Android)
+                    <div class="steps">PSM by me</div>
+                </div>
+                <div class="sub-box color-extra">
+                    Telematics
+                </div>
+            </div>
+        </div>
+
+        <!-- Legend -->
+        <div class="legend-box">
+            <strong style="display: block; margin-bottom: 15px;">Legend</strong>
+            <div class="legend-item"><div class="swatch color-vcpu"></div> Aurix based ECU Running AUTOSAR SW</div>
+            <div class="legend-item"><div class="swatch color-qnx"></div> QNX Running On QualCom SoC</div>
+            <div class="legend-item"><div class="swatch color-richos"></div> Linux running in Virtualised ENV throgh Hypervisor</div>
+            <div class="legend-item"><div class="swatch color-extra"></div> Telematic</div>
+        </div>
+    </div>
+
+</body>
+</html>
