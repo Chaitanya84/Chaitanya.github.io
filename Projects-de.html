@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meine Projekte</title>
+    <style>
+        :root {
+            --border: #ccc;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 20px;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        /* language switcher */
+        .lang-switcher {
+            display: flex;
+            justify-content: flex-end;
+            gap: 8px;
+            margin-bottom: 16px;
+        }
+        .lang-btn {
+            padding: 6px 12px;
+            border-radius: 999px;
+            border: 1px solid var(--border);
+            font-size: 13px;
+            background: #ffffff;
+            color: #2563eb;
+            cursor: pointer;
+            text-decoration: none;
+        }
+        .lang-btn.active {
+            background: #2563eb;
+            color: #ffffff;
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+        .projects {
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+        }
+        .project {
+            display: flex;
+            background-color: #e0e0e0;
+            border-radius: 8px;
+            padding: 20px;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+            gap: 25px;
+            align-items: flex-start;
+        }
+
+        .left-column {
+            flex: 0 0 300px;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+        .project img {
+            width: 100%;
+            height: auto;
+            border-radius: 4px;
+            object-fit: cover;
+        }
+        .project-stats {
+            background: rgba(255, 255, 255, 0.5);
+            padding: 15px;
+            border-radius: 6px;
+            font-size: 13px;
+            color: #333;
+        }
+        .project-stats ul {
+            margin: 0;
+            padding-left: 20px;
+        }
+        .project-stats li {
+            margin-bottom: 5px;
+        }
+        .project-info {
+            flex: 1;
+        }
+        .project-name {
+            font-size: 22px;
+            font-weight: bold;
+            margin-top: 0;
+            color: #333;
+        }
+        .description {
+            font-size: 14px;
+            color: #444;
+            margin: 10px 0;
+            text-align: justify;
+        }
+        .technologies {
+            font-weight: bold;
+            font-size: 14px;
+            color: #555;
+            margin: 15px 0 5px 0;
+        }
+        .repo-link {
+            font-size: 14px;
+            color: #1a73e8;
+            margin-top: 8px;
+        }
+    
+        @media (max-width: 768px) {
+            .project {
+                flex-direction: column;
+            }
+            .left-column {
+                flex: 0 0 auto;
+                width: 100%;
+            }
+        }
+
+        @media print {
+            .lang-switcher,
+            .repo-link iframe,
+            .repo-link div {
+                display: none !important;
+            }
+
+            body {
+                background: #ffffff;
+                -webkit-print-color-adjust: exact;
+                print-color-adjust: exact;
+            }
+
+            .container {
+                box-shadow: none;
+                padding: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+
+        <!-- SPRACHAUSWAHL -->
+        <div class="lang-switcher">
+            <a href="Projects.html" class="lang-btn">English</a>
+            <a href="Projects-de.html" class="lang-btn active">Deutsch</a>
+        </div>
+
+        <h1>Meine Projekte</h1>
+        <div class="projects">
+
+            <!-- Projekt 1 -->
+            <div class="project">
+                <div class="left-column">
+                    <img src="Power.png" alt="OnOff für IVI-Steuergerät">
+                    
+                    <div class="project-stats">
+                        <strong>Eingesetzte Werkzeuge und Technologien:</strong>
+                        <ul>
+                            <li><strong>Embedded C, C++, DaVinci, PreeVision</strong></li>
+                            <li><strong>ALM, VFlash</strong></li>
+                            <li><strong>VectorCast, ASAP2, CANalyzer, CANape, CANoe</strong></li>
+                            <li><strong>vTESTstudio</strong></li>
+                        </ul>
+                    </div>
+                </div>
+            
+                <div class="project-info">
+                    <div class="project-name">OnOff für IVI-Steuergerät</div>
+                    <div class="description">
+                        <section>
+                            <h3>Beschreibung</h3>
+                            <p>Power State Manager (PSM). Ich war verantwortlich für die Entwicklung und Pflege der Software, die die kritische Einschaltsequenz für dreilagige Leiterplatten steuert. Es handelte sich um einen komplexen, mehrstufigen Prozess, bei dem ein nahtloser Übergang von der Hardware zu QNX und schließlich zu Linux über einen Hypervisor sichergestellt werden musste. Ich arbeitete an SWE.1 bis SWE.4 der ASPICE-Ebene.</p>
+                            <p>Neben der eigentlichen Embedded-Entwicklung habe ich festgestellt, dass unser Fehlerverfolgungsprozess ein Engpass war. Um dies zu beheben, habe ich eine KI-gestützte RAG-Pipeline aufgebaut, die Tickets automatisch triagiert. Außerdem arbeitete ich eng mit den Architekten zusammen, um das „OnOff“-System zu verfeinern und sicherzustellen, dass unsere sicherheitskritischen Automotive-Startvorgänge so robust wie möglich sind.</p>
+                        </section>                     
+                    </div>
+                    <div class="technologies">Architektur und Beitrag: <a href="Mercedes.html">Link</a></div>
+                    <div class="repo-link">
+                        <div style="width: 400px; height: 300px; overflow: hidden; border: 1px solid #ccc; border-radius: 8px;">
+                            <iframe src="Mercedes.html" 
+                                style="
+                                    width: 1200px; 
+                                    height: 900px; 
+                                    border: none;
+                                    transform: scale(0.33);
+                                    transform-origin: 0 0;
+                                    -moz-transform: scale(0.33);
+                                    -moz-transform-origin: 0 0;
+                                    -o-transform: scale(0.33);
+                                    -o-transform-origin: 0 0;
+                                    -webkit-transform: scale(0.33);
+                                    -webkit-transform-origin: 0 0;
+                                ">
+                            </iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Projekt 2 -->
+            <div class="project">
+                <div class="left-column">
+                    <img src="EVCC.png" alt="EVCC für Elektro-Lkw">
+                    
+                    <div class="project-stats">
+                        <strong>Eingesetzte Werkzeuge und Technologien:</strong>
+                        <ul>
+                            <li><strong>Embedded C, C++, DaVinci, PreeVision</strong></li>
+                            <li><strong>ALM, VFlash</strong></li>
+                            <li><strong>VectorCast, ASAP2, CANalyzer, CANape, CANoe</strong></li>
+                            <li><strong>vTESTstudio</strong></li>
+                        </ul>
+                    </div>
+                </div>
+            
+                <div class="project-info">
+                    <div class="project-name">EVCC für Elektro-Lkw</div>
+                    <div class="description">
+                        <section>
+                            <h3>Beschreibung</h3>
+                            <p>„In meiner Rolle als Lead Embedded Software Engineer für unsere Motorsteuer-ECU lag mein Fokus auf der Entwicklung von hochwertiger, sicherheitskritischer Firmware für eine Aurix-basierte Steuereinheit. Ich entwickelte Gerätetreiber in Embedded C und konfigurierte den Microcontroller Abstraction Layer (MCAL). Außerdem konfigurierte ich RTOS-Dienste (RTA-OS) und Basissoftware (BSW) in AUTOSAR-Konfigurationstools. Während meiner Zeit bei American Axle &amp; Manufacturing war ich zudem für die Integration spezialisierter Drittanbieterbibliotheken wie Infineons SafeTlib und Cycurlib für Sicherheits- und Compliance-Anforderungen verantwortlich.“</p>
+                            <p>Um Serienreife und Zuverlässigkeit sicherzustellen, nahm ich regelmäßig an Kunden- und internen Audits teil, identifizierte Lücken im Entwicklungslebenszyklus und definierte Maßnahmen zur Behebung von Nichtkonformitäten. Dies umfasste die Überarbeitung von ASPICE SWE.1 bis SWE.5 sowie den Aufbau von Prüfmechanismen wie Coding-Guideline-Vorlagen, um den Entwicklungsprozess zu standardisieren. Durch systematische Software Unit Verification (SWE.4) und Integrationstests (SWE.5) konnten wir Fehler frühzeitig erkennen und die hohe Qualität sicherheitskritischer Automotive-Software gewährleisten. Zusätzlich coachte ich mein Team, um anspruchsvolle Liefermeilensteine zu erreichen.</p>
+                        </section>                     
+                    </div>
+                    <div class="technologies">Architektur und Beitrag: <a href="Autosar.html">Link</a></div>
+                    <div class="repo-link">
+                        <div style="width: 400px; height: 300px; overflow: hidden; border: 1px solid #ccc; border-radius: 8px;">
+                            <iframe src="Autosar.html" 
+                                style="
+                                    width: 1200px; 
+                                    height: 900px; 
+                                    border: none;
+                                    transform: scale(0.33);
+                                    transform-origin: 0 0;
+                                    -moz-transform: scale(0.33);
+                                    -moz-transform-origin: 0 0;
+                                    -o-transform: scale(0.33);
+                                    -o-transform-origin: 0 0;
+                                    -webkit-transform: scale(0.33);
+                                    -webkit-transform-origin: 0 0;
+                                ">
+                            </iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Projekt 3 -->
+            <div class="project">
+                <div class="left-column">
+                    <img src="AAM.jpg" alt="Electric Drive Unit">
+                    
+                    <div class="project-stats">
+                        <strong>Eingesetzte Werkzeuge und Technologien:</strong>
+                        <ul>
+                            <li><strong>Embedded C, C++, ETAS ISOLAR-A/B</strong></li>
+                            <li><strong>MATLAB/Simulink, Polyspace, VFlash</strong></li>
+                            <li><strong>VectorCast, ASAP2, CANalyzer, CANape, CANoe</strong></li>
+                            <li><strong>vTESTstudio</strong></li>
+                        </ul>
+                    </div>
+                </div>
+            
+                <div class="project-info">
+                    <div class="project-name">Electric Drive Unit</div>
+                    <div class="description">
+                        <section>
+                            <h3>Beschreibung</h3>
+                            <p>„In meiner Rolle als Lead Embedded Software Engineer für unsere Motorsteuer-ECU lag mein Fokus auf der Entwicklung von hochwertiger, sicherheitskritischer Firmware für eine Aurix-basierte Steuereinheit. Ich entwickelte Gerätetreiber in Embedded C und konfigurierte den Microcontroller Abstraction Layer (MCAL). Außerdem konfigurierte ich RTOS-Dienste (RTA-OS) und Basissoftware (BSW) in AUTOSAR-Konfigurationstools. Während meiner Zeit bei American Axle &amp; Manufacturing war ich zudem für die Integration spezialisierter Drittanbieterbibliotheken wie Infineons SafeTlib und Cycurlib für Sicherheits- und Compliance-Anforderungen verantwortlich.“</p>
+                            <p>Um Serienreife und Zuverlässigkeit sicherzustellen, nahm ich regelmäßig an Kunden- und internen Audits teil, identifizierte Lücken im Entwicklungslebenszyklus und definierte Maßnahmen zur Behebung von Nichtkonformitäten. Dies umfasste die Überarbeitung von ASPICE SWE.1 bis SWE.5 sowie den Aufbau von Prüfmechanismen wie Coding-Guideline-Vorlagen, um den Entwicklungsprozess zu standardisieren. Durch systematische Software Unit Verification (SWE.4) und Integrationstests (SWE.5) konnten wir Fehler frühzeitig erkennen und die hohe Qualität sicherheitskritischer Automotive-Software gewährleisten. Zusätzlich coachte ich mein Team, um anspruchsvolle Liefermeilensteine zu erreichen.</p>
+                        </section>                     
+                    </div>
+                    <div class="technologies">Architektur und Beitrag: <a href="Autosar.html">Link</a></div>
+                    <div class="repo-link">
+                        <div style="width: 400px; height: 300px; overflow: hidden; border: 1px solid #ccc; border-radius: 8px;">
+                            <iframe src="Autosar.html" 
+                                style="
+                                    width: 1200px; 
+                                    height: 900px; 
+                                    border: none;
+                                    transform: scale(0.33);
+                                    transform-origin: 0 0;
+                                    -moz-transform: scale(0.33);
+                                    -moz-transform-origin: 0 0;
+                                    -o-transform: scale(0.33);
+                                    -o-transform-origin: 0 0;
+                                    -webkit-transform: scale(0.33);
+                                    -webkit-transform-origin: 0 0;
+                                ">
+                            </iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Projekt 4 -->
+            <div class="project">
+                <div class="left-column">
+                    <img src="Skid.png" alt="Skid-Steer Loader">
+                    
+                    <div class="project-stats">
+                        <strong>Projekt-Highlights:</strong>
+                        <ul>
+                            <li><strong>Embedded C, C++, ETAS ISOLAR-A/B</strong></li>
+                            <li><strong>MATLAB/Simulink, Polyspace, VFlash</strong></li>
+                            <li><strong>VectorCast, ASAP2, CANalyzer, CANape, CANoe</strong></li>
+                            <li><strong>vTESTstudio</strong></li>
+                        </ul>
+                    </div>
+                </div>
+            
+                <div class="project-info">
+                    <div class="project-name">Skid-Steer Loader</div>
+                    <div class="description">
+                        <section>
+                            <h3>1. Systemmigration &amp; Performance-Upgrade</h3>
+                            <p>„Während meiner Tätigkeit migrierten wir die Steuerlogik des Skid-Steer-Laders von älterer 16-Bit-Hardware auf eine 32-Bit-Renesas-basierte ECU. Ich war persönlich für die Migration der Applikationsschicht verantwortlich und stellte sicher, dass sich das Maschinenverhalten trotz des kompletten Wechsels der Hardwareplattform konsistent und sicher verhielt.“</p>
+                        </section>
+                        
+                        <section>
+                            <h3>2. Kommunikation &amp; Datenintegrität (CAN/SPI/I2C)</h3>
+                            <p>„Ich entwickelte Low-Level-Treiber, die es dem Hauptprozessor ermöglichten, über SPI und I2C mit externen CAN-Controllern und Speichermodulen zu kommunizieren. Dadurch konnte der Lader hohe Buslasten durch Telematikdaten und kritische Sensorsignale ohne Latenz verarbeiten – entscheidend für die Echtzeitstabilität der Maschine.“</p>
+                        </section>
+                        
+                        <section>
+                            <h3>3. Modellbasierte Funktionsentwicklung (MBD)</h3>
+                            <p>„Ich arbeitete an den ‚Gehirnen‘ des Fahrzeugs mit modellbasierter Entwicklung. Mithilfe von Embedded Coder wandelte ich Regelungsmodelle in produktionsreifen C/C++-Code um. Um sicherzustellen, dass Funktionen wie Schaufelnivellierung oder Traktionskontrolle zuverlässig arbeiten, führte ich MIL- und SIL-Simulationen durch.“</p>
+                        </section>
+                        
+                        <section>
+                            <h3>4. JDOS-Integration (John Deere RTOS)</h3>
+                            <p>„Ich integrierte diese Softwarefunktionen in JDOS, das proprietäre Echtzeitbetriebssystem. Dies beinhaltete das Management des ‚Herzschlags‘ der Maschine – sicherheitskritische Tasks (z. B. Notabschaltungen) mussten stets Vorrang vor weniger kritischen Aufgaben (z. B. Klimaanzeigen in der Kabine) im RTOS-Scheduler haben.“</p>
+                        </section>
+                        
+                        <section>
+                            <h3>5. Zuverlässigkeit &amp; Sicherheit (8D/FMEA)</h3>
+                            <p>„Um sicherzustellen, dass der Lader über 10.000+ Betriebsstunden in rauen Umgebungen standhält, setzte ich DFMEA (Design Failure Mode and Effects Analysis) für die Software ein. Wenn im Feld ein Fehler auftrat, leitete ich die 8D-Root-Cause-Analyse, um die Ursache zu finden und eine dauerhafte Korrektur zu implementieren. Mein Fokus lag darauf, dass ein Softwarefehler niemals zu einem ‚Machine Down‘-Ereignis im Feld führt.“</p>
+                        </section>
+                        
+                        <section>
+                            <h3>6. Lebenszyklus &amp; Auslieferung (CI/CD)</h3>
+                            <p>„Ich betreute die Vehicle Payload Delivery Pipeline – im Grunde das Software-Delivery-System von der Fabrik bis ins Feld. Ich pflegte die CI/CD-Umgebung, um sicherzustellen, dass jeder Software-Build für Montageband oder Service-Tool vollständig validiert, signiert und einsatzbereit für die ECU des Laders war.“</p>
+                        </section>
+                    </div>
+                    <div class="technologies">Technologien: C, RTOS, MATLAB/Simulink, PCAN-USB, J1939, CAN, SPI, I2C, MISRA, Polyspace, MAAB-Guideline, SVN, Jira, Eclipse, Make</div>
+                    <div class="repo-link"><a href="Propriety.html">Repository ansehen</a></div>
+                </div>
+            </div>   
+
+            <!-- Projekt 5 -->
+            <div class="project">
+                <div class="left-column">
+                    <img src="PRC.png" alt="Ramp-Soak-Temperaturregler">
+                    
+                    <div class="project-stats">
+                        <strong>Projekt-Highlights:</strong>
+                        <ul>
+                            <li><strong>STM32CubeMX, STM32CubeIDE</strong></li>
+                            <li><strong>ST-LINK JTAG</strong></li>
+                            <li><strong>PuTTY</strong></li>
+                            <li><strong>Embedded C/C++</strong></li>
+                        </ul>
+                    </div>
+                </div>             
+            
+                <div class="project-info">
+                    <div class="project-name">STM32-basierter Ramp-Soak-Temperaturregler</div>
+                    <div class="description">
+                        <section>
+                            <h3>1. Architektur &amp; Parallelität</h3>
+                            <p>„Der Kern des Systems ist ein STM32-Mikrocontroller, auf dem ich sechs unabhängige Regelkreise verwaltete. Ich entwarf die Firmware so, dass sie simultan PID- und Ein/Aus-Regelung für sechs Zonen ausführt. Dies erforderte ein effizientes Task-Scheduling, damit Sensorsampling, PID-Berechnungen und SSR-PWM mit präzisem Timing und ohne Jitter ablaufen.“</p>                        
+                            <p>„Ich implementierte die Treiberlogik für sechs K‑Typ‑Thermoelementeingänge. Dazu gehörten AD-Wandlung, Kaltstellenkompensation und digitale Filterung, um stabile Messwerte in lauten Industrieumgebungen zu gewährleisten. Zudem integrierte ich eine dedizierte Sicherheitsroutine, die Thermoelementfehler überwacht und bei Störungen ein globales Hardware-Interrupt/Fault-Relais auslöst.“</p>
+                        </section>
+                        
+                        <section>
+                            <h3>3. Regelungslogik &amp; Profilprogrammierung</h3>
+                            <p>„Eine der größten Herausforderungen war die Ramp/Soak-Profil-Engine. Ich entwickelte eine Zustandsmaschine, die 1 bis 4 programmierbare Schritte pro Zone erlaubt. Außerdem implementierte ich eine ‚Servo Start‘-Funktion, die den Profilstart mit der aktuellen Prozesstemperatur synchronisiert, sowie eine Abweichungsüberwachung, um sicherzustellen, dass alle Zonen während kritischer Heizphasen innerhalb eines definierten Temperaturfensters bleiben.“</p>
+                        </section>
+                        
+                        <section>
+                            <h3>4. Peripherie &amp; Kommunikation</h3>
+                            <p>„Für das HMI integrierte ich ein Grafik-LCD und eine Matrix-Tastatur, womit Benutzer zwischen Auto-/Manuell-Modus umschalten und Echtzeitkurven visualisieren können. Auf der Kommunikationsseite implementierte ich eine RS‑485‑Schnittstelle mit proprietärem Protokoll für PC-basierte Datenaufzeichnung sowie eine Master/Slave-Architektur, die bis zu 60 Zonen über 10 Geräte kaskadierbar macht.“</p>
+                        </section>
+                    </div>
+                    <div class="technologies">Produktseite: <a href="https://libratherm.com/product/6-zone-ramp-soak-pwht-temperature-controller-prc-6000/">Link</a></div>
+                    <div class="repo-link"><a href="Propriety.html">Repository ansehen</a></div>
+                </div>
+            </div>
+
+            <!-- Projekt 6 -->
+            <div class="project">
+                <div class="left-column">
+                    <img src="PRC-309-side.png" alt="Silabs-Temperaturregler">
+                    
+                    <div class="project-stats">
+                        <strong>Projekt-Highlights:</strong>
+                        <ul>
+                            <li><strong>Simplicity Studio</strong></li>
+                            <li><strong>JTAG-Debugger</strong></li>
+                            <li><strong>PuTTY, Altium Designer</strong></li>
+                            <li><strong>Embedded C/C++</strong></li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="project-info">
+                    <div class="project-name">Silabs-Mikrocontroller-basierter Temperaturregler</div>
+                    <div class="description">
+                        <section>
+                            <h3>1. Systemarchitektur &amp; Speichermanagement</h3>
+                            <p>„Ich entwarf die Firmwarearchitektur als robuste Zustandsmaschine, die komplexe Temperaturprofile verwalten kann. Aufgrund der Einschränkungen einer 8‑Bit-Umgebung legte ich großen Wert auf effiziente Speichernutzung, um bis zu 10 Muster mit jeweils 16 Ramp/Soak-Schritten zu unterstützen. Ein zentrales Element war die Integration von Flash-Routinen, die sicherstellen, dass alle Parameter und Prozesszustände nichtflüchtig gespeichert werden und der Prozess nach einem Stromausfall automatisch fortgesetzt werden kann.“</p>
+                        </section>
+                        
+                        <section>
+                            <h3>2. Sensoranbindung &amp; Signalaufbereitung</h3>
+                            <p>„Um die Vielseitigkeit des Reglers zu gewährleisten, entwickelte ich einen anpassungsfähigen Analog-Frontend-Treiber, der Eingänge wie K-, R-, S- und B‑Thermoelemente sowie RTDs unterstützt. Dazu implementierte ich präzise Linearisierungsalgorithmen und Kaltstellenkompensation. Durch digitale Filterung konnte ich stabile Temperaturmessungen auch in stark gestörten Industrieumgebungen sicherstellen.“</p>
+                        </section>
+                        
+                        <section>
+                            <h3>3. Regelungslogik &amp; Profilablauf</h3>
+                            <p>„Die Kernlogik basiert auf einem PID-Regler, der sowohl Schalt- als auch lineare Ausgänge unterstützt. Ich implementierte eine ‚Servo Start‘-Funktion, die den Profilstart an die aktuelle Prozesstemperatur anpasst, um thermische Schocks zu vermeiden. Egal ob SSR per PWM oder ein Stellventil über 4–20‑mA-Ausgang angesteuert wird – die Logik ist auf enge Toleranzen in Ramp- und Soak-Phasen abgestimmt.“</p>
+                        </section>
+                        
+                        <section>
+                            <h3>4. Peripherie &amp; serielle Kommunikation</h3>
+                            <p>„Für die Bedienoberfläche implementierte ich einen Multi-Display-Treiber und eine Tasten-Interruptlogik, sodass Prozess- und Sollwerte gleichzeitig angezeigt und verändert werden können. Über RS‑485 kann das Gerät mit Windows-basierter Software verbunden werden, um Messdaten in Echtzeit zu protokollieren und grafisch auszuwerten.“</p>
+                        </section>
+                    </div>
+                    <div class="technologies">Produktseite: <a href="https://libratherm.com/product/ramp-soak-pid-temperature-controller-prc-309/">Link</a></div>
+                    <div class="repo-link"><a href="Propriety.html">Repository ansehen</a></div>
+                </div>
+            </div>
+
+            <!-- Projekt 7 -->
+            <div class="project">
+                <div class="left-column">
+                    <img src="GlassHeater.png" alt="Präzises thermisches Konditioniersystem">
+                    
+                    <div class="project-stats">
+                        <strong>Projekt-Highlights:</strong>
+                        <ul>
+                            <li><strong>Keil uVision</strong></li>
+                            <li><strong>JTAG-Debugger</strong></li>
+                            <li><strong>PuTTY, Altium Designer</strong></li>
+                            <li><strong>Embedded C/C++</strong></li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="project-info">
+                    <div class="project-name">Präzises thermisches Konditioniersystem</div>
+                    <div class="description">
+                        <section>
+                            <h3>1. Architektur &amp; Parallelität</h3>
+                            <p>„Die Firmware basiert auf einem C8051F35x-Mikrocontroller mit einem Bare-Metal-Echtzeitscheduler, der die gleichzeitige Rotation und vertikale Bewegung steuert. Ich nutzte Hardware-Timer, um den Kugelgewindetrieb-Schrittmotor anzusteuern, während im Hintergrund ein Countdown-Timer den Heizprozess überwacht. Diese Architektur ermöglicht eine gleichmäßige Hin- und Herbewegung des Brenners, ohne Benutzeroberfläche oder Sicherheitsüberwachung zu unterbrechen.“</p>
+                        </section>
+                        
+                        <section>
+                            <h3>2. Sensoranbindung &amp; Signalqualität</h3>
+                            <p>„Die oberen und unteren Näherungssensoren konfigurierte ich als externe Interrupts, um sofortiges Feedback bei Erreichen der Endlagen zu erhalten. Um Fehltrigger durch Vibrationen oder Störungen zu vermeiden, setzte ich sowohl Software-Entprellung als auch Optokoppler in der Hardware ein. So werden präzise Umkehrpunkte für die Kugelgewindespindel gewährleistet, wodurch die Wärme gleichmäßig über die gesamte Glasrohrlänge verteilt wird.“</p>
+                        </section>
+                        
+                        <section>
+                            <h3>3. Regelungslogik &amp; Profilsteuerung</h3>
+                            <p>„Die Steuerlogik folgt einer Zustandsmaschine, die von der Parametereingabe in die aktive Heizphase übergeht – basierend auf der über die Tastatur eingegebenen Zeit. Ich programmierte eine synchronisierte Umkehrlogik, die das Drehrichtungsbit des Motors genau dann umschaltet, wenn ein Grenztaster auslöst, um eine kontinuierliche vertikale ‚Abtastung‘ zu gewährleisten. Zusätzlich überwacht ein Watchdog die Drehzahl der Rotationsplatte und fährt den Brenner bei Stillstand automatisch zurück, um Glasschäden zu verhindern.“</p>
+                        </section>
+                        
+                        <section>
+                            <h3>4. Peripherie &amp; Kommunikation</h3>
+                            <p>„Ich integrierte eine 4×4-Membrantastatur für die Benutzereingabe und ein Zeichen-LCD, das den aktuellen Prozessstatus und die Restzeit anzeigt. Ein EEPROM speichert die zuletzt verwendeten Heizparameter, sodass das System nach einem Neustart schnell wieder einsatzbereit ist. Für Diagnosen implementierte ich eine UART-Schnittstelle, über die Zyklenzähler und Sensorstatus an einen PC zur Wartungsprotokollierung gesendet werden.“</p>
+                        </section>
+                    </div>
+                    <div class="technologies">Technologien: C, STM32, PID-Regelung, RS‑485</div>
+                    <div class="repo-link"><a href="Propriety.html">Repository ansehen</a></div>
+                </div>
+            </div> 
+
+            <!-- Projekt 8 -->
+            <div class="project">
+                <div class="left-column">
+                    <img src="Helium.png" alt="Helium-Lecktester">
+                    
+                    <div class="project-stats">
+                        <strong>Eingesetzte Werkzeuge und Technologien:</strong>
+                        <ul>
+                            <li><strong><a href="https://www.delta-emea.com/en-gb/products/PLC-Programmable-Logic-Controllers/ispsoft-programming-software">ISPSoft-Programmiersoftware</a></strong></li>
+                            <li><strong>Structured Text, Instruction List</strong></li>
+                            <li><strong>C#, MySQL</strong></li>
+                            <li><strong>Leistungselektronik</strong></li>
+                        </ul>
+                    </div>
+                </div>  
+
+                <div class="project-info">
+                    <div class="project-name">Helium-Leckprüfanlage</div>
+                    <div class="description">
+                        <section>
+                            <h3>Systembeschreibung</h3>
+                            <p>„Helium-Leckprüfsysteme wurden zur hochpräzisen Dichtigkeitsprüfung von Bauteilen entwickelt, die in Hochspannungsanwendungen eingesetzt werden. Helium wird aufgrund seiner geringen Molekülgröße und Inertheit als Prüfgas verwendet. Die Systeme arbeiten mit Drücken bis zu 300 bar und können Leckraten bis zu 10⁻⁸ mbar·l/s detektieren. Sie lassen sich in Fertigungslinien mit automatischer Materialzuführung integrieren, führen Selbsttests und Kalibrierungen automatisch durch und können eine integrierte Heliumrückgewinnung enthalten. Die Bedienung erfolgt über eine SCADA-Oberfläche, die auch Fernwartung erlaubt.“</p>
+                            <p>„Das Produkt besteht aus drei Hauptmodulen: einem modularen Heliumdetektor, einer Steuer-SPS und einer Windows-basierten Software in C#. Der PC war über Modbus RTU mit der SPS verbunden, auf PC-Seite über einen RS‑485‑zu‑USB-Wandler. Die SPS kommunizierte wiederum über PROFINET mit dem Detektor. Meine Aufgabe war die Entwicklung der Steuerungssoftware auf der SPS.“</p>
+                            <p>„Die SPS-Software wurde in Structured Text und Instruction List entwickelt. Außerdem unterstützte ich den PC-Softwareentwickler bei der Implementierung des Modbus‑RTU‑Protokolls sowie bei Datenerfassung und Steuerlogik.“</p>
+                        </section>
+                    </div>
+                    <div class="technologies">Kunden-/Arbeitgeber-Website: <a href="https://www.tekman.co.in/">Link</a></div>
+                    <div class="repo-link"><a href="Propriety.html">Repository ansehen</a></div>
+                </div>
+            </div> 
+            
+            <!-- Beispielprojekt -->
+            <div class="project">
+                <div class="left-column">
+                    <img src="project3_image.jpg" alt="Projekt Drei">
+                </div>
+                <div class="project-info">
+                    <div class="project-name">Projekt Drei</div>
+                    <div class="description">Eine kurze Beschreibung von Projekt Drei.</div>
+                    <div class="technologies">Technologien: Java, Spring Boot</div>
+                    <div class="repo-link"><a href="StatsTable.html">Repository ansehen</a></div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</body>
+</html>

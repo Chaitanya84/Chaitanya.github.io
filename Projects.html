@@ -12,6 +12,9 @@ Use HTML and CSS to style the page.
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Projects</title>
     <style>
+        :root {
+            --border: #ccc;
+        }
         body {
             font-family: Arial, sans-serif;
             background-color: #f4f4f4;
@@ -25,6 +28,28 @@ Use HTML and CSS to style the page.
             background-color: #fff;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         }
+        /* language switcher */
+        .lang-switcher {
+            display: flex;
+            justify-content: flex-end;
+            gap: 8px;
+            margin-bottom: 16px;
+        }
+        .lang-btn {
+            padding: 6px 12px;
+            border-radius: 999px;
+            border: 1px solid var(--border);
+            font-size: 13px;
+            background: #ffffff;
+            color: #2563eb;
+            cursor: pointer;
+            text-decoration: none;
+        }
+        .lang-btn.active {
+            background: #2563eb;
+            color: #ffffff;
+        }
+
         h1 {
             text-align: center;
             color: #333;
@@ -96,6 +121,7 @@ Use HTML and CSS to style the page.
         .repo-link {
             font-size: 14px;
             color: #1a73e8;
+            margin-top: 8px;
         }
     
         /* Responsive: Stack image on top for small screens */
@@ -108,25 +134,53 @@ Use HTML and CSS to style the page.
                 width: 100%;
             }
         }
+
+        @media print {
+            /* hide language buttons and non-essential UI on PDF */
+            .lang-switcher,
+            .repo-link iframe,
+            .repo-link div {
+                display: none !important;
+            }
+
+            body {
+                background: #ffffff;
+                -webkit-print-color-adjust: exact;
+                print-color-adjust: exact;
+            }
+
+            /* optional: remove outer padding so more fits on page */
+            .container {
+                box-shadow: none;
+                padding: 0;
+            }
+        }
     </style>
     
 </head>
 <body>
     <div class="container">
+
+        <!-- LANGUAGE SWITCHER -->
+        <div class="lang-switcher">
+            <a href="Projects.html" class="lang-btn active">English</a>
+            <a href="Projects-de.html" class="lang-btn">Deutsch</a>
+        </div>
+
         <h1>My Projects</h1>
         <div class="projects">
             <div class="project">
                 <!-- Left Side: Image and Stats -->
                 <div class="left-column">
-                    <img src="Power.png" alt="Project 1">
+                    <img src="Power.png" alt="OnOff for IVI ECU">
                     
                     <div class="project-stats">
                         <strong>Tools and Technologies used:</strong>
                         <ul>
-                            <li><strong>Embedded C, C++, DaVinci, PreeVision </strong></li>
-                            <li><strong>ALM, Vflash</strong></li>
-                            <li><strong>Vector Cast, ASAP2, CANalyzer, CANape,CANoe</strong></li>
-                            <li><strong>VTest Studio</strong></li>
+                            <li><strong>Embedded C, C++, DaVinci, PreeVision</strong></li>
+                            <li><strong>ALM, VFlash</strong></li>
+                            <li><strong>VectorCast, ASAP2, CANalyzer, CANape, CANoe</strong></li>
+                            <li><strong>vTESTstudio</strong></li>
                         </ul>
                     </div>
                 </div>
@@ -137,14 +191,12 @@ Use HTML and CSS to style the page.
                     <div class="description">
                         <section>
                             <h3>Description</h3>
-                            <p>Power State Manager (PSM). I was responsible for developing and maintaining the software that handles the critical power-on sequence for 3 layered boards. It was a complex multi-stage process where I had to ensure a seamless handoff from the hardware to QNX and eventually to Linux via a Hypervisor. I worked on SWE 1 to SWE4 of ASPICE layer. 
-                                Beyond the core embedded work, I noticed our bug-tracking process was a bit of a bottleneck. To fix that, I built an AI-driven RAG pipeline to automatically triage tickets. I also worked closely with our architects to refine the 'OnOff' system to make sure our safety-critical automotive startups were as robust as possible.</p>
+                            <p>Power State Manager (PSM). I was responsible for developing and maintaining the software that handles the critical power-on sequence for three-layer boards. It was a complex multi-stage process where I had to ensure a seamless handoff from the hardware to QNX and eventually to Linux via a hypervisor. I worked on SWE.1 to SWE.4 of the ASPICE layer.</p>
+                            <p>Beyond the core embedded work, I noticed our bug-tracking process was a bottleneck. To fix that, I built an AI-driven RAG pipeline to automatically triage tickets. I also worked closely with our architects to refine the “OnOff” system to make sure our safety-critical automotive startups were as robust as possible.</p>
                         </section>                     
-                        
                     </div>
                     <div class="technologies">Architecture and my contribution: <a href="Mercedes.html">Link</a></div>
                     <div class="repo-link">
-                        <!-- Wrapper to contain the scaled frame -->
                         <div style="width: 400px; height: 300px; overflow: hidden; border: 1px solid #ccc; border-radius: 8px;">
                             <iframe src="Mercedes.html" 
                                 style="
@@ -152,10 +204,9 @@ Use HTML and CSS to style the page.
                                     height: 900px; 
                                     border: none;
                                     transform: scale(0.33);
-                                    -moz-transform: scale(0.33);
+                                    transform-origin: 0 0;
                                     -moz-transform: scale(0.33);
                                     -moz-transform-origin: 0 0;
-                                    transform-origin: 0 0;
                                     -o-transform: scale(0.33);
                                     -o-transform-origin: 0 0;
                                     -webkit-transform: scale(0.33);
@@ -164,22 +215,20 @@ Use HTML and CSS to style the page.
                             </iframe>
                         </div>
                     </div>
-                    
-                    </div>
                 </div>
             </div>
             <div class="project">
                 <!-- Left Side: Image and Stats -->
                 <div class="left-column">
-                    <img src="EVCC.png" alt="Project 1">
+                    <img src="EVCC.png" alt="EVCC for Electric Trucks">
                     
                     <div class="project-stats">
                         <strong>Tools and Technologies used:</strong>
                         <ul>
-                            <li><strong>Embedded C, C++, DaVinci, PreeVision </strong></li>
-                            <li><strong>ALM, Vflash</strong></li>
-                            <li><strong>Vector Cast, ASAP2, CANalyzer, CANape,CANoe</strong></li>
-                            <li><strong>VTest Studio</strong></li>
+                            <li><strong>Embedded C, C++, DaVinci, PreeVision</strong></li>
+                            <li><strong>ALM, VFlash</strong></li>
+                            <li><strong>VectorCast, ASAP2, CANalyzer, CANape, CANoe</strong></li>
+                            <li><strong>vTESTstudio</strong></li>
                         </ul>
                     </div>
                 </div>
@@ -190,30 +239,27 @@ Use HTML and CSS to style the page.
                     <div class="description">
                         <section>
                             <h3>Description</h3>
-                            <p>"In my role as the Lead Embedded Software Engineer for our Motor Control ECU, I focused on delivering high-quality, safety-critical firmware for Aurix based Electronic control unit. I developed device drivers in  Embedded C and Micrcontroller Abstraction Layer(MCAL) configuration. I also configured RTOS services (RTA-OS) and Basic Software (BSW) in AUTOSAR configuration tool. During my time at American Axle and manufacturing I was also responsible for integrating specialized third-party libraries like Infineon’s SafeTlib and Cycurlib for security and safety compliance."</p>
-                            <p>To ensure production-grade reliability, It was also my responsibility to keep participating in customer and internal audit and noticing gaps in development lifecycle and define action items to overcome Non compliance. This activity involved revisiting ASPICE SWE.1 through SWE.5 and build checks like coding guideline documentation template and bring standard to the development process. This involves everything from Software Requirements Analysis (SWE.1) and Architectural Design (SWE.2) to the Detailed Design and Unit Construction (SWE.3). By implementing systematic Software Unit Verification (SWE.4) and Integration Testing (SWE.5), I ensure that every component is not only functionally sound but also fully traceable and compliant with ISO, ASPICE and latest automotive standards. This structured approach has allowed company to catch bugs early in the lifecycle and maintain the high quality expected in automotive systems. As added responsibility I was responsible for coaching my team to meet  demanding delivery milestones."</p>
+                            <p>"In my role as the Lead Embedded Software Engineer for our Motor Control ECU, I focused on delivering high-quality, safety-critical firmware for an Aurix-based electronic control unit. I developed device drivers in embedded C and configured the Microcontroller Abstraction Layer (MCAL). I also configured RTOS services (RTA-OS) and Basic Software (BSW) in AUTOSAR configuration tools. During my time at American Axle &amp; Manufacturing, I was also responsible for integrating specialized third-party libraries like Infineon’s SafeTlib and Cycurlib for security and safety compliance."</p>
+                            <p>To ensure production-grade reliability, I continuously participated in customer and internal audits, identified gaps in the development lifecycle, and defined action items to overcome non-compliance. This involved revisiting ASPICE SWE.1 through SWE.5 and building checks like coding guideline documentation templates to standardize the development process. By implementing systematic Software Unit Verification (SWE.4) and Integration Testing (SWE.5), we caught bugs early and maintained the high quality expected in automotive systems. I was also responsible for coaching my team to meet demanding delivery milestones.</p>
                         </section>                     
-                        
                     </div>
                     <div class="technologies">Architecture and my contribution: <a href="Autosar.html">Link</a></div>
                     <div class="repo-link">
-                        <!-- Wrapper to contain the scaled frame -->
                         <div style="width: 400px; height: 300px; overflow: hidden; border: 1px solid #ccc; border-radius: 8px;">
                             <iframe src="Autosar.html" 
-                            style="
-                            width: 1200px; 
-                            height: 900px; 
-                            border: none;
-                            transform: scale(0.33);
-                            -moz-transform: scale(0.33);
-                            -moz-transform: scale(0.33);
-                            -moz-transform-origin: 0 0;
-                            transform-origin: 0 0;
-                            -o-transform: scale(0.33);
-                            -o-transform-origin: 0 0;
-                            -webkit-transform: scale(0.33);
-                            -webkit-transform-origin: 0 0;
-                        ">
+                                style="
+                                    width: 1200px; 
+                                    height: 900px; 
+                                    border: none;
+                                    transform: scale(0.33);
+                                    transform-origin: 0 0;
+                                    -moz-transform: scale(0.33);
+                                    -moz-transform-origin: 0 0;
+                                    -o-transform: scale(0.33);
+                                    -o-transform-origin: 0 0;
+                                    -webkit-transform: scale(0.33);
+                                    -webkit-transform-origin: 0 0;
+                                ">
                             </iframe>
                         </div>
                     </div>
@@ -222,15 +268,15 @@ Use HTML and CSS to style the page.
             <div class="project">
                 <!-- Left Side: Image and Stats -->
                 <div class="left-column">
-                    <img src="AAM.jpg" alt="Project 1">
+                    <img src="AAM.jpg" alt="Electric Drive Unit">
                     
                     <div class="project-stats">
                         <strong>Tools and Technologies used:</strong>
                         <ul>
-                            <li><strong>Embedded C, C++, ETAS Isolar A/B</strong></li>
-                            <li><strong>Matlab/Simulink, Polyspace, Vflash</strong></li>
-                            <li><strong>Vector Cast, ASAP2, CANalyzer, CANape,CANoe</strong></li>
-                            <li><strong>VTest Studio</strong></li>
+                            <li><strong>Embedded C, C++, ETAS ISOLAR-A/B</strong></li>
+                            <li><strong>MATLAB/Simulink, Polyspace, VFlash</strong></li>
+                            <li><strong>VectorCast, ASAP2, CANalyzer, CANape, CANoe</strong></li>
+                            <li><strong>vTESTstudio</strong></li>
                         </ul>
                     </div>
                 </div>
@@ -241,30 +287,27 @@ Use HTML and CSS to style the page.
                     <div class="description">
                         <section>
                             <h3>Description</h3>
-                            <p>"In my role as the Lead Embedded Software Engineer for our Motor Control ECU, I focused on delivering high-quality, safety-critical firmware for Aurix based Electronic control unit. I developed device drivers in  Embedded C and Micrcontroller Abstraction Layer(MCAL) configuration. I also configured RTOS services (RTA-OS) and Basic Software (BSW) in AUTOSAR configuration tool. During my time at American Axle and manufacturing I was also responsible for integrating specialized third-party libraries like Infineon’s SafeTlib and Cycurlib for security and safety compliance."</p>
-                            <p>To ensure production-grade reliability, It was also my responsibility to keep participating in customer and internal audit and noticing gaps in development lifecycle and define action items to overcome Non compliance. This activity involved revisiting ASPICE SWE.1 through SWE.5 and build checks like coding guideline documentation template and bring standard to the development process. This involves everything from Software Requirements Analysis (SWE.1) and Architectural Design (SWE.2) to the Detailed Design and Unit Construction (SWE.3). By implementing systematic Software Unit Verification (SWE.4) and Integration Testing (SWE.5), I ensure that every component is not only functionally sound but also fully traceable and compliant with ISO, ASPICE and latest automotive standards. This structured approach has allowed company to catch bugs early in the lifecycle and maintain the high quality expected in automotive systems. As added responsibility I was responsible for coaching my team to meet  demanding delivery milestones."</p>
+                            <p>"In my role as the Lead Embedded Software Engineer for our Motor Control ECU, I focused on delivering high-quality, safety-critical firmware for an Aurix-based electronic control unit. I developed device drivers in embedded C and configured the Microcontroller Abstraction Layer (MCAL). I also configured RTOS services (RTA-OS) and Basic Software (BSW) in AUTOSAR configuration tools. During my time at American Axle &amp; Manufacturing, I was also responsible for integrating specialized third-party libraries like Infineon’s SafeTlib and Cycurlib for security and safety compliance."</p>
+                            <p>To ensure production-grade reliability, I continuously participated in customer and internal audits, identified gaps in the development lifecycle, and defined action items to overcome non-compliance. This involved revisiting ASPICE SWE.1 through SWE.5 and building checks like coding guideline documentation templates to standardize the development process. By implementing systematic Software Unit Verification (SWE.4) and Integration Testing (SWE.5), we caught bugs early and maintained the high quality expected in automotive systems. I was also responsible for coaching my team to meet demanding delivery milestones.</p>
                         </section>                     
-                        
                     </div>
                     <div class="technologies">Architecture and my contribution: <a href="Autosar.html">Link</a></div>
                     <div class="repo-link">
-                        <!-- Wrapper to contain the scaled frame -->
                         <div style="width: 400px; height: 300px; overflow: hidden; border: 1px solid #ccc; border-radius: 8px;">
                             <iframe src="Autosar.html" 
-                            style="
-                            width: 1200px; 
-                            height: 900px; 
-                            border: none;
-                            transform: scale(0.33);
-                            -moz-transform: scale(0.33);
-                            -moz-transform: scale(0.33);
-                            -moz-transform-origin: 0 0;
-                            transform-origin: 0 0;
-                            -o-transform: scale(0.33);
-                            -o-transform-origin: 0 0;
-                            -webkit-transform: scale(0.33);
-                            -webkit-transform-origin: 0 0;
-                        ">
+                                style="
+                                    width: 1200px; 
+                                    height: 900px; 
+                                    border: none;
+                                    transform: scale(0.33);
+                                    transform-origin: 0 0;
+                                    -moz-transform: scale(0.33);
+                                    -moz-transform-origin: 0 0;
+                                    -o-transform: scale(0.33);
+                                    -o-transform-origin: 0 0;
+                                    -webkit-transform: scale(0.33);
+                                    -webkit-transform-origin: 0 0;
+                                ">
                             </iframe>
                         </div>
                     </div>
@@ -273,15 +316,15 @@ Use HTML and CSS to style the page.
             <div class="project">
                 <!-- Left Side: Image and Stats -->
                 <div class="left-column">
-                    <img src="Skid.png" alt="Project 1">
+                    <img src="Skid.png" alt="Skid-Steer Loader">
                     
                     <div class="project-stats">
                         <strong>Project Highlights:</strong>
                         <ul>
-                            <li><strong>Embedded C, C++, ETAS Isolar A/B</strong></li>
-                            <li><strong>Matlab/Simulink, Polyspace, Vflash</strong></li>
-                            <li><strong>Vector Cast, ASAP2, CANalyzer, CANape,CANoe</strong></li>
-                            <li><strong>VTest Studio</strong></li>
+                            <li><strong>Embedded C, C++, ETAS ISOLAR-A/B</strong></li>
+                            <li><strong>MATLAB/Simulink, Polyspace, VFlash</strong></li>
+                            <li><strong>VectorCast, ASAP2, CANalyzer, CANape, CANoe</strong></li>
+                            <li><strong>vTESTstudio</strong></li>
                         </ul>
                     </div>
                 </div>
@@ -292,12 +335,12 @@ Use HTML and CSS to style the page.
                     <div class="description">
                         <section>
                             <h3>1. Core System Migration &amp; Performance Upgrading</h3>
-                            <p>"During my tenure, we transitioned the Skid Steer’s control logic from legacy 16-bit hardware to a 32-bit Renesas-based ECU. I personally handled the application layer migration, ensuring that the machine’s behavior remained consistent and safe despite the total change in underlying silicon."</p>
+                            <p>"During my tenure, we transitioned the skid steer’s control logic from legacy 16-bit hardware to a 32-bit Renesas-based ECU. I personally handled the application layer migration, ensuring that the machine’s behavior remained consistent and safe despite the total change in underlying silicon."</p>
                         </section>
                         
                         <section>
                             <h3>2. Communication &amp; Data Integrity (CAN/SPI/I2C)</h3>
-                            <p>I developed the low-level drivers that allowed the main processor to talk to external CAN controllers and memory modules via SPI and I2C. This ensured that the loader could handle high-bus-load telematics data and critical sensor feedback without latency, which is vital for real-time machine stability."</p>
+                            <p>"I developed the low-level drivers that allowed the main processor to talk to external CAN controllers and memory modules via SPI and I2C. This ensured that the loader could handle high-bus-load telematics data and critical sensor feedback without latency, which is vital for real-time machine stability."</p>
                         </section>
                         
                         <section>
@@ -328,14 +371,14 @@ Use HTML and CSS to style the page.
             <div class="project">
                 <!-- Left Side -->
                 <div class="left-column">
-                    <img src="PRC.png" alt="Project 2">
+                    <img src="PRC.png" alt="Ramp Soak Temperature Controller">
                     
                     <div class="project-stats">
                         <strong>Project Highlights:</strong>
                         <ul>
                             <li><strong>STM32CubeMX, STM32CubeIDE</strong></li>
-                            <li><strong>STLink JTAG</strong></li>
-                            <li><strong>Putty</strong></li>
+                            <li><strong>ST-LINK JTAG</strong></li>
+                            <li><strong>PuTTY</strong></li>
                             <li><strong>Embedded C/C++</strong></li>
                         </ul>
                     </div>
@@ -343,22 +386,22 @@ Use HTML and CSS to style the page.
             
                 <!-- Right Side -->
                 <div class="project-info">
-                    <div class="project-name">STM32 Based Ramp Soak temperature controller</div>
+                    <div class="project-name">STM32-Based Ramp Soak Temperature Controller</div>
                     <div class="description">
                         <section>
-                            <h3>1. Architecture &amp; Concurrency</h2>
+                            <h3>1. Architecture &amp; Concurrency</h3>
                             <p>"The core of the system is an STM32 microcontroller where I managed six independent control loops. I designed the firmware to handle simultaneous PID and On/Off control for six zones. This required efficient task scheduling to ensure that sensor sampling, PID calculations, and SSR pulse-width modulation occurred with precise timing without jitter."</p>                        
                             <p>"I implemented the driver logic for six K-type thermocouple inputs. This involved handling analog-to-digital conversion, cold-junction compensation, and digital filtering to ensure stable readings in noisy industrial environments. I also integrated a dedicated safety routine that monitors for thermocouple faults and triggers a global hardware interrupt/fault relay."</p>
                         </section>
                         
                         <section>
-                            <h3>3. Control Logic &amp; Profile Programming</h2>
-                            <p>"One of the key challenges was the Ramp/Soak profile engine. I developed a state machine that allows for 1 to 4 programmable steps per zone. I also implemented a 'Servo Start' feature, which synchronizes the profile start with the current process temperature, and a Deviation Hold logic to ensure all zones stay within a specific thermal window during critical heating cycles."</p>
+                            <h3>3. Control Logic &amp; Profile Programming</h3>
+                            <p>"One of the key challenges was the Ramp/Soak profile engine. I developed a state machine that allows for 1 to 4 programmable steps per zone. I also implemented a 'Servo Start' feature, which synchronizes the profile start with the current process temperature, and a deviation hold logic to ensure all zones stay within a specific thermal window during critical heating cycles."</p>
                         </section>
                         
                         <section>
-                            <h3>4. Peripherals &amp; Communication</h2>
-                            <p>"For the HMI, I integrated a Graphical LCD and a matrix keyboard, allowing users to switch between Auto/Manual modes and visualize real-time curves. On the connectivity side, I implemented RS-485 serial communication using a custom protocol for PC-based data logging and a Master/Slave architecture that allows for cascading up to 60 control zones across 10 devices."</p>
+                            <h3>4. Peripherals &amp; Communication</h3>
+                            <p>"For the HMI, I integrated a graphical LCD and a matrix keyboard, allowing users to switch between Auto/Manual modes and visualize real-time curves. On the connectivity side, I implemented RS-485 serial communication using a custom protocol for PC-based data logging and a Master/Slave architecture that allows for cascading up to 60 control zones across 10 devices."</p>
                         </section>
                     </div>
                     <div class="technologies">Product Page: <a href="https://libratherm.com/product/6-zone-ramp-soak-pwht-temperature-controller-prc-6000/">Link</a></div>
@@ -368,14 +411,14 @@ Use HTML and CSS to style the page.
             <div class="project">
                 <!-- Left Side -->
                 <div class="left-column">
-                    <img src="PRC-309-side.png" alt="Project 3">
+                    <img src="PRC-309-side.png" alt="Silabs Temperature Controller">
                     
                     <div class="project-stats">
                         <strong>Project Highlights:</strong>
                         <ul>
                             <li><strong>Simplicity Studio</strong></li>
                             <li><strong>JTAG Debugger</strong></li>
-                            <li><strong>Putty, Altium designer</strong></li>
+                            <li><strong>PuTTY, Altium Designer</strong></li>
                             <li><strong>Embedded C/C++</strong></li>
                         </ul>
                     </div>
@@ -384,25 +427,25 @@ Use HTML and CSS to style the page.
             
                 <!-- Right Side -->
                 <div class="project-info">
-                    <div class="project-name">Silabs MicroController Based Temprature controller</div>
+                    <div class="project-name">Silabs Microcontroller-Based Temperature Controller</div>
                     <div class="description">
                         <section>
-                            <h3>1. System Architecture & Memory Management</h3>
+                            <h3>1. System Architecture &amp; Memory Management</h3>
                             <p>"I designed the firmware architecture around a robust state machine capable of managing complex thermal profiles. Given the constraints of an 8-bit environment, I prioritized efficient memory mapping to handle up to 10 distinct patterns of 16 ramp/soak steps each. A critical component of this architecture was the integration of non-volatile flash memory routines, ensuring that all programmed parameters and process states are preserved and can auto-resume following a power disruption."</p>
                         </section>
                         
                         <section>
-                            <h3>2. Sensor Interfacing & Signal Conditioning</h3>
+                            <h3>2. Sensor Interfacing &amp; Signal Conditioning</h3>
                             <p>"To ensure the controller's versatility, I developed an adaptable analog front-end driver that supports a wide range of inputs, including K, R, S, and B-type thermocouples and RTDs. This involved implementing precise linearization algorithms and cold-junction compensation to maintain high accuracy. I also focused on signal integrity, utilizing digital filtering techniques to provide stable temperature readings even in the electrically noisy environments typical of industrial furnaces."</p>
                         </section>
                         
                         <section>
-                            <h3>3. Control Logic & Profile Execution</h3>
-                            <p>"The core control logic features a sophisticated PID engine that supports both switching and linear outputs. I implemented a 'Servo Start' function to synchronize the profile execution with the actual process temperature at startup, preventing thermal shock. Whether the system is driving an SSR via pulse-width modulation or a modulating motor valve via 4-20mA analog control, the logic is tuned to maintain tight tolerances during critical ramp and soak transitions."</p>
+                            <h3>3. Control Logic &amp; Profile Execution</h3>
+                            <p>"The core control logic features a sophisticated PID engine that supports both switching and linear outputs. I implemented a 'Servo Start' function to synchronize the profile execution with the actual process temperature at startup, preventing thermal shock. Whether the system is driving an SSR via pulse-width modulation or a modulating motor valve via 4–20 mA analog control, the logic is tuned to maintain tight tolerances during critical ramp and soak transitions."</p>
                         </section>
                         
                         <section>
-                            <h3>4. Peripherals & Serial Communication</h3>
+                            <h3>4. Peripherals &amp; Serial Communication</h3>
                             <p>"For the user interface, I managed a multi-display driver and a membrane keyboard interrupt routine to allow for simultaneous monitoring of process and set values. On the connectivity side, I implemented an RS-485 serial communication port to facilitate remote monitoring. This allows the device to interface with Windows-based software for real-time data logging and graphical analysis, providing a comprehensive view of the heating system's performance."</p>
                         </section>
                     </div>
@@ -413,14 +456,14 @@ Use HTML and CSS to style the page.
             <div class="project">
                 <!-- Left Side -->
                 <div class="left-column">
-                    <img src="GlassHeater.png" alt="Project 1">
+                    <img src="GlassHeater.png" alt="Precision Thermal Conditioning System">
                     
                     <div class="project-stats">
                         <strong>Project Highlights:</strong>
                         <ul>
                             <li><strong>Keil uVision</strong></li>
                             <li><strong>JTAG Debugger</strong></li>
-                            <li><strong>Putty, Altium designer</strong></li>
+                            <li><strong>PuTTY, Altium Designer</strong></li>
                             <li><strong>Embedded C/C++</strong></li>
                         </ul>
                     </div>
@@ -433,7 +476,7 @@ Use HTML and CSS to style the page.
                     <div class="description">
                         <section>
                             <h3>1. Architecture &amp; Concurrency</h3>
-                            <p>"The firmware is built on an C8051F35x microcontroller using a real-time bare-metal scheduler to manage the simultaneous rotation and vertical linear motion. I utilized hardware timers to drive the ball screw stepper motor while running a background countdown timer for the heating process. This concurrent architecture ensures that the burner maintains a steady reciprocating motion without interrupting the user interface or safety monitoring."</p>
+                            <p>"The firmware is built on a C8051F35x microcontroller using a real-time bare-metal scheduler to manage the simultaneous rotation and vertical linear motion. I utilized hardware timers to drive the ball screw stepper motor while running a background countdown timer for the heating process. This concurrent architecture ensures that the burner maintains a steady reciprocating motion without interrupting the user interface or safety monitoring."</p>
                         </section>
                         
                         <section>
@@ -448,7 +491,7 @@ Use HTML and CSS to style the page.
                         
                         <section>
                             <h3>4. Peripherals &amp; Communication</h3>
-                            <p>"I integrated a 4x4 membrane keypad for user input and a character LCD to display real-time process status and remaining cycle time. The system uses an EEPROM peripheral to store the last-used heating parameters, allowing for quick setup after power cycles. For diagnostics, I implemented a UART serial interface that outputs cycle counts and sensor status to a PC for maintenance logging."</p>
+                            <p>"I integrated a 4×4 membrane keypad for user input and a character LCD to display real-time process status and remaining cycle time. The system uses an EEPROM peripheral to store the last-used heating parameters, allowing for quick setup after power cycles. For diagnostics, I implemented a UART serial interface that outputs cycle counts and sensor status to a PC for maintenance logging."</p>
                         </section>
                     </div>
                     <div class="technologies">Technologies: C, STM32, PID Control, RS-485</div>
@@ -458,13 +501,13 @@ Use HTML and CSS to style the page.
             <div class="project">
                 <!-- Left Side -->
                 <div class="left-column">
-                    <img src="Helium.png" alt="Project 1">
+                    <img src="Helium.png" alt="Helium Leak Detector Machine">
                     
                     <div class="project-stats">
                         <strong>Tools and technologies used:</strong>
                         <ul>
                             <li><strong><a href="https://www.delta-emea.com/en-gb/products/PLC-Programmable-Logic-Controllers/ispsoft-programming-software">ISPSoft Programming Software</a></strong></li>
-                            <li><strong>Structure text, Instruction List</strong></li>
+                            <li><strong>Structured Text, Instruction List</strong></li>
                             <li><strong>C#, MySQL</strong></li>
                             <li><strong>Power Electronics</strong></li>
                         </ul>
@@ -472,12 +515,13 @@ Use HTML and CSS to style the page.
                 </div>  
                 <!-- Right Side -->
                 <div class="project-info">
-                    <div class="project-name">Helium Leak detector machine</div>
+                    <div class="project-name">Helium Leak Detector Machine</div>
                     <div class="description">
                         <section>
                             <h3>System Description</h3>
-                            <p>"Helium leak test systems was designed for high-precision integrity verification of jobs used in HIGH voltage application, using helium's small molecular size and inert properties as a tracer gas. The systems operate by subjecting parts to pressures up to 300 bar and can detect leak rates as low as 10⁻⁸ mbar l/sec. These can be integrated into production lines with automated material movement, performing continuous self-monitoring, automatic calibration, and may include an integrated helium recovery station. Operations are managed via a SCADA interface for control and remote maintenance.This product contains 3 main module. One moduler helium dector a control PLC(SPS) and a Windows based Software developed in C#. PC was connected to PLC using a Modbus RTU comminication on the PLC side and a RS-485 to USB converter on the PC side. The PLC was also in turn connected to the PLC over Profinet bus. My role was to develop the control software for the machine on the PLC.
-                                The software on the PLC side was developed in structure text and Instruction list. I also supported PC software developer in understand ModBus RTU Protocol and data retrieval and control logic."</p>
+                            <p>"Helium leak test systems were designed for high-precision integrity verification of jobs used in high-voltage applications, using helium's small molecular size and inert properties as a tracer gas. The systems operate by subjecting parts to pressures up to 300 bar and can detect leak rates as low as 10⁻⁸ mbar·l/s. These can be integrated into production lines with automated material movement, performing continuous self-monitoring, automatic calibration, and may include an integrated helium recovery station. Operations are managed via a SCADA interface for control and remote maintenance.</p>
+                            <p>This product contains three main modules: one modular helium detector, a control PLC (SPS), and a Windows-based software developed in C#. The PC was connected to the PLC using a Modbus RTU communication on the PLC side and an RS-485-to-USB converter on the PC side. The PLC was also connected to the detector over a PROFINET bus. My role was to develop the control software for the machine on the PLC.</p>
+                            <p>The software on the PLC side was developed in Structured Text and Instruction List. I also supported the PC software developer in understanding the Modbus RTU protocol and implementing data retrieval and control logic."</p>
                         </section>
                     </div>
                     <div class="technologies">Customer/Client/Employer website: <a href="https://www.tekman.co.in/">Link</a></div>
@@ -486,14 +530,18 @@ Use HTML and CSS to style the page.
             </div> 
             
             <div class="project">
-                <img src="project3_image.jpg" alt="Project 3">
-                <div class="project-name">Project Three</div>
-                <div class="description">A brief description of Project Three.</div>
-                <div class="technologies">Technologies: Java, Spring Boot</div>
-                <div class="repo-link"><a href="StatsTable.html">View Repository</a></div>
+                <div class="left-column">
+                    <img src="project3_image.jpg" alt="Project Three">
+                </div>
+                <div class="project-info">
+                    <div class="project-name">Project Three</div>
+                    <div class="description">A brief description of Project Three.</div>
+                    <div class="technologies">Technologies: Java, Spring Boot</div>
+                    <div class="repo-link"><a href="StatsTable.html">View Repository</a></div>
+                </div>
             </div>
             <!-- Add more projects as needed -->
         </div>
     </div>
 </body>
-</html> 
+</html>

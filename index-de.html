@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <title>Chaitanya Priya | Senior Technical Lead</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com" rel="stylesheet">
+
+    <style>
+        :root {
+            --primary: #0f172a;
+            --secondary: #2563eb;
+            --text: #1f2933;
+            --muted: #6b7280;
+            --bg: #ffffff;
+            --card: #f9fafb;
+            --border: #e5e7eb;
+        }
+
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+
+        html, body {
+            background-color: #ffffff;
+            font-family: 'Inter', sans-serif;
+            color: var(--text);
+            scroll-behavior: smooth;
+        }
+
+        a { color: var(--secondary); text-decoration: none; }
+
+        .container {
+            max-width: 1100px;
+            margin: auto;
+            padding: 40px 24px; /* was 60px 24px */
+        }
+
+        .lang-switcher {
+            display: flex;
+            justify-content: center;
+            gap: 8px;
+            margin-top: 12px;
+        }
+
+        .lang-btn {
+            padding: 6px 12px;
+            border-radius: 999px;
+            border: 1px solid var(--border);
+            font-size: 13px;
+            background: #ffffff;
+            color: #2563eb;
+            cursor: pointer;
+            text-decoration: none;
+        }
+
+        .lang-btn.active {
+            background: #2563eb;
+            color: #ffffff;
+        }
+
+        header {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 24px;
+            margin-bottom: 60px;
+        }
+
+        header h1 {
+            font-size: 40px;
+            font-weight: 700;
+            color: var(--primary);
+        }
+
+        header h2 {
+            font-size: 20px;
+            font-weight: 500;
+            color: var(--secondary);
+        }
+
+        .contact {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            font-size: 14px;
+            color: var(--muted);
+        }
+
+        section { margin-bottom: 64px; }
+
+        section h3 {
+            font-size: 22px;
+            font-weight: 600;
+            margin-bottom: 24px;
+            border-bottom: 2px solid var(--border);
+            padding-bottom: 8px;
+            color: var(--primary);
+        }
+
+        .actions {
+            display: flex;
+            gap: 16px;
+            flex-wrap: wrap;
+            margin: 40px 0 60px 0;
+        }
+
+        .action-btn {
+            padding: 12px 22px;
+            border-radius: 10px;
+            font-size: 14px;
+            font-weight: 600;
+            border: 1px solid var(--border);
+            background: var(--secondary);
+            color: #ffffff;
+            transition: all 0.2s ease;
+        }
+
+        .action-btn.secondary {
+            background: #ffffff;
+            color: var(--secondary);
+        }
+
+        .action-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+        }
+
+        .card {
+            background: var(--card);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 24px;
+            margin-bottom: 24px;
+        }
+
+        .card h4 { font-size: 18px; font-weight: 600; margin-bottom: 6px; }
+
+        .meta {
+            font-size: 14px;
+            color: var(--muted);
+            margin-bottom: 12px;
+        }
+
+        ul { padding-left: 18px; }
+        li { margin-bottom: 8px; font-size: 15px; }
+
+        .cert-item {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 12px 0;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .cert-item:last-child { border-bottom: none; }
+
+        .cert-left {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            flex: 1;
+        }
+
+        .cert-logo {
+            width: 40px;
+            height: 40px;
+            object-fit: contain;
+            border-radius: 4px;
+        }
+
+        .cert-name { font-weight: 500; }
+
+        .cert-grade {
+            font-weight: 600;
+            color: var(--primary);
+            margin-left: 20px;
+            white-space: nowrap;
+        }
+
+        .profile-header {
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            gap: 32px;
+            flex-wrap: nowrap;
+        }
+
+        .profile-image {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 3px solid var(--border);
+            flex-shrink: 0;
+        }
+
+        .about-text {
+            margin-top: 16px;
+            line-height: 1.6;
+            color: var(--text);
+            font-size: 15px;
+            max-width: 800px;
+            text-align: justify;
+        }
+
+        @media (max-width: 600px) {
+            .profile-header {
+                flex-direction: column;
+                text-align: center;
+            }
+        }
+
+        .skills {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .skill {
+            background: #eef2ff;
+            color: #1e3a8a;
+            padding: 6px 12px;
+            border-radius: 999px;
+            font-size: 13px;
+            font-weight: 500;
+        }
+
+        footer {
+            text-align: center;
+            font-size: 14px;
+            color: var(--muted);
+            padding-bottom: 40px;
+            margin-top: 40px;
+        }
+
+        @media (max-width: 768px) {
+            header h1 { font-size: 32px; }
+        }
+
+        @media print {
+            .lang-switcher,
+            .actions,
+            .about-text {
+                display: none !important;
+            }
+
+            body {
+                background: #ffffff;
+                -webkit-print-color-adjust: exact;
+                print-color-adjust: exact;
+            }
+        }
+    </style>
+</head>
+
+<body>
+<div class="container">
+
+    <!-- HEADER -->
+    <header>
+        <div class="profile-header">
+            <div style="display:flex;flex-direction:column;align-items:center;">
+                <img src="priya.png" alt="Chaitanya Priya" class="profile-image">
+
+                <!-- SPRACHAUSWAHL (moved here) -->
+                <div class="lang-switcher">
+                    <a href="index.html" class="lang-btn">English</a>
+                    <a href="index-de.html" class="lang-btn active">Deutsch</a>
+                </div>
+            </div>
+
+            <div>
+                <h1>Chaitanya Priya</h1>
+                <h2>Senior Technical Lead | Automotive Embedded Systems</h2>
+
+                <div class="contact">
+                    <span>📍 Stuttgart, Deutschland</span>
+                    <span>📞 +49 172 2950530</span>
+                    <span>✉️ <a href="mailto:priya.chaitanya.87@gmail.com">priya.chaitanya.87@gmail.com</a></span>
+                </div>
+
+                <div class="about-text">
+                    <p>Ich bin Embedded-Software-Spezialistin mit rund zehn Jahren Erfahrung und einem Schwerpunkt auf Fahrzeugsicherheit und -sicherheit. Ich bin zertifiziert in Automotive Cybersecurity (ISO 21434) und Functional Safety (ISO 26262) und kenne daher die Normen, die moderne Fahrzeuge zuverlässig machen, sehr genau.</p>
+                    <p>Den Großteil meiner Karriere habe ich „unter der Haube“ der Software verbracht. Ich habe Projekte geleitet, die von Bare-Metal-Programmierung bis hin zu komplexen AUTOSAR-Stacks und modellbasierter Entwicklung reichen. Ob Debugging von Low-Level-Treibern oder Optimierung von Softwareprozessen zur Erfüllung von ASPICE-Anforderungen – ich fühle mich in der Detailarbeit von Mikrocontroller-Umgebungen zu Hause.</p>
+                    <p>Ich hatte die Möglichkeit, starke Teams zu führen, unter anderem bei American Axle mit Fokus auf AUTOSAR-Implementierung sowie bei HCL Technologies, wo ich Funktionen für schwere Off-Highway-Fahrzeuge verantwortet habe. Frühere Stationen wie Libratherm haben meine Fähigkeiten in Firmware-Entwicklung und Systemdesign geschärft.</p>
+                    <p>Im Grunde bin ich eine Mischung aus technischer Führungskraft und Safety-Engineer, die Freude daran hat, die komplexen Herausforderungen der nächsten Fahrzeuggeneration zu lösen.</p>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- AKTIONS-BUTTONS -->
+    <div class="actions">
+        <a href="Projects-de.html" class="action-btn secondary">🚀 Projekte ansehen</a>
+        <a href="https://www.linkedin.com" target="_blank" class="action-btn secondary">🔗 LinkedIn-Profil</a>
+        <a href="Certificate-de.html" class="action-btn secondary">📜 Zertifikate ansehen</a>
+        <a href="Chaitanya.pdf" class="action-btn">📜 Lebenslauf herunterladen</a>
+    </div>
+
+    <!-- BERUFSERFAHRUNG -->
+    <section>
+        <h3>Berufserfahrung</h3>
+
+        <!-- Mercedes-Benz -->
+        <div class="card">
+            <h4>Senior Technical Lead</h4>
+            <div class="meta">Mercedes-Benz (Soorce Professional GmbH) | Okt 2024 – Heute</div>
+            <ul>
+                <li>Entwicklung und Pflege des Power State Managers (PSM) für Aurix-TCx-basierte Boards und Multi-OS-SoCs.</li>
+                <li>Entwurf mehrstufiger Hardware-Initialisierung für die Übergabe der Kontrolle zwischen Aurix, QNX und Linux.</li>
+                <li>Architektur einer automatisierten Jira-Triage-Pipeline auf Basis von RAG zur Klassifizierung und Weiterleitung von Tickets außerhalb des Projektumfangs.</li>
+                <li>Implementierung einer KI-gestützten Root-Cause-Analyse zur Identifikation von Softwarefehlern und Generierung gezielter Codevorschläge.</li>
+                <li>Zusammenarbeit mit dem Architekturteam zur Optimierung des „OnOff“-Systems für sicherheitskritische Power-States.</li>
+                <li>Eigenverantwortliche Lösung komplexer Hardware-Software-Schnittstellenfehler über den gesamten Bug-Lifecycle.</li>
+            </ul>
+        </div>
+
+        <!-- Vector Informatik -->
+        <div class="card">
+            <h4>Senior Technical Lead</h4>
+            <div class="meta">Vector Informatik GmbH (MSK Engineering and IT Services GmbH) | Jul 2023 – Sep 2024</div>
+            <ul>
+                <li>Leitung der Anforderungserhebung und Erstellung detaillierter Design-Dokumentation für EV-Ladeabläufe.</li>
+                <li>Entwicklung komplexer Gerätetreiber und Design robuster Low-Level-Softwarearchitekturen.</li>
+                <li>Konzeption von Softwarelösungen und Integration von Drittanbieterbibliotheken in bestehende Architekturen.</li>
+                <li>Konfiguration und Pflege von AUTOSAR-Base-Software zur Sicherstellung optimaler Systemleistung.</li>
+                <li>Koordination mit globalen Kunden und Lieferanten zur Integration externer Bibliotheken.</li>
+                <li>Erstellung strenger Test- und Sicherheitspläne zur Einhaltung der ISO-26262-Anforderungen.</li>
+                <li>Durchführung von Unit-Tests, statischer Codeanalyse, SIL- und Integrationstests als Feature Owner.</li>
+                <li>Vertretung des Teams in ASPICE-Qualitäts- und ISO-21434-Cybersecurity-Audits.</li>
+            </ul>
+        </div>
+
+        <!-- American Axle -->
+        <div class="card">
+            <h4>Lead Embedded Software Engineer</h4>
+            <div class="meta">American Axle &amp; Manufacturing | Okt 2019 – Jul 2023</div>
+            <ul>
+                <li>Entwicklung von Gerätetreibern in Embedded C für Motorsteuer-ECUs mit Integration in RTA-OS.</li>
+                <li>Erstellung robuster Testpläne und Durchführung von SIL/HIL-Tests zur Reduktion von Produktionsfehlern.</li>
+                <li>Entwicklung von Embedded C/C++ Software für Fahrzeugdiagnose nach ISO 14229.</li>
+                <li>Integration von Drittanbieterbibliotheken wie Infineon SafeTlib und Cycurlib.</li>
+                <li>Konfiguration der AUTOSAR-Basissoftware (BSW) und der Microcontroller Abstraction Layer (MCAL).</li>
+                <li>Durchführung von Unit-Tests, statischer Codeanalyse sowie SIL- und Integrationstests als Feature Owner.</li>
+                <li>Board-Bring-up, Treiberentwicklung und BSP-Konfiguration für POCs und neue Plattformen.</li>
+                <li>Coaching von Teammitgliedern bei technischen Blockern zur Sicherstellung von Liefermeilensteinen.</li>
+            </ul>
+        </div>
+
+        <!-- John Deere / HCL -->
+        <div class="card">
+            <h4>Lead Engineer</h4>
+            <div class="meta">John Deere (HCL Technologies) | Sep 2017 – Okt 2019</div>
+            <ul>
+                <li>Entwicklung von Gerätetreibern für SPI- und I2C-basierte CAN- und externe Speichermodule.</li>
+                <li>Migration von Applikationsfunktionen von 16-Bit-Mikrocontrollern auf die 32-Bit-Renesas-Plattform.</li>
+                <li>Tests von Funktionen mittels Model-in-the-Loop (MIL) und Software-in-the-Loop (SIL).</li>
+                <li>Generierung und Integration von C/C++-Code aus modellbasierter Entwicklung mit Embedded Coder.</li>
+                <li>Pflege und Weiterentwicklung von CI/CD-Pipelines zur Sicherstellung reibungsloser Fahrzeug-Deployments.</li>
+                <li>Integration, Build und Debugging von Code für JDOS (John Deere RTOS) basierte Fahrzeugprojekte.</li>
+                <li>Fehleranalyse und -behebung mittels 8D, FMEA und DFMEA.</li>
+                <li>Review von Spezifikationen, Code und Qualitätsberichten mit Empfehlungen zur Verbesserung.</li>
+                <li>Bewertung der technischen Machbarkeit und des wirtschaftlichen Impacts von Change Requests mit Offshore-Management.</li>
+            </ul>
+        </div>
+
+        <!-- Libratherm -->
+        <div class="card">
+            <h4>Embedded Systems Software Developer</h4>
+            <div class="meta">Libratherm Instruments Pvt. Ltd. | Feb 2015 – Sep 2017</div>
+            <ul>
+                <li>Entwicklung und Wartung von Firmware für medizinische Geräte unter Einhaltung von FDA-Vorgaben.</li>
+                <li>Programmierung von Anwendungen und Modulen für STM32-Mikrocontroller in C/C++.</li>
+                <li>Integration von Kommunikationstechnologien und IoT-Protokollen, darunter MQTT und ModBus RTU/ASCII.</li>
+                <li>Erstellung umfassender Dokumentation für Produktzulassung und Zertifizierungsprozesse.</li>
+                <li>Verantwortung für den gesamten Produktlebenszyklus von der Konzeption bis zur Serienfertigung und Aftersales.</li>
+                <li>Durchführung gründlicher Unit-Tests zur Sicherstellung von Firmware-Zuverlässigkeit und Systemperformance.</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- TECHNISCHE FÄHIGKEITEN -->
+    <section>
+        <h3>Technische Fähigkeiten</h3>
+        <div class="skills">
+            <span class="skill">Embedded C/C++</span>
+            <span class="skill">Protokolle: CAN, CAN FD, UDS, I2C, UART, SPI</span>
+            <span class="skill">FreeRTOS</span>
+            <span class="skill">MISRA</span>
+            <span class="skill">OpenOCD</span>
+            <span class="skill">JTAG-Debugging</span>
+            <span class="skill">Mikrocontroller 16/32 Bit</span>
+            <span class="skill">IBM RTC</span>
+            <span class="skill">Polyspace BF &amp; CP</span>
+            <span class="skill">KiCAD, Altium CAD</span>
+            <span class="skill">Lauterbach TRACE32</span>
+            <span class="skill">Git (GitHub)</span>
+            <span class="skill">IBM DOORS NG</span>
+            <span class="skill">Normen: ISO 21434, ISO 26262</span>
+            <span class="skill">Vector-Tools (CANoe, DaVinci Configurator)</span>
+            <span class="skill">ETAS RTA BSW</span>
+            <span class="skill">ETAS RTA OS</span>
+            <span class="skill">MATLAB &amp; Simulink</span>
+            <span class="skill">VectorCast (Unit Tests)</span>
+            <span class="skill">SAE J1939</span>
+            <span class="skill">Python</span>
+            <span class="skill">ISO 14229 (UDS)</span>
+            <span class="skill">vTESTstudio</span>
+            <span class="skill">Jira, Confluence</span>
+            <span class="skill">AUTOSAR</span>
+        </div>
+    </section>
+
+    <!-- AUSBILDUNG & ZERTIFIZIERUNGEN -->
+    <section>
+        <h3>Ausbildung &amp; Zertifizierungen</h3>
+        <div class="card">
+            <div class="cert-item">
+                <div class="cert-left">
+                    <img src="iit-logo.png" alt="IIT" class="cert-logo">
+                    <span class="cert-name">Zertifikat in ML und Generativer KI für Professionals (Indian Institute of Technology)</span>
+                </div>
+                <div class="cert-grade">Zertifiziert</div>
+            </div>
+
+            <div class="cert-item">
+                <div class="cert-left">
+                    <img src="tuv-logo.png" alt="TÜV SÜD" class="cert-logo">
+                    <span class="cert-name">ISO 21434:2021 – Automotive Cybersecurity Practitioner (TÜV SÜD)</span>
+                </div>
+                <div class="cert-grade">Zertifiziert</div>
+            </div>
+
+            <div class="cert-item">
+                <div class="cert-left">
+                    <img src="omnex-logo.png" alt="Omnex" class="cert-logo">
+                    <span class="cert-name">ISO 26262:2018 – Functional Safety Level 1 (Omnex)</span>
+                </div>
+                <div class="cert-grade">Zertifiziert</div>
+            </div>
+
+            <div class="cert-item">
+                <div class="cert-left">
+                    <img src="magadh.png" alt="Magadh" class="cert-logo">
+                    <span class="cert-name">B.Sc. Engineering (Magadh University)</span>
+                </div>
+                <div class="cert-grade">Mit Auszeichnung</div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        &copy; 2024 Chaitanya Priya. Alle Rechte vorbehalten.
+    </footer>
+
+</div>
+</body>
+</html>
