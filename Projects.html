@@ -13,119 +13,198 @@ Use HTML and CSS to style the page.
     <title>My Projects</title>
     <style>
         :root {
-            --border: #ccc;
+            --bg: #0b1120;
+            --bg-elevated: #020617;
+            --card: #020617;
+            --accent: #38bdf8;
+            --accent-soft: rgba(56, 189, 248, 0.15);
+            --accent-strong: #0ea5e9;
+            --text: #e5e7eb;
+            --text-muted: #9ca3af;
+            --border: rgba(148, 163, 184, 0.35);
+            --heading: #f9fafb;
+            --shadow-soft: 0 18px 45px rgba(15, 23, 42, 0.8);
         }
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f4f4f4;
+
+        * {
+            box-sizing: border-box;
             margin: 0;
-            padding: 20px;
+            padding: 0;
         }
+
+        html, body {
+            background: radial-gradient(circle at top, #0f172a 0, #020617 55%, #000000 100%);
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, "Inter", sans-serif;
+            color: var(--text);
+            scroll-behavior: smooth;
+        }
+
+        a {
+            color: var(--accent-strong);
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
         .container {
-            max-width: 1200px;
+            max-width: 1100px;
             margin: 0 auto;
-            padding: 20px;
-            background-color: #fff;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            padding: 40px 24px;
         }
+
         /* language switcher */
         .lang-switcher {
             display: flex;
             justify-content: flex-end;
-            gap: 8px;
-            margin-bottom: 16px;
+            gap: 10px;
+            margin-bottom: 20px;
         }
+
         .lang-btn {
-            padding: 6px 12px;
+            padding: 6px 14px;
             border-radius: 999px;
-            border: 1px solid var(--border);
+            border: 1px solid rgba(148, 163, 184, 0.6);
             font-size: 13px;
-            background: #ffffff;
-            color: #2563eb;
+            background: rgba(15, 23, 42, 0.9);
+            color: var(--accent-strong);
             cursor: pointer;
             text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            backdrop-filter: blur(10px);
         }
+
         .lang-btn.active {
-            background: #2563eb;
-            color: #ffffff;
+            background: linear-gradient(135deg, var(--accent), var(--accent-strong));
+            color: #0b1120;
+            border-color: transparent;
+            box-shadow: 0 10px 28px rgba(8, 47, 73, 0.9);
         }
 
         h1 {
             text-align: center;
-            color: #333;
-        }
-        .projects {
-            display: flex;
-            flex-direction: column; /* Stacks the horizontal tiles vertically */
-            gap: 30px;
-        }
-        .project {
-            display: flex; /* Aligns image and text side-by-side */
-            background-color: #e0e0e0;
-            border-radius: 8px;
-            padding: 20px;
-            box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
-            gap: 25px; /* Space between image and description */
-            align-items: flex-start;
+            color: var(--heading);
+            margin-bottom: 32px;
+            font-size: 2rem;
+            letter-spacing: 0.04em;
         }
 
-        /* Grouping Image and Stats */
-        .left-column {
-            flex: 0 0 300px; /* Fixed width for the left side */
+        .projects {
             display: flex;
             flex-direction: column;
-            gap: 15px;
+            gap: 26px;
         }
+
+        .project {
+            display: flex;
+            gap: 24px;
+            padding: 20px 22px;
+            border-radius: 18px;
+            background: radial-gradient(circle at top, rgba(15, 118, 110, 0.25), var(--card));
+            border: 1px solid rgba(148, 163, 184, 0.45);
+            box-shadow: 0 20px 60px rgba(15, 23, 42, 0.9);
+            backdrop-filter: blur(16px);
+        }
+
+        .left-column {
+            flex: 0 0 280px;
+            display: flex;
+            flex-direction: column;
+            gap: 14px;
+        }
+
         .project img {
             width: 100%;
             height: auto;
-            border-radius: 4px;
+            border-radius: 14px;
             object-fit: cover;
+            border: 1px solid rgba(148, 163, 184, 0.6);
+            box-shadow: 0 16px 40px rgba(15, 23, 42, 0.9);
         }
-        /* Stats List Styling */
+
         .project-stats {
-            background: rgba(255, 255, 255, 0.5);
-            padding: 15px;
-            border-radius: 6px;
-            font-size: 13px;
-            color: #333;
+            background: rgba(15, 23, 42, 0.9);
+            padding: 14px;
+            border-radius: 12px;
+            font-size: 0.85rem;
+            color: var(--text-muted);
+            border: 1px solid rgba(148, 163, 184, 0.5);
         }
+
+        .project-stats strong {
+            color: var(--heading);
+        }
+
         .project-stats ul {
-            margin: 0;
-            padding-left: 20px;
+            margin-top: 6px;
+            padding-left: 18px;
         }
+
         .project-stats li {
-            margin-bottom: 5px;
+            margin-bottom: 4px;
         }
+
         .project-info {
-            flex: 1; /* Description takes up remaining space */
+            flex: 1;
         }
+
         .project-name {
-            font-size: 22px;
-            font-weight: bold;
+            font-size: 1.25rem;
+            font-weight: 600;
             margin-top: 0;
-            color: #333;
+            color: var(--heading);
+            margin-bottom: 8px;
         }
+
         .description {
-            font-size: 14px;
-            color: #444;
-            margin: 10px 0;
+            font-size: 0.93rem;
+            color: var(--text-muted);
+            margin: 10px 0 8px 0;
             text-align: justify;
+            line-height: 1.6;
         }
+
+        .description section + section {
+            margin-top: 10px;
+        }
+
+        .description h3 {
+            font-size: 0.98rem;
+            font-weight: 600;
+            margin-bottom: 4px;
+            color: var(--heading);
+        }
+
         .technologies {
-            font-weight: bold;
-            font-size: 14px;
-            color: #555;
-            margin: 15px 0 5px 0;
+            font-weight: 500;
+            font-size: 0.9rem;
+            color: var(--text);
+            margin: 12px 0 4px 0;
         }
+
         .repo-link {
-            font-size: 14px;
-            color: #1a73e8;
-            margin-top: 8px;
+            font-size: 0.88rem;
+            color: var(--accent-strong);
+            margin-top: 6px;
         }
-    
-        /* Responsive: Stack image on top for small screens */
-        @media (max-width: 768px) {
+
+        .repo-link a {
+            color: var(--accent-strong);
+        }
+
+        /* iframe preview containers */
+        .repo-link > div {
+            margin-top: 8px;
+            border-radius: 12px;
+            border: 1px solid rgba(148, 163, 184, 0.5);
+            box-shadow: 0 12px 32px rgba(15, 23, 42, 0.9);
+            overflow: hidden;
+        }
+
+        @media (max-width: 900px) {
             .project {
                 flex-direction: column;
             }
@@ -135,11 +214,11 @@ Use HTML and CSS to style the page.
             }
         }
 
+        /* print: hide language buttons & repo previews */
         @media print {
-            /* hide language buttons and non-essential UI on PDF */
             .lang-switcher,
             .repo-link iframe,
-            .repo-link div {
+            .repo-link > div {
                 display: none !important;
             }
 
@@ -149,14 +228,70 @@ Use HTML and CSS to style the page.
                 print-color-adjust: exact;
             }
 
-            /* optional: remove outer padding so more fits on page */
             .container {
                 box-shadow: none;
-                padding: 0;
+                padding: 16px;
+            }
+        }
+
+        @media print {
+            /* hide UI not needed in PDF */
+            .lang-switcher,
+            .repo-link iframe,
+            .repo-link > div {
+                display: none !important;
+            }
+
+            /* remove colors, gradients, shadows */
+            * {
+                box-shadow: none !important;
+                text-shadow: none !important;
+                background: transparent !important;
+            }
+
+            html, body {
+                background: #ffffff !important;
+                color: #000000 !important;
+                -webkit-print-color-adjust: economy;
+                print-color-adjust: economy;
+            }
+
+            .container {
+                max-width: 100%;
+                padding: 16px;
+                margin: 0;
+                border: none;
+            }
+
+            /* keep project layout readable */
+            .project {
+                display: flex;
+                flex-direction: row;
+                gap: 16px;
+                border: 1px solid #000000 !important;
+            }
+
+            .left-column {
+                flex: 0 0 220px;
+            }
+
+            .project img {
+                border: none !important;
+            }
+
+            h1, h2, h3, .project-name, .technologies, .project-stats strong {
+                color: #000000 !important;
+            }
+
+            p, li, span, a {
+                color: #000000 !important;
+            }
+
+            .project-stats {
+                border: 1px solid #000000 !important;
             }
         }
     </style>
-    
 </head>
 <body>
     <div class="container">
