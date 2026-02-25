@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Testimonials | Chaitanya Priya</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+        :root {
+            --bg: #0b1120;
+            --bg-elevated: #020617;
+            --card: #020617;
+            --accent: #38bdf8;
+            --accent-soft: rgba(56, 189, 248, 0.15);
+            --accent-strong: #0ea5e9;
+            --text: #e5e7eb;
+            --text-muted: #9ca3af;
+            --border: rgba(148, 163, 184, 0.35);
+            --heading: #f9fafb;
+            --chip-bg: rgba(15, 118, 110, 0.08);
+            --chip-text: #a5f3fc;
+            --shadow-soft: 0 18px 45px rgba(15, 23, 42, 0.8);
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html, body {
+            background: radial-gradient(circle at top, #0f172a 0, #020617 55%, #000000 100%);
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, "Inter", sans-serif;
+            color: var(--text);
+        }
+
+        a {
+            color: var(--accent-strong);
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 40px 24px 60px;
+        }
+
+        .lang-switcher {
+            display: flex;
+            justify-content: flex-end;
+            gap: 10px;
+            margin-bottom: 24px;
+        }
+
+        .lang-btn {
+            padding: 6px 14px;
+            border-radius: 999px;
+            border: 1px solid rgba(148, 163, 184, 0.6);
+            font-size: 13px;
+            background: rgba(15, 23, 42, 0.9);
+            color: var(--accent-strong);
+            cursor: pointer;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            backdrop-filter: blur(10px);
+        }
+
+        .lang-btn.active {
+            background: linear-gradient(135deg, var(--accent), var(--accent-strong));
+            color: #0b1120;
+            border-color: transparent;
+            box-shadow: var(--shadow-soft);
+        }
+
+        .page-header {
+            text-align: center;
+            margin-bottom: 32px;
+        }
+
+        .page-header h1 {
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--heading);
+            letter-spacing: 0.05em;
+            margin-bottom: 8px;
+            text-transform: uppercase;
+        }
+
+        .subtitle {
+            font-size: 0.95rem;
+            color: var(--text-muted);
+        }
+
+        .card {
+            background: radial-gradient(circle at top, rgba(15, 118, 110, 0.2), var(--card));
+            border: 1px solid rgba(148, 163, 184, 0.4);
+            border-radius: 18px;
+            padding: 20px 22px;
+            box-shadow: 0 20px 60px rgba(15, 23, 42, 0.9);
+            backdrop-filter: blur(16px);
+        }
+
+        .testimonial-image {
+            display: block;
+            max-width: 100%;
+            height: auto;
+            border-radius: 12px;
+            border: 1px solid rgba(148, 163, 184, 0.6);
+            box-shadow: 0 18px 45px rgba(15, 23, 42, 0.9);
+            margin: 0 auto;
+        }
+
+        footer {
+            text-align: center;
+            font-size: 0.8rem;
+            color: var(--text-muted);
+            padding-top: 24px;
+            margin-top: 32px;
+            border-top: 1px solid rgba(148, 163, 184, 0.25);
+        }
+
+        /* print: simple black on white, hide language switcher */
+        @media print {
+            .lang-switcher {
+                display: none !important;
+            }
+
+            * {
+                box-shadow: none !important;
+                text-shadow: none !important;
+                background: transparent !important;
+            }
+
+            html, body {
+                background: #ffffff !important;
+                color: #000000 !important;
+                -webkit-print-color-adjust: economy;
+                print-color-adjust: economy;
+            }
+
+            .container {
+                max-width: 100%;
+                padding: 16px;
+                margin: 0;
+                border: none;
+            }
+
+            h1, p, a, span {
+                color: #000000 !important;
+            }
+
+            .card {
+                border: 1px solid #000000 !important;
+            }
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+
+    <div class="lang-switcher">
+        <a href="index.html" class="lang-btn">English</a>
+        <a href="index-de.html" class="lang-btn">Deutsch</a>
+    </div>
+
+    <div class="page-header">
+        <h1>Testimonials</h1>
+        <p class="subtitle">Verifiable through LinkedIn</p>
+    </div>
+
+    <div class="card">
+        <img src="testimonial.png" alt="Testimonials" class="testimonial-image">
+    </div>
+
+    <footer>
+        &copy; 2024 Chaitanya Priya. All rights reserved.
+    </footer>
+</div>
+</body>
+</html>
+```
