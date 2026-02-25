@@ -355,61 +355,62 @@
 
         /* PRINT: hide UI and about text */
         @media print {
-    /* hide only UI we don't need on resume */
-    .lang-switcher,
-    .actions {
-        display: none !important;
-    }
+            /* hide only UI we don't need on resume */
+            .lang-switcher,
+            .actions,
+            .about-text {
+                display: none !important;
+            }
 
-    /* basic page setup */
-    html, body {
-        background: #ffffff !important;
-        color: #000000 !important;
-        -webkit-print-color-adjust: economy;
-        print-color-adjust: economy;
-    }
+            /* basic page setup */
+            html, body {
+                background: #ffffff !important;
+                color: #000000 !important;
+                -webkit-print-color-adjust: economy;
+                print-color-adjust: economy;
+            }
 
-    /* keep structure & margins */
-    .container {
-        max-width: 100% !important;
-        padding: 16px !important;
-        margin: 0 !important;
-        border: none !important;
-    }
+            /* keep structure & margins */
+            .container {
+                max-width: 100% !important;
+                padding: 16px !important;
+                margin: 0 !important;
+                border: none !important;
+            }
 
-    /* keep header 2‑column layout */
-    header {
-        display: grid !important;
-        grid-template-columns: 1fr 2fr !important;
-        gap: 16px !important;
-    }
+            /* keep header 2‑column layout */
+            header {
+                display: grid !important;
+                grid-template-columns: 1fr 2fr !important;
+                gap: 16px !important;
+            }
 
-    /* remove decorations that can confuse Edge */
-    .card,
-    .skill,
-    .cert-item {
-        background: none !important;
-        box-shadow: none !important;
-        border: 1px solid #000000 !important;
-    }
+            /* remove decorations */
+            .card,
+            .skill,
+            .cert-item {
+                background: none !important;
+                box-shadow: none !important;
+                border: 1px solid #000000 !important;
+            }
 
-    .profile-image {
-        box-shadow: none !important;
-        border: none !important;
-    }
+            .profile-image {
+                box-shadow: none !important;
+                border: none !important;
+            }
 
-    h1, h2, h3, h4,
-    .cert-name, .skill, .meta,
-    li, p, span, a {
-        color: #000000 !important;
-        text-shadow: none !important;
-    }
+            h1, h2, h3, h4,
+            .cert-name, .skill, .meta,
+            li, p, span, a {
+                color: #000000 !important;
+                text-shadow: none !important;
+            }
 
-    section h3 {
-        border-bottom: 1px solid #000000 !important;
-        background: none !important;
-    }
-}
+            section h3 {
+                border-bottom: 1px solid #000000 !important;
+                background: none !important;
+            }
+        }
 
 
     </style>
