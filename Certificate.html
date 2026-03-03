@@ -11,81 +11,170 @@ Use HTML and CSS to style the page.
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Certificates</title>
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f4f4f4;
+        /* Modern theme variables — matching index.html */
+        :root {
+            --bg: #0b1120;
+            --bg-elevated: #020617;
+            --card: #020617;
+            --accent: #38bdf8;
+            --accent-soft: rgba(56, 189, 248, 0.15);
+            --accent-strong: #0ea5e9;
+            --text: #e5e7eb;
+            --text-muted: #9ca3af;
+            --border: rgba(148, 163, 184, 0.35);
+            --heading: #f9fafb;
+            --shadow-soft: 0 18px 45px rgba(15, 23, 42, 0.8);
+            --shadow-chip: 0 8px 20px rgba(8, 47, 73, 0.8);
+        }
+
+        * {
+            box-sizing: border-box;
             margin: 0;
-            padding: 20px;
+            padding: 0;
         }
+
+        html, body {
+            background: radial-gradient(circle at top, #0f172a 0, #020617 55%, #000000 100%);
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, "Inter", sans-serif;
+            color: var(--text);
+            scroll-behavior: smooth;
+        }
+
+        a {
+            color: var(--accent-strong);
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
         .container {
-            max-width: 1200px;
+            max-width: 1100px;
             margin: 0 auto;
-            padding: 20px;
-            background-color: #fff;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            padding: 16px 24px;
         }
+
         h1 {
             text-align: center;
-            color: #333;
+            color: var(--heading);
+            font-size: 2.1rem;
+            font-weight: 700;
+            letter-spacing: 0.03em;
+            margin-bottom: 20px;
         }
+
+        /* Back button matching index.html action-btn style */
+        .back-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            padding: 10px 18px;
+            border-radius: 999px;
+            font-size: 0.9rem;
+            font-weight: 500;
+            border: 1px solid rgba(148, 163, 184, 0.55);
+            background: radial-gradient(circle at top left, rgba(56, 189, 248, 0.28), rgba(15, 23, 42, 0.95));
+            color: var(--text);
+            box-shadow: 0 16px 40px rgba(15, 23, 42, 0.9);
+            transition: all 0.2s ease;
+            text-decoration: none;
+            margin-bottom: 16px;
+        }
+
+        .back-btn:hover {
+            transform: translateY(-2px) translateZ(0);
+            box-shadow: 0 20px 55px rgba(8, 47, 73, 0.95);
+            text-decoration: none;
+        }
+
         .certificates {
             display: flex;
             flex-wrap: wrap;
-            gap: 20px;
+            gap: 24px;
             justify-content: center;
         }
+
         .certificate {
-            background-color: #e0e0e0;
-            border-radius: 8px;
-            padding: 20px;
-            width: 300px;
-            box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+            background: radial-gradient(circle at top, rgba(15, 118, 110, 0.2), var(--card));
+            border: 1px solid rgba(148, 163, 184, 0.4);
+            border-radius: 18px;
+            padding: 24px;
+            width: 475px;
+            box-shadow: 0 20px 60px rgba(15, 23, 42, 0.9);
+            backdrop-filter: blur(16px);
             text-align: center;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
         }
+
+        .certificate:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 24px 65px rgba(8, 47, 73, 0.95);
+        }
+
         .certificate img {
             max-width: 100%;
-            border-radius: 4px;
+            border-radius: 8px;
+            border: 1px solid rgba(148, 163, 184, 0.3);
         }
+
         .course-name {
-            font-size: 18px;
-            margin: 10px 0;
-            color: #555;
+            font-size: 1rem;
+            font-weight: 600;
+            margin: 14px 0 6px;
+            color: var(--heading);
         }
+
         .platform {
-            font-size: 14px;
-            color: #777;
+            font-size: 0.85rem;
+            color: var(--accent);
+            font-weight: 500;
+        }
+
+        footer {
+            text-align: center;
+            font-size: 0.8rem;
+            color: var(--text-muted);
+            padding-bottom: 32px;
+            margin-top: 48px;
+            border-top: 1px solid rgba(148, 163, 184, 0.25);
+            padding-top: 16px;
         }
     </style></head>
 <body>
     <div class="container">
+        <a href="index.html" class="back-btn">⬅ Back to Home</a>
         <h1>My Certificates</h1>
         <div class="certificates">
             <div class="certificate">
-                <img src="AI_ML.jpg" alt="Certificate 3">
+                <img src="ZAB.jpg" alt="Certificate 1">
+                <div class="course-name"></div>
+                <div class="platform">ZAB (Zentralstelle für ausländisches Bildungswesen)</div>
+            </div>
+            <div class="certificate">
+                <img src="AI_ML.jpg" alt="Certificate 2">
                 <div class="course-name">Certficate in AI and ML</div>
                 <div class="platform">Indian Institute Of Technology</div>
             </div>
             <div class="certificate">             
-                <img src="CertFusa.jpg" alt="Certificate 1">
+                <img src="CertFusa.jpg" alt="Certificate 3">
                 <div class="course-name">ISO 26262 Level 1</div>
                 <div class="platform">Omnex</div>
             </div>
             <div class="certificate">
-                <img src="CertCyber.jpg" alt="Certificate 2">
+                <img src="CertCyber.jpg" alt="Certificate 4">
                 <div class="course-name">Automotive Cyber Security</div>
                 <div class="platform">TÜV SÜD</div>
-            </div>            
-            <div class="certificate">
-                <img src="certificate4.jpg" alt="Certificate 4">
-                <div class="course-name">Machine Learning Basics</div>
-                <div class="platform">LinkedIn Learning</div>
             </div>
             <div class="certificate">
-                <img src="certificate5.jpg" alt="Certificate 5">
-                <div class="course-name">Cloud Computing Essentials</div>
-                <div class="platform">Pluralsight</div>
-            </div>
+                <img src="PuneUni.png" alt="Certificate 5">
+                <div class="course-name">Certificate Course in Embedded System Design</div>
+                <div class="platform">University Of Pune</div>
+            </div> 
         </div>
+        <footer>
+            &copy; 2024 Chaitanya Priya. All rights reserved.
+        </footer>
     </div>
 </body>
 </html>
