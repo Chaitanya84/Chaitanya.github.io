@@ -1,0 +1,605 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>resume</title>
+  <style>
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+</head>
+<body>
+<style>
+  @page { margin: 12mm 10mm; }
+  body { font-family: "Calibri", "Helvetica Neue", Arial, sans-serif; font-size: 10pt; color: #222; line-height: 1.4; margin: 0 !important; padding: 10px !important; max-width: 100% !important; }
+  h1 { font-size: 22pt; margin: 0 0 2px 0; color: #1a1a1a; border-bottom: 2.5px solid #2c3e50; padding-bottom: 4px; }
+  h2 { font-size: 11pt; color: #2c3e50; text-transform: uppercase; letter-spacing: 1.5px; border-bottom: 1px solid #bdc3c7; padding-bottom: 3px; margin-top: 14px; margin-bottom: 6px; }
+  h3 { font-size: 10pt; margin: 6px 0 2px 0; color: #1a1a1a; }
+  table { width: 100% !important; border-collapse: collapse; margin-bottom: 2px; display: table !important; }
+  td { vertical-align: top; padding: 1px 0; }
+  .right { text-align: right; white-space: nowrap; color: #555; }
+  .header-table td { vertical-align: middle; }
+  .contact-row td { padding: 1px 0; font-size: 9.5pt; }
+  ul { margin: 2px 0 4px 16px; padding: 0; }
+  li { margin-bottom: 1px; font-size: 9.5pt; }
+  p { margin: 4px 0; font-size: 9.5pt; }
+  .section-table td { padding: 2px 0; }
+  .skill-category { font-weight: 600; color: #2c3e50; white-space: nowrap; padding-right: 10px; }
+  hr { border: none; border-top: 1px solid #ddd; margin: 4px 0; }
+  .photo { width: 90px; height: 110px; object-fit: cover; border: 1px solid #ccc; }
+  .subtitle { font-size: 11pt; color: #2c3e50; font-weight: 500; margin: 0 0 6px 0; letter-spacing: 0.5px; }
+</style>
+<table class="header-table">
+<tr>
+<td style="width:100px; text-align:center;">
+<img src="priya.png" alt="Chaitanya Priya" class="photo">
+</td>
+<td style="padding-left:14px;">
+<h1 id="chaitanya-priya">Chaitanya Priya</h1>
+<div class="subtitle">
+Senior Technical Lead | Automotive Embedded Systems
+</div>
+<table class="contact-row">
+<tr>
+<td>
+<strong>Address:</strong> Stuttgart, Germany
+</td>
+<td class="right">
+<strong>Phone:</strong> +49 172 2950530
+</td>
+</tr>
+<tr>
+<td>
+<strong>E-Mail:</strong> priya.chaitanya.87@gmail.com
+</td>
+<td class="right">
+<strong>LinkedIn:</strong> linkedin.com/in/chaitanyapriya
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<hr />
+<h2 id="professional-summary">Professional Summary</h2>
+<p>Embedded software specialist with over 10 years of hands-on
+experience developing safety-critical and security-relevant systems for
+the automotive and industrial sectors. Certified in Automotive
+Cybersecurity (ISO 21434, TÜV SÜD) and Functional Safety (ISO 26262,
+Omnex). Proven track record leading international engineering teams
+through ASPICE-compliant development lifecycles at Mercedes-Benz, Vector
+Informatik, American Axle &amp; Manufacturing, and John Deere. Deep
+expertise spanning bare-metal firmware through complex AUTOSAR stacks
+and model-based development, complemented by recent work in AI-driven
+engineering tooling (RAG pipelines, LLM-based root cause analysis).</p>
+<hr />
+<h2 id="core-competencies">Core Competencies</h2>
+<table class="section-table">
+<tr>
+<td class="skill-category">
+Programming
+</td>
+<td>
+Embedded C, C++, Python, Structured Text
+</td>
+</tr>
+<tr>
+<td class="skill-category">
+Protocols &amp; Interfaces
+</td>
+<td>
+CAN, CAN FD, UDS (ISO 14229), SAE J1939, I2C, SPI, UART, MQTT, ModBus
+RTU/ASCII, PROFINET, RS-485
+</td>
+</tr>
+<tr>
+<td class="skill-category">
+Microcontrollers &amp; RTOS
+</td>
+<td>
+Aurix TCx, STM32, Renesas (16/32-bit), C8051F, FreeRTOS, JDOS, RTA-OS,
+Bare-Metal
+</td>
+</tr>
+<tr>
+<td class="skill-category">
+Automotive Standards
+</td>
+<td>
+AUTOSAR (BSW, MCAL, DaVinci Configurator, ETAS ISOLAR-A/B, RTA-BSW), ISO
+26262, ISO 21434, ASPICE (SWE.1–SWE.5)
+</td>
+</tr>
+<tr>
+<td class="skill-category">
+Tools &amp; Test
+</td>
+<td>
+MATLAB &amp; Simulink, Embedded Coder, Vector CANoe/CANalyzer/CANape,
+VectorCast, vTESTstudio, Polyspace BF/CP, Lauterbach TRACE32, VFlash,
+ASAP2
+</td>
+</tr>
+<tr>
+<td class="skill-category">
+Methodology &amp; DevOps
+</td>
+<td>
+SIL, HIL, MIL, CI/CD, MISRA, 8D, FMEA, DFMEA, OpenOCD, JTAG
+</td>
+</tr>
+<tr>
+<td class="skill-category">
+Design &amp; PLM
+</td>
+<td>
+KiCAD, Altium Designer, PreeVision, IBM DOORS NG, IBM RTC, GIT, JIRA,
+Confluence
+</td>
+</tr>
+<tr>
+<td class="skill-category">
+AI &amp; Data
+</td>
+<td>
+RAG Pipelines, LLM-driven Root Cause Analysis, Generative AI (IIT
+Certified)
+</td>
+</tr>
+</table>
+<hr />
+<h2 id="professional-experience">Professional Experience</h2>
+<table>
+<tr>
+<td>
+<h3>
+Senior Technical Lead
+</h3>
+</td>
+<td class="right">
+<strong>Oct 2024 – Present</strong>
+</td>
+</tr>
+<tr>
+<td>
+<strong>Mercedes-Benz GmbH</strong> (via Soorce Professional GmbH) —
+Stuttgart, Germany
+</td>
+<td>
+</td>
+</tr>
+</table>
+<ul>
+<li>Developed and maintained the Power State Manager (PSM) for Aurix
+TCx-based boards and multi-OS SoCs (AUTOSAR, QNX, Linux via
+hypervisor)</li>
+<li>Engineered multi-stage hardware initialization logic for seamless
+control handoff between Aurix, QNX, and Linux</li>
+<li>Architected an automated Jira triage pipeline using RAG to classify
+and redirect out-of-scope tickets, reducing manual triage effort</li>
+<li>Implemented AI-driven root cause analysis to identify software
+defects and generate targeted code fix suggestions</li>
+<li>Collaborated with the Architecture Team to refine the
+safety-critical “OnOff” system for ASIL-relevant power states</li>
+<li>Resolved complex hardware-software interface defects by owning the
+end-to-end bug resolution lifecycle</li>
+<li>Delivered work products aligned with ASPICE SWE.1 through SWE.4</li>
+</ul>
+<table>
+<tr>
+<td>
+<h3>
+Senior Technical Lead
+</h3>
+</td>
+<td class="right">
+<strong>Jul 2023 – Sep 2024</strong>
+</td>
+</tr>
+<tr>
+<td>
+<strong>Vector Informatik GmbH</strong> (via MSK Engineering and IT
+Services GmbH) — Stuttgart, Germany
+</td>
+<td>
+</td>
+</tr>
+</table>
+<ul>
+<li>Led requirements elicitation and developed comprehensive design
+documentation for EV charging sequences</li>
+<li>Engineered complex device drivers and designed robust low-level
+software architectures</li>
+<li>Designed software solutions and integrated third-party libraries
+into existing architectural frameworks</li>
+<li>Configured and maintained AUTOSAR base software to ensure optimal
+system performance</li>
+<li>Coordinated with global customers and vendors to facilitate
+integration of third-party libraries</li>
+<li>Developed rigorous test and safety plans to ensure full compliance
+with ISO 26262 standards</li>
+<li>Executed comprehensive unit, static code analysis, SIL, and
+integration testing as Feature Owner</li>
+<li>Represented the team in ASPICE Quality and ISO 21434 Cybersecurity
+Audits to ensure compliance</li>
+</ul>
+<table>
+<tr>
+<td>
+<h3>
+Lead Embedded Software Engineer
+</h3>
+</td>
+<td class="right">
+<strong>Oct 2019 – Jul 2023</strong>
+</td>
+</tr>
+<tr>
+<td>
+<strong>American Axle &amp; Manufacturing (AAM)</strong> — Detroit, USA
+</td>
+<td>
+</td>
+</tr>
+</table>
+<ul>
+<li>Developed device drivers using Embedded C for Motor Control ECU
+integration with RTA-OS on Aurix platform</li>
+<li>Created robust test plans and performed SIL/HIL testing to reduce
+bugs in production</li>
+<li>Developed Embedded C/C++ software for vehicle diagnostics in
+accordance with ISO 14229 (UDS)</li>
+<li>Integrated third-party libraries including Infineon SafeTlib and
+Cycurlib for security and safety compliance</li>
+<li>Configured AUTOSAR Base Software (BSW) and Microcontroller
+Abstraction Layer (MCAL)</li>
+<li>Executed unit testing, static code analysis (Polyspace), and
+SIL/integration testing as Feature Owner</li>
+<li>Managed board bring-up, driver development, and BSP configuration
+for POCs and new platforms</li>
+<li>Coached team members on technical blockers to ensure successful
+achievement of delivery milestones</li>
+<li>Participated in customer and internal ASPICE audits (SWE.1–SWE.5)
+and defined corrective actions</li>
+</ul>
+<table>
+<tr>
+<td>
+<h3>
+Lead Engineer
+</h3>
+</td>
+<td class="right">
+<strong>Sep 2017 – Oct 2019</strong>
+</td>
+</tr>
+<tr>
+<td>
+<strong>John Deere</strong> (via HCL Technologies) — Pune, India
+</td>
+<td>
+</td>
+</tr>
+</table>
+<ul>
+<li>Developed device drivers for SPI- and I2C-based CAN controllers and
+external memory modules</li>
+<li>Migrated application layer features from 16-bit microcontrollers to
+the 32-bit Renesas platform</li>
+<li>Tested features using Model-in-the-Loop (MIL) and
+Software-in-the-Loop (SIL) methodologies</li>
+<li>Generated and integrated production C/C++ code using Embedded Coder
+for model-based development</li>
+<li>Maintained and developed CI/CD pipelines (Vehicle Payload Delivery)
+for smooth deployments</li>
+<li>Integrated, built, and debugged code for JDOS (John Deere RTOS)
+based vehicle projects</li>
+<li>Resolved defects and performed root cause analysis using 8D, FMEA,
+and DFMEA techniques</li>
+<li>Conducted reviews of specifications, code, and quality reports to
+recommend improvements</li>
+<li>Evaluated technical feasibility and commercial impact of change
+requests with offshore management</li>
+</ul>
+<table>
+<tr>
+<td>
+<h3>
+Embedded Systems Software Developer
+</h3>
+</td>
+<td class="right">
+<strong>Feb 2015 – Sep 2017</strong>
+</td>
+</tr>
+<tr>
+<td>
+<strong>Libratherm Instruments Pvt. Ltd.</strong> — Mumbai, India
+</td>
+<td>
+</td>
+</tr>
+</table>
+<ul>
+<li>Developed and maintained firmware for medical devices, ensuring
+compliance with FDA regulatory standards</li>
+<li>Programmed applications and modules for STM32 microcontrollers using
+C/C++</li>
+<li>Integrated communication technologies and IoT protocols including
+MQTT and ModBus RTU/ASCII</li>
+<li>Designed firmware for multi-zone PID temperature controllers (6-zone
+ramp/soak profiles, RS-485 Master/Slave)</li>
+<li>Developed control software for industrial systems: precision thermal
+conditioning, helium leak detection (PLC, Structured Text)</li>
+<li>Created comprehensive documentation required for product approval
+and certification processes</li>
+<li>Led the full product lifecycle from initial concept through mass
+production and aftersales support</li>
+<li>Conducted rigorous unit tests to ensure firmware reliability and
+system performance</li>
+</ul>
+<table>
+<tr>
+<td>
+<h3>
+Trainer - Embedded Systems Software
+</h3>
+</td>
+<td class="right">
+<strong>Aug 2012 – Jan 2015</strong>
+</td>
+</tr>
+<tr>
+<td>
+<strong>Gencor Learning Solutions Pvt. Ltd.</strong> — Pune, India
+</td>
+<td>
+</td>
+</tr>
+</table>
+<ul>
+<li>Created structured lessons on microcontroller architectures, memory
+maps, and register-level programming</li>
+<li>Conducted live sessions on “board bring-up,” where trainees learn to
+initialize hardware from scratch</li>
+<li>Guided students in writing drivers for GPIO, UART, SPI, I2C, ADC,
+and PWM without high-level libraries</li>
+<li>Prepared trainees by teaching best practices in version control
+(Git), MISRA C standards, and RTOS like FreeRTOS</li>
+<li>Constantly monitored trainee progress by devising new tests and lab
+exercises</li>
+</ul>
+<hr />
+<h2 id="education">Education</h2>
+<table class="section-table">
+<tr>
+<td>
+<strong>Embedded Systems Design</strong>
+</td>
+<td>
+University of Pune, India
+</td>
+</tr>
+<tr>
+<td>
+<strong>B.Sc. Engineering (Distinction)</strong>
+</td>
+<td>
+Magadh University, India
+</td>
+</tr>
+</table>
+<hr />
+<h2 id="certifications">Certifications</h2>
+<table class="section-table">
+<tr>
+<td>
+<strong>Certified in ML and Generative AI for Professionals</strong>
+</td>
+<td>
+Indian Institute of Technology (IIT)
+</td>
+</tr>
+<tr>
+<td>
+<strong>ISO 21434:2021 – Automotive Cybersecurity Practitioner</strong>
+</td>
+<td>
+TÜV SÜD
+</td>
+</tr>
+<tr>
+<td>
+<strong>ISO 26262:2018 – Functional Safety Level 1</strong>
+</td>
+<td>
+Omnex
+</td>
+</tr>
+</table>
+<hr />
+<h2 id="languages">Languages</h2>
+<table class="section-table">
+<tr>
+<td>
+<strong>English</strong>
+</td>
+<td>
+Fluent (C2)
+</td>
+</tr>
+<tr>
+<td>
+<strong>German</strong>
+</td>
+<td>
+Elementary (A2)
+</td>
+</tr>
+<tr>
+<td>
+<strong>Hindi</strong>
+</td>
+<td>
+Native
+</td>
+</tr>
+</table>
+</body>
+</html>

@@ -133,6 +133,17 @@ Embedded software specialist with over 10 years of hands-on experience developin
 - Led the full product lifecycle from initial concept through mass production and aftersales support
 - Conducted rigorous unit tests to ensure firmware reliability and system performance
 
+<table>
+<tr><td><h3>Trainer - Embedded Systems Software</h3></td><td class="right"><strong>Aug 2012 – Jan 2015</strong></td></tr>
+<tr><td><strong>Gencor Learning Solutions Pvt. Ltd.</strong> — Pune, India</td><td></td></tr>
+</table>
+
+- Created structured lessons on microcontroller architectures, memory maps, and register-level programming
+- Conducted live sessions on "board bring-up," where trainees learn to initialize hardware from scratch
+- Guided students in writing drivers for GPIO, UART, SPI, I2C, ADC, and PWM without high-level libraries
+- Prepared trainees by teaching best practices in version control (Git), MISRA C standards, and RTOS like FreeRTOS
+- Constantly monitored trainee progress by devising new tests and lab exercises
+
 ---
 
 ## Education

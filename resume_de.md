@@ -133,6 +133,17 @@ Embedded-Software-Spezialistin mit über 10 Jahren praktischer Erfahrung in der 
 - Verantwortung für den gesamten Produktlebenszyklus von der Konzeption bis zur Serienfertigung und Aftersales
 - Durchführung gründlicher Unit-Tests zur Sicherstellung von Firmware-Zuverlässigkeit und Systemperformance
 
+<table>
+<tr><td><h3>Trainer – Embedded-Systems-Software</h3></td><td class="right"><strong>Aug 2012 – Jan 2015</strong></td></tr>
+<tr><td><strong>Gencor Learning Solutions Pvt. Ltd.</strong> — Pune, Indien</td><td></td></tr>
+</table>
+
+- Erstellung strukturierter Lehreinheiten zu Mikrocontroller-Architekturen, Speicher-Maps und registernaher Programmierung
+- Durchführung von Live-Sessions zum Thema „Board-Bring-up", in denen Teilnehmer die Hardware-Initialisierung von Grund auf erlernen
+- Anleitung der Teilnehmer beim Schreiben von Treibern für GPIO, UART, SPI, I2C, ADC und PWM ohne High-Level-Bibliotheken
+- Vorbereitung der Teilnehmer durch Vermittlung von Best Practices in Versionskontrolle (Git), MISRA-C-Standards und Echtzeitbetriebssystemen wie FreeRTOS
+- Kontinuierliche Überwachung des Lernfortschritts durch Entwicklung neuer Tests und Laborübungen
+
 ---
 
 ## Ausbildung
