@@ -1,22 +1,32 @@
 <style>
+  :root {
+    --ink: #1b2430;
+    --muted: #4b5563;
+    --brand: #0d3b66;
+    --brand-soft: #eaf2f8;
+    --line: #bfcad6;
+    --kw-fg: #0f6e78;
+    --section-bar: #123d63;
+  }
   @page { margin: 12mm 10mm; }
-  body { font-family: "Calibri", "Helvetica Neue", Arial, sans-serif; font-size: 10pt; color: #222; line-height: 1.4; margin: 0 !important; padding: 10px !important; max-width: 100% !important; }
-  h1 { font-size: 22pt; margin: 0 0 2px 0; color: #1a1a1a; border-bottom: 2.5px solid #2c3e50; padding-bottom: 4px; }
-  h2 { font-size: 11pt; color: #2c3e50; text-transform: uppercase; letter-spacing: 1.5px; border-bottom: 1px solid #bdc3c7; padding-bottom: 3px; margin-top: 14px; margin-bottom: 6px; }
-  h3 { font-size: 10pt; margin: 6px 0 2px 0; color: #1a1a1a; }
+  body { font-family: "Calibri", "Helvetica Neue", Arial, sans-serif; font-size: 10pt; color: var(--ink); line-height: 1.4; margin: 0 !important; padding: 10px !important; max-width: 100% !important; background: linear-gradient(180deg, #f8fbff 0%, #ffffff 22%); }
+  h1 { font-size: 22pt; margin: 0 0 2px 0; color: var(--brand); border-bottom: 2.5px solid var(--brand); padding-bottom: 4px; }
+  h2 { font-size: 10.5pt; color: #ffffff; text-transform: uppercase; letter-spacing: 1.8px; background: var(--section-bar); border-bottom: 1px solid #0d3150; padding: 3px 8px; margin-top: 14px; margin-bottom: 6px; }
+  h3 { font-size: 10pt; margin: 6px 0 2px 0; color: #0b3559; }
   table { width: 100% !important; border-collapse: collapse; margin-bottom: 2px; display: table !important; }
   td { vertical-align: top; padding: 1px 0; }
-  .right { text-align: right; white-space: nowrap; color: #555; }
+  .right { text-align: right; white-space: nowrap; color: var(--muted); }
   .header-table td { vertical-align: middle; }
   .contact-row td { padding: 1px 0; font-size: 9.5pt; }
   ul { margin: 2px 0 4px 16px; padding: 0; }
   li { margin-bottom: 1px; font-size: 9.5pt; }
   p { margin: 4px 0; font-size: 9.5pt; }
   .section-table td { padding: 2px 0; }
-  .skill-category { font-weight: 600; color: #2c3e50; white-space: nowrap; padding-right: 10px; }
-  hr { border: none; border-top: 1px solid #ddd; margin: 4px 0; }
+  .skill-category { font-weight: 700; color: #123d63; white-space: nowrap; padding-right: 10px; }
+  hr { border: none; border-top: 1px solid var(--line); margin: 4px 0; }
   .photo { width: 90px; height: 110px; object-fit: cover; border: 1px solid #ccc; }
-  .subtitle { font-size: 11pt; color: #2c3e50; font-weight: 500; margin: 0 0 6px 0; letter-spacing: 0.5px; }
+  .subtitle { font-size: 11pt; color: #0f6e78; font-weight: 700; margin: 0 0 6px 0; letter-spacing: 0.5px; background: var(--brand-soft); padding: 3px 8px; border-left: 3px solid var(--brand); display: inline-block; }
+  .kw { color: var(--kw-fg); font-weight: 700; }
 </style>
 
 <table class="header-table">
@@ -26,11 +36,11 @@
 
 # Chaitanya Priya
 
-<div class="subtitle">Senior Technical Lead | Automotive Embedded Systems</div>
+<div class="subtitle">Senior Embedded Software Engineer | Ladesoftware, Diagnose & FuSi</div>
 
 <table class="contact-row">
 <tr><td><strong>Adresse:</strong> Stuttgart, Deutschland</td><td class="right"><strong>Telefon:</strong> +49 172 2950530</td></tr>
-<tr><td><strong>E-Mail:</strong> priya.chaitanya.87@gmail.com</td><td class="right"><strong>LinkedIn:</strong> linkedin.com/in/chaitanyapriya</td></tr>
+<tr><td><strong>E-Mail:</strong> chaitanya.priya@mail.de</td><td class="right"><strong>LinkedIn:</strong> linkedin.com/in/chaitanyapriya</td></tr>
 </table>
 
 </td>
@@ -41,7 +51,7 @@
 
 ## Berufsprofil
 
-Embedded-Software-Spezialistin mit über 10 Jahren praktischer Erfahrung in der Entwicklung sicherheitskritischer und sicherheitsrelevanter Systeme für die Automobil- und Industriebranche. Zertifiziert in Automotive Cybersecurity (ISO 21434, TÜV SÜD) und Funktionaler Sicherheit (ISO 26262, Omnex). Nachgewiesene Führungserfahrung in internationalen Entwicklungsteams durch ASPICE-konforme Entwicklungszyklen bei Mercedes-Benz, Vector Informatik, American Axle & Manufacturing und John Deere. Tiefgreifende Expertise von Bare-Metal-Firmware über komplexe AUTOSAR-Stacks bis hin zu modellbasierter Entwicklung, ergänzt durch aktuelle Arbeit an KI-gestützten Engineering-Tools (RAG-Pipelines, LLM-basierte Fehleranalyse).
+Embedded-Software-Spezialistin mit über 10 Jahren Erfahrung in sicherheitskritischen Automotive-Systemen, mit Schwerpunkt auf <span class="kw">Steuerungssoftware für Ladefunktionen</span>, <span class="kw">Diagnose</span> und robustem <span class="kw">Fehlerhandling</span>. Nachweisbare Umsetzung von <span class="kw">Ladebetriebsarten</span> und Kommunikationspfaden, Fahrzeugdiagnosefunktionen (<span class="kw">OBD/UDS/CAN</span>) sowie <span class="kw">FuSi-gerechter</span> Integration gemäß <span class="kw">ISO 26262</span>. Umfassende Praxis in <span class="kw">AUTOSAR</span>-Architektur und -Implementierung (BSW/MCAL), Sicherheitsmechanismen (<span class="kw">Watchdog</span>, Selbsttests, Plausibilitätsprüfungen) und durchgängiger Verifikation über <span class="kw">Unit-</span>, <span class="kw">Integrations-</span>, <span class="kw">SIL/HIL-</span> und <span class="kw">Systemtests</span>. Zertifiziert in Automotive Cybersecurity (ISO 21434, TÜV SUD) und Funktionaler Sicherheit (ISO 26262, Omnex), mit ASPICE-konformer Liefererfahrung bei Mercedes-Benz, Vector Informatik, American Axle & Manufacturing und John Deere.
 
 ---
 
@@ -49,11 +59,12 @@ Embedded-Software-Spezialistin mit über 10 Jahren praktischer Erfahrung in der 
 
 <table class="section-table">
 <tr><td class="skill-category">Programmierung</td><td>Embedded C, C++, Python, Structured Text</td></tr>
+<tr><td class="skill-category">Laden & Diagnose</td><td>Steuerung von <span class="kw">Lademodi</span> und Kommunikationsabläufen, <span class="kw">UDS</span> (ISO 14229), <span class="kw">CAN/OBD-Diagnose</span>, <span class="kw">DTC-Handling</span>, Diagnose-Services und Kalibrierunterstützung</td></tr>
 <tr><td class="skill-category">Protokolle & Schnittstellen</td><td>CAN, CAN FD, UDS (ISO 14229), SAE J1939, I2C, SPI, UART, MQTT, ModBus RTU/ASCII, PROFINET, RS-485</td></tr>
-<tr><td class="skill-category">Mikrocontroller & RTOS</td><td>Aurix TCx, STM32, Renesas (16/32-Bit), C8051F, FreeRTOS, JDOS, RTA-OS, Bare-Metal</td></tr>
-<tr><td class="skill-category">Automotive-Normen</td><td>AUTOSAR (BSW, MCAL, DaVinci Configurator, ETAS ISOLAR-A/B, RTA-BSW), ISO 26262, ISO 21434, ASPICE (SWE.1–SWE.5)</td></tr>
-<tr><td class="skill-category">Tools & Test</td><td>MATLAB & Simulink, Embedded Coder, Vector CANoe/CANalyzer/CANape, VectorCast, vTESTstudio, Polyspace BF/CP, Lauterbach TRACE32, VFlash, ASAP2</td></tr>
-<tr><td class="skill-category">Methodik & DevOps</td><td>SIL, HIL, MIL, CI/CD, MISRA, 8D, FMEA, DFMEA, OpenOCD, JTAG</td></tr>
+<tr><td class="skill-category">Mikrocontroller & RTOS</td><td>Aurix TCx, STM32, Renesas (16/32-Bit), C8051F, HSM/SBC-Integration, FreeRTOS, JDOS, RTA-OS, Bare-Metal</td></tr>
+<tr><td class="skill-category">Automotive-Normen</td><td><span class="kw">AUTOSAR</span> (BSW, MCAL, DaVinci Configurator/Developer, ETAS ISOLAR-A/B, RTA-BSW), <span class="kw">ISO 26262</span>, ISO 21434, ASPICE (SWE.1–SWE.5), <span class="kw">FMEDA</span>-Unterstützung</td></tr>
+<tr><td class="skill-category">Tools & Test</td><td>MATLAB & Simulink, Embedded Coder, <span class="kw">Vector CANoe</span>/CANalyzer/CANape, <span class="kw">DaVinci Toolchain</span>, <span class="kw">EB tresos</span>/MCAL, VectorCast, vTESTstudio, Polyspace BF/CP, Lauterbach TRACE32, VFlash, ASAP2</td></tr>
+<tr><td class="skill-category">Methodik & DevOps</td><td><span class="kw">SIL</span>, <span class="kw">HIL</span>, MIL, CI/CD, MISRA, <span class="kw">Watchdog</span>/Selbsttest/Plausibilitätsprüfungen, 8D, FMEA, DFMEA, OpenOCD, JTAG</td></tr>
 <tr><td class="skill-category">Design & PLM</td><td>KiCAD, Altium Designer, PreeVision, IBM DOORS NG, IBM RTC, GIT, JIRA, Confluence</td></tr>
 <tr><td class="skill-category">KI & Datenanalyse</td><td>RAG-Pipelines, LLM-gestützte Root-Cause-Analyse, Generative AI (IIT-zertifiziert)</td></tr>
 </table>
@@ -68,11 +79,14 @@ Embedded-Software-Spezialistin mit über 10 Jahren praktischer Erfahrung in der 
 </table>
 
 - Entwicklung und Pflege des Power State Managers (PSM) für Aurix-TCx-basierte Boards und Multi-OS-SoCs (AUTOSAR, QNX, Linux über Hypervisor)
+- Umsetzung von <span class="kw">Steuerungssoftware</span> für ladebezogene Power-States und Kommunikations-Handshake über Multi-OS-Domänen
 - Entwurf mehrstufiger Hardware-Initialisierungslogik für nahtlose Steuerungsübergabe zwischen Aurix, QNX und Linux
+- Integration von Sicherheitsmechanismen wie <span class="kw">Watchdog</span>-Überwachung, Plausibilitätsprüfungen und deterministischem Fallback bei <span class="kw">Fehlerfällen</span>
 - Architektur einer automatisierten Jira-Triage-Pipeline auf Basis von RAG zur Klassifizierung und Weiterleitung von Tickets außerhalb des Projektumfangs
 - Implementierung einer KI-gestützten Root-Cause-Analyse zur Identifikation von Softwarefehlern und Generierung gezielter Codevorschläge
 - Zusammenarbeit mit dem Architekturteam zur Optimierung des sicherheitskritischen „OnOff"-Systems für ASIL-relevante Power-States
 - Eigenverantwortliche Lösung komplexer Hardware-Software-Schnittstellenfehler über den gesamten Bug-Lifecycle
+- Unterstützung von <span class="kw">Softwarearchitektur</span> und technischer Dokumentation für ASPICE/FuSi-Arbeitsergebnisse und Release-Freigaben
 - Lieferung von Arbeitsprodukten gemäß ASPICE SWE.1 bis SWE.4
 
 <table>
@@ -84,9 +98,11 @@ Embedded-Software-Spezialistin mit über 10 Jahren praktischer Erfahrung in der 
 - Entwicklung komplexer Gerätetreiber und Design robuster Low-Level-Softwarearchitekturen
 - Konzeption von Softwarelösungen und Integration von Drittanbieterbibliotheken in bestehende Architekturen
 - Konfiguration und Pflege von AUTOSAR-Basissoftware zur Sicherstellung optimaler Systemleistung
+- Implementierung von <span class="kw">Diagnose-</span> und <span class="kw">Fehlerbehandlungsfunktionen</span> für Lade-ECUs, inklusive <span class="kw">UDS</span>-Services und <span class="kw">DTC</span>-Workflows
 - Koordination mit globalen Kunden und Lieferanten zur Integration externer Bibliotheken
 - Erstellung strenger Test- und Sicherheitspläne zur vollständigen Einhaltung der ISO-26262-Anforderungen
-- Durchführung von Unit-Tests, statischer Codeanalyse, SIL- und Integrationstests als Feature Owner
+- Durchführung von <span class="kw">Unit-Tests</span>, statischer Codeanalyse, <span class="kw">SIL-</span> und <span class="kw">Integrationstests</span> als Feature Owner
+- Durchführung von <span class="kw">Integrations-</span> und <span class="kw">Systemtests</span> in <span class="kw">CANoe</span>, inklusive Diagnosekommunikation und Grenzfall-Szenarien
 - Vertretung des Teams in ASPICE-Qualitäts- und ISO-21434-Cybersecurity-Audits
 
 <table>
@@ -169,6 +185,6 @@ Embedded-Software-Spezialistin mit über 10 Jahren praktischer Erfahrung in der 
 
 <table class="section-table">
 <tr><td><strong>Englisch</strong></td><td>Fließend (C2)</td></tr>
-<tr><td><strong>Deutsch</strong></td><td>Grundkenntnisse (A2)</td></tr>
+<tr><td><strong>Deutsch</strong></td><td>Berufliche Arbeitssprache (B2, laufende Verbesserung)</td></tr>
 <tr><td><strong>Hindi</strong></td><td>Muttersprache</td></tr>
 </table>

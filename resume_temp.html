@@ -1,189 +1,32 @@
-<!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
-<head>
-  <meta charset="utf-8" />
-  <meta name="generator" content="pandoc" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
-  <title>resume</title>
-  <style>
-    html {
-      color: #1a1a1a;
-      background-color: #fdfdfd;
-    }
-    body {
-      margin: 0 auto;
-      max-width: 36em;
-      padding-left: 50px;
-      padding-right: 50px;
-      padding-top: 50px;
-      padding-bottom: 50px;
-      hyphens: auto;
-      overflow-wrap: break-word;
-      text-rendering: optimizeLegibility;
-      font-kerning: normal;
-    }
-    @media (max-width: 600px) {
-      body {
-        font-size: 0.9em;
-        padding: 12px;
-      }
-      h1 {
-        font-size: 1.8em;
-      }
-    }
-    @media print {
-      html {
-        background-color: white;
-      }
-      body {
-        background-color: transparent;
-        color: black;
-        font-size: 12pt;
-      }
-      p, h2, h3 {
-        orphans: 3;
-        widows: 3;
-      }
-      h2, h3, h4 {
-        page-break-after: avoid;
-      }
-    }
-    p {
-      margin: 1em 0;
-    }
-    a {
-      color: #1a1a1a;
-    }
-    a:visited {
-      color: #1a1a1a;
-    }
-    img {
-      max-width: 100%;
-    }
-    h1, h2, h3, h4, h5, h6 {
-      margin-top: 1.4em;
-    }
-    h5, h6 {
-      font-size: 1em;
-      font-style: italic;
-    }
-    h6 {
-      font-weight: normal;
-    }
-    ol, ul {
-      padding-left: 1.7em;
-      margin-top: 1em;
-    }
-    li > ol, li > ul {
-      margin-top: 0;
-    }
-    blockquote {
-      margin: 1em 0 1em 1.7em;
-      padding-left: 1em;
-      border-left: 2px solid #e6e6e6;
-      color: #606060;
-    }
-    code {
-      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
-      font-size: 85%;
-      margin: 0;
-      hyphens: manual;
-    }
-    pre {
-      margin: 1em 0;
-      overflow: auto;
-    }
-    pre code {
-      padding: 0;
-      overflow: visible;
-      overflow-wrap: normal;
-    }
-    .sourceCode {
-     background-color: transparent;
-     overflow: visible;
-    }
-    hr {
-      background-color: #1a1a1a;
-      border: none;
-      height: 1px;
-      margin: 1em 0;
-    }
-    table {
-      margin: 1em 0;
-      border-collapse: collapse;
-      width: 100%;
-      overflow-x: auto;
-      display: block;
-      font-variant-numeric: lining-nums tabular-nums;
-    }
-    table caption {
-      margin-bottom: 0.75em;
-    }
-    tbody {
-      margin-top: 0.5em;
-      border-top: 1px solid #1a1a1a;
-      border-bottom: 1px solid #1a1a1a;
-    }
-    th {
-      border-top: 1px solid #1a1a1a;
-      padding: 0.25em 0.5em 0.25em 0.5em;
-    }
-    td {
-      padding: 0.125em 0.5em 0.25em 0.5em;
-    }
-    header {
-      margin-bottom: 4em;
-      text-align: center;
-    }
-    #TOC li {
-      list-style: none;
-    }
-    #TOC ul {
-      padding-left: 1.3em;
-    }
-    #TOC > ul {
-      padding-left: 0;
-    }
-    #TOC a:not(:hover) {
-      text-decoration: none;
-    }
-    code{white-space: pre-wrap;}
-    span.smallcaps{font-variant: small-caps;}
-    div.columns{display: flex; gap: min(4vw, 1.5em);}
-    div.column{flex: auto; overflow-x: auto;}
-    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
-    /* The extra [class] is a hack that increases specificity enough to
-       override a similar rule in reveal.js */
-    ul.task-list[class]{list-style: none;}
-    ul.task-list li input[type="checkbox"] {
-      font-size: inherit;
-      width: 0.8em;
-      margin: 0 0.8em 0.2em -1.6em;
-      vertical-align: middle;
-    }
-    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
-  </style>
-</head>
-<body>
 <style>
+  :root {
+    --ink: #1b2430;
+    --muted: #4b5563;
+    --brand: #0d3b66;
+    --brand-soft: #eaf2f8;
+    --line: #bfcad6;
+    --kw-fg: #0f6e78;
+    --section-bar: #123d63;
+  }
   @page { margin: 12mm 10mm; }
-  body { font-family: "Calibri", "Helvetica Neue", Arial, sans-serif; font-size: 10pt; color: #222; line-height: 1.4; margin: 0 !important; padding: 10px !important; max-width: 100% !important; }
-  h1 { font-size: 22pt; margin: 0 0 2px 0; color: #1a1a1a; border-bottom: 2.5px solid #2c3e50; padding-bottom: 4px; }
-  h2 { font-size: 11pt; color: #2c3e50; text-transform: uppercase; letter-spacing: 1.5px; border-bottom: 1px solid #bdc3c7; padding-bottom: 3px; margin-top: 14px; margin-bottom: 6px; }
-  h3 { font-size: 10pt; margin: 6px 0 2px 0; color: #1a1a1a; }
+  body { font-family: "Calibri", "Helvetica Neue", Arial, sans-serif; font-size: 10pt; color: var(--ink); line-height: 1.4; margin: 0 !important; padding: 10px !important; max-width: 100% !important; background: linear-gradient(180deg, #f8fbff 0%, #ffffff 22%); }
+  h1 { font-size: 22pt; margin: 0 0 2px 0; color: var(--brand); border-bottom: 2.5px solid var(--brand); padding-bottom: 4px; }
+  h2 { font-size: 10.5pt; color: #ffffff; text-transform: uppercase; letter-spacing: 1.8px; background: var(--section-bar); border-bottom: 1px solid #0d3150; padding: 3px 8px; margin-top: 14px; margin-bottom: 6px; }
+  h3 { font-size: 10pt; margin: 6px 0 2px 0; color: #0b3559; }
   table { width: 100% !important; border-collapse: collapse; margin-bottom: 2px; display: table !important; }
   td { vertical-align: top; padding: 1px 0; }
-  .right { text-align: right; white-space: nowrap; color: #555; }
+  .right { text-align: right; white-space: nowrap; color: var(--muted); }
   .header-table td { vertical-align: middle; }
   .contact-row td { padding: 1px 0; font-size: 9.5pt; }
   ul { margin: 2px 0 4px 16px; padding: 0; }
   li { margin-bottom: 1px; font-size: 9.5pt; }
   p { margin: 4px 0; font-size: 9.5pt; }
   .section-table td { padding: 2px 0; }
-  .skill-category { font-weight: 600; color: #2c3e50; white-space: nowrap; padding-right: 10px; }
-  hr { border: none; border-top: 1px solid #ddd; margin: 4px 0; }
+  .skill-category { font-weight: 700; color: #123d63; white-space: nowrap; padding-right: 10px; }
+  hr { border: none; border-top: 1px solid var(--line); margin: 4px 0; }
   .photo { width: 90px; height: 110px; object-fit: cover; border: 1px solid #ccc; }
-  .subtitle { font-size: 11pt; color: #2c3e50; font-weight: 500; margin: 0 0 6px 0; letter-spacing: 0.5px; }
+  .subtitle { font-size: 11pt; color: #0f6e78; font-weight: 700; margin: 0 0 6px 0; letter-spacing: 0.5px; background: var(--brand-soft); padding: 3px 8px; border-left: 3px solid var(--brand); display: inline-block; }
+  .kw { color: var(--kw-fg); font-weight: 700; }
 </style>
 <table class="header-table">
 <tr>
@@ -193,7 +36,7 @@
 <td style="padding-left:14px;">
 <h1 id="chaitanya-priya">Chaitanya Priya</h1>
 <div class="subtitle">
-Senior Technical Lead | Automotive Embedded Systems
+Senior Embedded Software Engineer | EV Charging, Diagnostics &amp; FuSi
 </div>
 <table class="contact-row">
 <tr>
@@ -206,7 +49,7 @@ Senior Technical Lead | Automotive Embedded Systems
 </tr>
 <tr>
 <td>
-<strong>E-Mail:</strong> priya.chaitanya.87@gmail.com
+<strong>E-Mail:</strong> chaitanya.priya@mail.de
 </td>
 <td class="right">
 <strong>LinkedIn:</strong> linkedin.com/in/chaitanyapriya
@@ -219,15 +62,23 @@ Senior Technical Lead | Automotive Embedded Systems
 <hr />
 <h2 id="professional-summary">Professional Summary</h2>
 <p>Embedded software specialist with over 10 years of hands-on
-experience developing safety-critical and security-relevant systems for
-the automotive and industrial sectors. Certified in Automotive
-Cybersecurity (ISO 21434, TÜV SÜD) and Functional Safety (ISO 26262,
-Omnex). Proven track record leading international engineering teams
-through ASPICE-compliant development lifecycles at Mercedes-Benz, Vector
-Informatik, American Axle &amp; Manufacturing, and John Deere. Deep
-expertise spanning bare-metal firmware through complex AUTOSAR stacks
-and model-based development, complemented by recent work in AI-driven
-engineering tooling (RAG pipelines, LLM-based root cause analysis).</p>
+experience in safety-critical automotive systems, with strong focus on
+<span class="kw">charging control software</span>, <span
+class="kw">diagnostics</span>, and robust <span class="kw">fault
+handling</span>. Proven delivery of control functions for <span
+class="kw">charging modes</span> and communication paths, diagnostic
+implementations (<span class="kw">OBD/UDS/CAN</span>), and <span
+class="kw">FuSi-compliant</span> software integration according to <span
+class="kw">ISO 26262</span>. Experienced across <span
+class="kw">AUTOSAR</span> architecture and implementation (BSW/MCAL),
+safety concepts (<span class="kw">watchdog</span>, self-test,
+plausibility checks), and end-to-end verification through <span
+class="kw">unit</span>, <span class="kw">integration</span>, <span
+class="kw">SIL/HIL</span>, and <span class="kw">system tests</span>.
+Certified in Automotive Cybersecurity (ISO 21434, TÜV SUD) and
+Functional Safety (ISO 26262, Omnex), with ASPICE-compliant delivery
+background at Mercedes-Benz, Vector Informatik, American Axle &amp;
+Manufacturing, and John Deere.</p>
 <hr />
 <h2 id="core-competencies">Core Competencies</h2>
 <table class="section-table">
@@ -237,6 +88,17 @@ Programming
 </td>
 <td>
 Embedded C, C++, Python, Structured Text
+</td>
+</tr>
+<tr>
+<td class="skill-category">
+Charging &amp; Diagnostics
+</td>
+<td>
+<span class="kw">Charging modes</span> and communication control, <span
+class="kw">UDS</span> (ISO 14229), <span class="kw">CAN/OBD
+diagnostics</span>, <span class="kw">DTC handling</span>, diagnostic
+services and calibration support
 </td>
 </tr>
 <tr>
@@ -253,8 +115,8 @@ RTU/ASCII, PROFINET, RS-485
 Microcontrollers &amp; RTOS
 </td>
 <td>
-Aurix TCx, STM32, Renesas (16/32-bit), C8051F, FreeRTOS, JDOS, RTA-OS,
-Bare-Metal
+Aurix TCx, STM32, Renesas (16/32-bit), C8051F, HSM/SBC integration,
+FreeRTOS, JDOS, RTA-OS, Bare-Metal
 </td>
 </tr>
 <tr>
@@ -262,8 +124,10 @@ Bare-Metal
 Automotive Standards
 </td>
 <td>
-AUTOSAR (BSW, MCAL, DaVinci Configurator, ETAS ISOLAR-A/B, RTA-BSW), ISO
-26262, ISO 21434, ASPICE (SWE.1–SWE.5)
+<span class="kw">AUTOSAR</span> (BSW, MCAL, DaVinci
+Configurator/Developer, ETAS ISOLAR-A/B, RTA-BSW), <span class="kw">ISO
+26262</span>, ISO 21434, ASPICE (SWE.1–SWE.5), <span
+class="kw">FMEDA</span> support
 </td>
 </tr>
 <tr>
@@ -271,9 +135,10 @@ AUTOSAR (BSW, MCAL, DaVinci Configurator, ETAS ISOLAR-A/B, RTA-BSW), ISO
 Tools &amp; Test
 </td>
 <td>
-MATLAB &amp; Simulink, Embedded Coder, Vector CANoe/CANalyzer/CANape,
-VectorCast, vTESTstudio, Polyspace BF/CP, Lauterbach TRACE32, VFlash,
-ASAP2
+MATLAB &amp; Simulink, Embedded Coder, <span class="kw">Vector
+CANoe</span>/CANalyzer/CANape, <span class="kw">DaVinci
+Toolchain</span>, <span class="kw">EB tresos</span>/MCAL, VectorCast,
+vTESTstudio, Polyspace BF/CP, Lauterbach TRACE32, VFlash, ASAP2
 </td>
 </tr>
 <tr>
@@ -281,7 +146,9 @@ ASAP2
 Methodology &amp; DevOps
 </td>
 <td>
-SIL, HIL, MIL, CI/CD, MISRA, 8D, FMEA, DFMEA, OpenOCD, JTAG
+<span class="kw">SIL</span>, <span class="kw">HIL</span>, MIL, CI/CD,
+MISRA, <span class="kw">watchdog</span>/self-test/plausibility checks,
+8D, FMEA, DFMEA, OpenOCD, JTAG
 </td>
 </tr>
 <tr>
@@ -329,8 +196,15 @@ Stuttgart, Germany
 <li>Developed and maintained the Power State Manager (PSM) for Aurix
 TCx-based boards and multi-OS SoCs (AUTOSAR, QNX, Linux via
 hypervisor)</li>
+<li>Implemented <span class="kw">control software</span> behavior for
+<span class="kw">charging-related</span> power states and communication
+handshakes across multi-OS domains</li>
 <li>Engineered multi-stage hardware initialization logic for seamless
 control handoff between Aurix, QNX, and Linux</li>
+<li>Integrated safety mechanisms including <span
+class="kw">watchdog</span> supervision, plausibility checks, and
+deterministic fallback behavior for <span class="kw">fault
+cases</span></li>
 <li>Architected an automated Jira triage pipeline using RAG to classify
 and redirect out-of-scope tickets, reducing manual triage effort</li>
 <li>Implemented AI-driven root cause analysis to identify software
@@ -339,6 +213,9 @@ defects and generate targeted code fix suggestions</li>
 safety-critical “OnOff” system for ASIL-relevant power states</li>
 <li>Resolved complex hardware-software interface defects by owning the
 end-to-end bug resolution lifecycle</li>
+<li>Supported <span class="kw">software architecture</span> and
+technical documentation for ASPICE/FuSi work products and release
+readiness</li>
 <li>Delivered work products aligned with ASPICE SWE.1 through SWE.4</li>
 </ul>
 <table>
@@ -370,12 +247,21 @@ software architectures</li>
 into existing architectural frameworks</li>
 <li>Configured and maintained AUTOSAR base software to ensure optimal
 system performance</li>
+<li>Implemented <span class="kw">diagnostic</span> and <span
+class="kw">fault-handling</span> software functions for charging ECUs,
+including <span class="kw">UDS</span> services and <span
+class="kw">DTC</span> workflows</li>
 <li>Coordinated with global customers and vendors to facilitate
 integration of third-party libraries</li>
 <li>Developed rigorous test and safety plans to ensure full compliance
 with ISO 26262 standards</li>
-<li>Executed comprehensive unit, static code analysis, SIL, and
-integration testing as Feature Owner</li>
+<li>Executed comprehensive <span class="kw">unit</span>, static code
+analysis, <span class="kw">SIL</span>, and <span class="kw">integration
+testing</span> as Feature Owner</li>
+<li>Executed <span class="kw">integration</span> and <span
+class="kw">system-level validation</span> in <span
+class="kw">CANoe</span>, including diagnostic communication and
+edge-case fault scenarios</li>
 <li>Represented the team in ASPICE Quality and ISO 21434 Cybersecurity
 Audits to ensure compliance</li>
 </ul>
@@ -589,7 +475,7 @@ Fluent (C2)
 <strong>German</strong>
 </td>
 <td>
-Elementary (A2)
+Professional Working (B2, ongoing improvement)
 </td>
 </tr>
 <tr>
@@ -601,5 +487,3 @@ Native
 </td>
 </tr>
 </table>
-</body>
-</html>
