@@ -1,0 +1,783 @@
+    1  nordvpn connect india
+    2  nordvpn login
+    3  nordvpn connect india
+    4  mkdir CODING/AI_playground
+    5  mkdir Coding
+    6  mkdir Coding/AI_playground
+    7  cd  Coding/AI_playground
+    8  git status
+    9  sudo apt install git
+   10  git status
+   11  code GrokxAICoder.sh
+   12  chmod +x GrokxAICoder.sh 
+   13  ./GrokxAICoder.sh 
+   14  curl -I https://x.ai/cli/grok-0.2.103-linux-x86_64
+   15  curl -L -o grok https://x.ai/cli/grok-0.2.103-linux-x86_64
+   16  nordvpn diconnect
+   17  nordvpn disconnect
+   18  ./GrokxAICoder.sh 
+   19  grok -m local-qwen
+   20  source ~/.bashrc
+   21  grok inspect
+   22  grok -m local-qwen
+   23  grok -m local-qwen
+   24  cat /tmp/hello_world.py 
+   25  watch -n 1 ls -l /tmp/hello_world.py
+   26  ls -l /tmp/hello_world.py
+   27  pwd
+   28  cd Coding/AI_playground/
+   29  pwd
+   30  ls
+   31  cd ..
+   32  mkdir ReqAnalyser
+   33  cd ReqAnalyser/
+   34  ls
+   35  git clone git@github.com:Chaitanya84/RequirementsAnalyzer_ML.git
+   36  cd RequirementsAnalyzer_ML/
+   37  ls
+   38  pip install -r requirement
+   39  pip install -r requirements.txt 
+   40  which python
+   41  python -version
+   42  pip3 install -r requirements.txt 
+   43  python3-pip install -r requirements.txt 
+   44  sudo apt install pip
+   45  ls
+   46  cd ..
+   47  code Input/Req.md
+   48  python3 -m .venv venv
+   49  python -m venv .venv
+   50  python3 -m venv .venv
+   51  source .venv/bin/activate
+   52  ls .venv/bin/
+   53  apt install python3.12-venv
+   54  sudo apt install python3.12-venv
+   55  python3 -m venv .venv
+   56  source .venv/bin/activate
+   57  clear 
+   58  pip3 install -r RequirementsAnalyzer_ML/requirements.txt 
+   59  python3 RequirementsAnalyzer_ML/app.py 
+   60  pip3 uninstall -r RequirementsAnalyzer_ML/requirements.txt -y
+   61  python3 RequirementsAnalyzer_ML/app.py 
+   62  sudo apt install streamlit
+   63  sudo apt install -y socat
+   64  pip install -r requirements.txt 
+   65  git status
+   66  cd RequirementsAnalyzer_ML/
+   67  git status
+   68  git restore .
+   69  git status
+   70  cd ..
+   71  rm -rf .venv/
+   72  ls
+   73  python3 - .venv venv
+   74  python3 -m .venv venv
+   75  python3 -m venv venv
+   76  source venv/bin/activate
+   77  pip install -r requirements.txt 
+   78  streamlit run app.py 
+   79  pip install -r requirements.txt 
+   80  streamlit run app.py 
+   81  python3 test.py
+   82  streamlit run app.py 
+   83  pip freeze > requirements.txt
+   84  cd Coding/ReqAnalyser/
+   85  ls -al ~/.ssh/
+   86  ssh-keygen -t ed25519 -C "aelien@outlook.com"
+   87  ls -al ~/.ssh/
+   88  eval "$(ssh-agent -s)"
+   89  ssh-add ~/.ssh/id_ed25519
+   90  cat ~/.ssh/id_ed25519.pub
+   91  ssh -T git@github.com
+   92  cd RequirementsAnalyzer_ML/
+   93  ls
+   94  git status
+   95  git checkout -b feature/Update to use OPenAI 
+   96  rm -rf __pycache__/requirement_engine.cpython-31
+   97  git status
+   98  rm -rf __pycache__/requirement_engine.cpython-31
+   99  git status
+  100  code .gitignore
+  101  git status
+  102  git add .gitignore 
+  103  git status
+  104  git add .
+  105  git status
+  106  git commit -m "New version of the app created to use OPenAI"
+  107  git config --global user.email "aelien@outlook.com"
+  108  git config --global user.name "Chaitanya84"
+  109  git commit -m "New version of the app created to use OPenAI"
+  110  git push
+  111  nordvpn login
+  112  nordvpn connect india
+  113  nordvpn disconnect
+  114  chmod +x qnx-setup-2.0.4-202501021438-linux.run 
+  115  ./qnx-setup-2.0.4-202501021438-linux.run 
+  116  sudo dmesg -w
+  117  sudo dmesg -w
+  118  lsusb
+  119  sudo dmesg -w
+  120  cutecom
+  121  ls
+  122  bash arduino-ide_2.3.10_Linux_64bit.AppImage 
+  123  chmod -x arduino-ide_2.3.10_Linux_64bit.AppImage 
+  124  bash arduino-ide_2.3.10_Linux_64bit.AppImage
+  125  sudo add-apt-repository universe
+  126  sudo apt update
+  127  sudo apt install libfuse2
+  128  bash arduino-ide_2.3.10_Linux_64bit.AppImage
+  129  ls =ls
+  130  ls -la
+  131  ./arduino-ide_2.3.10_Linux_64bit.AppImage 
+  132  sudo ./arduino-ide_2.3.10_Linux_64bit.AppImage 
+  133  sudo ./arduino-ide_2.3.10_Linux_64bit.AppImage --no-sandbox
+  134  ./arduino-ide_2.3.10_Linux_64bit.AppImage --no-sandbox
+  135  sudo apt install rpi-imager
+  136  rpi-imager 
+  137  sudo apt install putty
+  138  putty
+  139  lsusb
+  140  sudo dmesg -w
+  141  clear
+  142  sudo dmesg -w
+  143  KOMPARE
+  144  kompare
+  145  sudo apt install minicom
+  146  ls /dev/tty*
+  147  minicom -D /dev/ttyACM0 -b 115200
+  148  minicom -D /dev/ttyACM1 -b 115200
+  149  sudo minicom -D /dev/ttyACM0 -b 115200
+  150  sudo minicom -D /dev/ttyACM1 -b 115200
+  151  ls /dev/tty*
+  152  sudo minicom -D /dev/ttyACM1 -b 115200
+  153  chmode +x qnxsdp-env.sh 
+  154  chmod +x qnxsdp-env.sh 
+  155  ./qnxsdp-env.sh 
+  156  source qnxsdp-env.sh 
+  157  cd bsp/BSP_raspberrypi-bcm2712-rpi5_be-800_SVN1024006_JBN381/
+  158  ls
+  159  make clean
+  160  make
+  161  make clean
+  162  make
+  163  make clean
+  164  make
+  165  make clean
+  166  make
+  167  ls /dev/tty*
+  168  history
+  169  minicom -D /dev/ttyACM1 -b 115200
+  170  sudo minicom -D /dev/ttyACM1 -b 115200
+  171  source qnxsdp-env.sh 
+  172  sudo minicom -D /dev/ttyACM1 -b 115200
+  173  make clean
+  174  source ../../qnxsdp-env.sh
+  175  make clean
+  176  make
+  177  ./qnx-setup-2.0.4-202501021438-linux.run 
+  178  minicom -D /dev/ttyACM1 -b 115200
+  179  sudo minicom -D /dev/ttyACM1 -b 115200
+  180  source ../../qnxsdp-env.sh 
+  181  make clean
+  182  make all
+  183  history
+  184  ls /dev/tty*
+  185  killall minicom
+  186  lsof | grep ttyACM1
+  187  killall minicom
+  188  ls /dev/tty*
+  189  killall minicom
+  190  sudo code
+  191  killall minicom
+  192  sudo minicom -D /dev/ttyACM1 -b 115200
+  193  ssh root@169.254.197.204
+  194  ping 169.254.197.204
+  195  ping -I eth0 169.254.197.204
+  196  ifconfig
+  197  ipconfig
+  198  ifconfig
+  199  sudo apt install net-tools 
+  200  ifconfig
+  201  ping 127.0.0.100
+  202  ping 192.168.0.108
+  203  ls /dev/tt
+  204  ls /dev/tt*
+  205  sudo minicom -D /dev/ttyUSB0 -b 115200
+  206  make clean
+  207  source ../../qnxsdp-env.sh 
+  208  make clean
+  209  make all
+  210  make clean
+  211  make all
+  212  ls
+  213  source ../../qnxsdp-env.sh 
+  214  make clean
+  215  make all
+  216  cd ..
+  217  source ../../qnxsdp-env.sh 
+  218  source ../qnxsdp-env.sh 
+  219  ls
+  220  cd BSP_raspberrypi-bcm2712-rpi5_be-800_SVN1024006_JBN381/
+  221  ls
+  222  make clean
+  223  make all
+  224  cd ..
+  225  ls
+  226  cd bsp/BSP_raspberrypi-bcm2712-rpi5_be-800_SVN1024006_JBN381/
+  227  ls
+  228  ls images/
+  229  source ../../qnxsdp-env.sh 
+  230  make clean
+  231  make all
+  232  make clean
+  233  make all
+  234  make clean
+  235  make all
+  236  make clean
+  237  make all
+  238  scp images/ifs-rpi5.bin qnxuser@10.42.0.109:/boot/
+  239  scp images/ifs-rpi5.bin qnxuser@10.42.0.109:/bootfs/
+  240  scp images/ifs-rpi5.bin qnxuser@10.42.0.109:/dev/sd0t12/
+  241  ssh -m hmac-sha2-512 root@10.42.0.109
+  242  ssh -m hmac-sha2-512 qnxuser@10.42.0.109
+  243  ssh qnxuser@10.42.0.109
+  244  ssh-keygen -f '/home/cp/.ssh/known_hosts' -R '10.42.0.109'
+  245  ssh qnxuser@10.42.0.109
+  246  source /home/cp/qnx800/qnxsdp-env.sh
+  247  ls
+  248  qcc -Vgcc_ntoaarch64le -o chaitanya Chaitanya.c
+  249  qcc -Vgcc_ntoaarch64le -o chaitanya application/Chaitanya.c
+  250  pwd
+  251  ls
+  252  source qnxsdp-env.sh 
+  253  cd bsp/
+  254  ls
+  255  cd BSP_raspberrypi-bcm2712-rpi5_be-800_SVN1024006_JBN381/
+  256  ls
+  257  make clean
+  258  make all
+  259  0x5A028E4C0x5A028E4C
+  260  clear
+  261  make clean
+  262  clean
+  263  make clean
+  264  clear
+  265  make all
+  266  make clean
+  267  make all > buildlog.log
+  268  db
+  269  sudo minicom -D /dev/ttyACM1 -b 115200
+  270  sudo minicom -D /dev/ttyACM1 -b 115200
+  271  sudo minicom -D /dev/ttyACM1 -b 115200
+  272  pyhton3 obsidinaVault.py 
+  273  pyhton obsidinaVault.py 
+  274  whereis python
+  275  sudo apt install python
+  276  sudo apt install python3
+  277  sudo apt update
+  278  sudo apt upgrade 
+  279  python3 obsidinaVault.py 
+  280  sudo apt install cflow
+  281  apt-get install graphviz graphviz-dev
+  282  sudo apt-get install graphviz graphviz-dev
+  283  pip install emerge-viz
+  284  python3 -m venv .venv
+  285  ls
+  286  ls -la
+  287  source .venv/bin/activate
+  288  pip install emerge-viz
+  289  emerge -a c
+  290  pip install "setuptools<81.0.0"
+  291  python -c "import pkg_resources; print('Fixed successfully')"
+  292  emerge -a c
+  293  ls
+  294  emerge -c c-template.yaml
+  295  sudo apt-get update && sudo apt-get install -y xclip
+  296  emerge -c c-template.yaml
+  297  ls
+  298  cd html/
+  299  ls
+  300  python3 -m http.server 8080
+  301  cat /home/cp/RaspberryPI/EmergeAnalysis/export/html/emerge_config.js
+  302  emerge -c c-template.yaml
+  303  emerge -a c cpp
+  304  emerge -a c c++
+  305  emerge -a c
+  306  cd ..
+  307  emerge -a c
+  308  emerge -c c-template.yaml
+  309  ls -la
+  310  python3 -m http.server 8080
+  311  python3 -m http.server 8081
+  312  emerge -w html/
+  313  ls
+  314  emerge-server
+  315  ls /dev/tty*
+  316  nm-connection-editor
+  317  ipconfig
+  318  ifconfig
+  319  sudo ifconfig enp0s31f6 10.42.0.10 netmask 255.255.255.0 up
+  320  ifconfig
+  321  sudo nmcli device modify enp0s31f6 ipv4.addresses 10.42.0.10/24 ipv4.method manual
+  322  ifconfig
+  323  ping -c 4 10.42.0.50
+  324  ssh root@10.42.0.50
+  325  ssh qnxuser@10.42.0.50
+  326  sudo minicom -D /dev/ttyACM1 -b 115200
+  327  ls
+  328  cd qnx800/bsp/BSP_raspberrypi-bcm2712-rpi5_be-800_SVN1024006_JBN381/images/
+  329  source ../../../qnxsdp-env.sh 
+  330  dumpifs ifs-rpi5.bin 
+  331  cflow *.c > template.txt
+  332  find . -name "*.c" | xargs cflow > call_hierarchy.txt
+  333  find . \( -name "*.c" -o -name "*.h" \) | xargs pycflow2dot -f dot -o hierarchy.dot
+  334  pip install pycflow2dot
+  335  pip install python3-pycflow2dot
+  336  sudo apt install python3-pycflow2dot
+  337  pip3 install --user pycflow2dot
+  338  sudo pip3 install pycflow2dot --break-system-packages
+  339  find . \( -name "*.c" -o -name "*.h" \) | xargs pycflow2dot -f dot -o hierarchy.dot
+  340  find . \( -name "*.c" -o -name "*.h" \) | xargs python3 -m pycflow2dot -f dot -o hierarchy.dot
+  341  sudo find . \( -name "*.c" -o -name "*.h" \) | xargs python3 -m pycflow2dot -f dot -o hierarchy.dot
+  342  find . \( -name "*.c" -o -name "*.h" \) | xargs /usr/local/bin/pycflow2dot -f dot -o hierarchy.dot
+  343  ls /usr/local/bin/
+  344  find . \( -name "*.c" -o -name "*.h" \) | xargs /usr/local/bin/cflow2dot -f dot -o hierarchy.dot
+  345  ls
+  346  find . \( -name "*.c" -o -name "*.h" \) | xargs /usr/local/bin/pycflow2dot -f dot -o hierarchy.dot
+  347  /usr/local/bin/cflow2dot -i $(find . \( -name "*.c" -o -name "*.h" \)) -f dot -o hierarchy.dot
+  348  sudo apt install doxygen graphviz
+  349  doxygen -g
+  350  doxygen Doxyfile
+  351  ls -la
+  352  doxygen Doxyfile
+  353  dumpifs ifs-rpi5.bin | less
+  354  source ../../../qnxsdp-env.sh 
+  355  dumpifs ifs-rpi5.bin | less
+  356  dumpifs ifs-rpi5.bin | less > dumpifs.txt
+  357  ls $QNX_HOST/usr/bin/
+  358  cd ..
+  359  ls -la
+  360  make all
+  361  make clean
+  362  make all
+  363  make all > build.log
+  364  make clean
+  365  make all > build.log
+  366  cd ~/CodeParser
+  367  source .venv/bin/activate
+  368  python main.py /path/to/source --output code_graph.json --html code_graph.html --verbose
+  369  python main.py /home/cp/qnx800/bsp/BSP_raspberrypi-bcm2712-rpi5_be-800_SVN1024006_JBN381 --output code_graph.json --html code_graph.html --verbose
+  370  cd ..
+  371  mkdir CodeParser
+  372  cd CodeParser/
+  373  python main.py /home/cp/qnx800/bsp/BSP_raspberrypi-bcm2712-rpi5_be-800_SVN1024006_JBN381 --output code_graph.json --html code_graph.html --verbose
+  374  python3 main.py /home/cp/qnx800/bsp/BSP_raspberrypi-bcm2712-rpi5_be-800_SVN1024006_JBN381 --output code_graph.json --html code_graph.html --verbose
+  375  cd ../CodeParser/
+  376  ls
+  377  ls -la
+  378  source .venv/bin/activate
+  379  python3 main.py /home/cp/qnx800/bsp/BSP_raspberrypi-bcm2712-rpi5_be-800_SVN1024006_JBN381 --output code_graph.json --html code_graph.html --verbose
+  380  ls -la
+  381  doxygen ~/qnx800/bsp/BSP_raspberrypi-bcm2712-rpi5_be-800_SVN1024006_JBN381/Doxyfile 
+  382  git status
+  383  git add .gitignore 
+  384  git commit -m "updated gitignore"
+  385  git status
+  386  git push 
+  387  git status
+  388  git add .
+  389  git status
+  390  git reset
+  391  git status
+  392  git restore .
+  393  git status
+  394  git clean -fd
+  395  git status
+  396  doxygen ~/qnx800/bsp/BSP_raspberrypi-bcm2712-rpi5_be-800_SVN1024006_JBN381/Doxyfile 
+  397  git status
+  398  git add .
+  399  git commit -m "New HTMl"
+  400  git push
+  401  sudo apt install repo
+  402  cd ..
+  403  mkdir QNX_Practice
+  404  cd QNX_Practice/
+  405  ls
+  406  repo init
+  407  git init
+  408  git status
+  409  cat << 'EOF' > default.xml
+  410  <?xml version="1.0" encoding="UTF-8"?>
+  411  <manifest>
+  412    <remote name="github" fetch="https://github.com" />
+  413    <default revision="main" remote="github" sync-j="4" />
+  414    <project path="application" name="my-application-repo.git" />
+  415    <project path="bsp" name="my-bsp-repo.git" />
+  416  </manifest>
+  417  EOF
+  418  git status
+  419  nano default.xml 
+  420  git branch -M main
+  421  git remote add origin git@github.com:Chaitanya84/QNX_Home.git
+  422  nano .gitignore
+  423  git status
+  424  git add .
+  425  git commit -m "Hello"
+  426  git push
+  427  git push --set-upstream origin main
+  428  git status
+  429  curl -fsSL https://raw.githubusercontent.com/DeusData/codebase-memory-mcp/main/install.sh | bash
+  430  codebase-memory-mcp --ui=true --port=9749
+  431  source /home/cp/.bashrc
+  432  codebase-memory-mcp --ui=true --port=9749
+  433  cd CodeParser/
+  434  ls -la
+  435  git inti
+  436  git init
+  437  git status
+  438  git add README.md 
+  439  git status
+  440  git add .gitignore 
+  441  git commit -m "First Commit"
+  442  git branch -M main
+  443  git remote add origin git@github.com:Chaitanya84/CodeAnalyser.git
+  444  git push -u origin main
+  445  git status
+  446  git add .
+  447  git status
+  448  git commit -m "Updated code file and generated sample html from QNX BSP"
+  449  git push -u origin main
+  450  ls
+  451  cd ../qnx800/bsp/BSP_raspberrypi-bcm2712-rpi5_be-800_SVN1024006_JBN381/src/
+  452  ls
+  453  ls -la
+  454  cd ../images/
+  455  ls -la
+  456  cd ..
+  457  ls -la
+  458  doxygen Doxyfile 
+  459  ls -la
+  460  cp html/ ~/CodeParser/
+  461  cp -r html/ ~/CodeParser/
+  462  cd ~/CodeParser/
+  463  ls
+  464  git status
+  465  git checkout -b feture/html
+  466  git add .
+  467  git commit -m "html doxygen from from QNX BSP"
+  468  git push
+  469  git push --set-upstream origin feture/html
+  470  ls -la
+  471  mkdir docs
+  472  ls
+  473  cp -r html/ docs/
+  474  ls
+  475  ls -la docs/
+  476  ls -la html/
+  477  rm -rf docs/html/
+  478  ls -la
+  479  rm -rf docs/
+  480  ls
+  481  mv -r html/ docs
+  482  mv html/ docs
+  483  ls -la docs/
+  484  git status
+  485  git add .
+  486  git sttus
+  487  git status
+  488  git commit -m "Doxygen Html"
+  489  git push --set-upstream origin feture/html
+  490  git status
+  491  git add .
+  492  git commit -m "hello 2"
+  493  git push
+  494  cd ..
+  495  mkdir NewQNX
+  496  cd NewQNX/
+  497  repo init -u git@github.com:Chaitanya84/QNX_Home.git
+  498  ls -la
+  499  repo sync
+  500  ls -la
+  501  repo sync
+  502  git status
+  503  ls -la
+  504  cd Appl_PSM/
+  505  ls
+  506  cd ../../QNX_Practice/
+  507  ls -la
+  508  git pull -r
+  509  repo sync
+  510  git reset
+  511  repo init -u git@github.com:Chaitanya84/QNX_Home.git
+  512  repo sync
+  513  ls
+  514  source qnxsdp-env.sh 
+  515  ls -la
+  516  code .gitignore
+  517  git status
+  518  cd .repo/manifests
+  519  ls -la
+  520  cd ../../
+  521  repo upload
+  522  repo upload .repo/manifests/
+  523  repo upload
+  524  repo sync -d
+  525  repo upload
+  526  ~
+  527  echo ~
+  528  source ../qnx800/qnxsdp-env.sh
+  529  make all
+  530  make -C ../qnx800/bsp/BSP_raspberrypi-bcm2712-rpi5_be-800_SVN1024006_JBN381/images/
+  531  make -C ../qnx800/bsp/BSP_raspberrypi-bcm2712-rpi5_be-800_SVN1024006_JBN381/images/ clena
+  532  make -C ../qnx800/bsp/BSP_raspberrypi-bcm2712-rpi5_be-800_SVN1024006_JBN381/images/ clean
+  533  make -C ../qnx800/bsp/BSP_raspberrypi-bcm2712-rpi5_be-800_SVN1024006_JBN381/images/ all
+  534  make -C ../qnx800/bsp/BSP_raspberrypi-bcm2712-rpi5_be-800_SVN1024006_JBN381/images/ clean
+  535  make -C ../qnx800/bsp/BSP_raspberrypi-bcm2712-rpi5_be-800_SVN1024006_JBN381/images/ all
+  536  code commands.md
+  537  cd Appl_PSM/
+  538  qcc -Vgcc_ntoaarch64le Chaitanya.c -o appl
+  539  objdump appl 
+  540  objdump -a -f -p appl 
+  541  dumpifs ../../qnx800/bsp/BSP_raspberrypi-bcm2712-rpi5_be-800_SVN1024006_JBN381/images/ifs-rpi5.bin 
+  542  git status
+  543  objdump -a -f -p out/appl 
+  544  qcc -Vgcc_ntoaarch64le Chaitanya.c -o /out/appl
+  545  cd ..
+  546  cd Appl_PSM/
+  547  qcc -Vgcc_ntoaarch64le Chaitanya.c -o out/appl
+  548  qcc -Vgcc_ntoaarch64le Chaitanya.c -o appl
+  549  mkdir out
+  550  qcc -Vgcc_ntoaarch64le Chaitanya.c -o /out/appl
+  551  qcc -Vgcc_ntoaarch64le Chaitanya.c -o out/appl
+  552  git status
+  553  git add .
+  554  git commit -m "Hello word QNX application"
+  555  git push
+  556  git revert --staged
+  557  git checkout -b feature/Dummy
+  558  git push
+  559  git push --set-upstream github feature/Dummy
+  560  cd Appl_PSM/
+  561  git push --set-upstream origin feture/html
+  562  git status
+  563  git push --set-upstream origin feature/Dummy
+  564  git status
+  565  git commit -a
+  566  git push
+  567  git push --set-upstream github feature/Dummy
+  568  echo $SHELL
+  569  nano ~/.bashrc
+  570  source ~/.bashrc
+  571  ssh -m hmac-sha2-512 root@10.42.0.109
+  572  source /home/cp/qnx800/qnxsdp-env.sh
+  573  sudo dmidecode -s system-product-name
+  574  sudo apt update && sudo apt install flameshot -y
+  575  flameshot
+  576  flameshot gui
+  577  clear
+  578  sudo dmidecode -s system-product-name
+  579  flameshot gui
+  580  history
+  581  ssh -m hmac-sha2-512 root@10.42.0.14
+  582  ssh -m hmac-sha2-512 qnxuser@10.42.0.14
+  583  sudo docker ps
+  584  docker kill 31608421e4ee
+  585  sudo docker kill 31608421e4ee
+  586  sudo docker ps
+  587  clear
+  588  code install_docker.sh
+  589  chmode +x install_docker.sh 
+  590  chmod +x install_docker.sh 
+  591  sudo ./install_docker.sh 
+  592  sudo docker ps
+  593  git clone https://github.com/Gsync/jobsync.git
+  594  cd jobsync/
+  595  docker compose up
+  596  sudo docker compose up
+  597  mkdir AutomateApplication
+  598  cd AutomateApplication/
+  599  code requirement.txt
+  600  code app.py
+  601  code logger_config.py
+  602  code browser.py
+  603  code scraper.py
+  604  python -m venv .venv
+  605  python3 -m venv .venv
+  606  source .venv/bin/activate
+  607  pip install -r requirement.txt 
+  608  streamlit runn app.py 
+  609  streamlit run app.py 
+  610  clear
+  611  streamlit run app.py 
+  612  code CompClen.py
+  613  python3 CompClen.py 
+  614  ls
+  615  mv CompClen.py AutomateApplication/
+  616  cd AutomateApplication/
+  617  python3 CompClen.py 
+  618  code CleanComp.py
+  619  python3 CleanComp.py 
+  620  mkdir ChromeExt
+  621  cd ChromeExt/
+  622  code manifest.json
+  623  code popup.html
+  624  code popup.js
+  625  code content.js
+  626  code background.js
+  627  code Startup.md
+  628  code Sequence.puml
+  629  code Sequnece2.puml
+  630  ls /dev/tty*
+  631  sudo minicom -D /dev/ttyACM1 -b 115200
+  632  ssh -m hmac-sha2-512 root@10.42.0.14
+  633  ssh -m hmac-sha2-512 qnxuser@10.42.0.14
+  634  ssh -m hmac-sha2-512 qnxuser@10.42.0.21
+  635  ssh-keygen -f '/home/cp/.ssh/known_hosts' -R '10.42.0.21'
+  636  ssh -m hmac-sha2-512 qnxuser@10.42.0.21
+  637  ssh -m hmac-sha2-512 qnxuser@10.42.0.2
+  638  ssh -m hmac-sha2-512 qnxuser@10.42.0.14
+  639  [200~ssh-keygen -f '/home/cp/.ssh/known_hosts' -R '10.42.0.14'
+  640  ~ssh-keygen -f '/home/cp/.ssh/known_hosts' -R '10.42.0.14'
+  641  ssh-keygen -f '/home/cp/.ssh/known_hosts' -R '10.42.0.14'
+  642  ssh -m hmac-sha2-512 qnxuser@10.42.0.14
+  643  ssh -m hmac-sha2-512 root@10.42.0.14
+  644  ssh -m hmac-sha2-512 qnxuser@10.42.0.14
+  645  ping 10.42.0.14
+  646  ifconfig
+  647  ssh -m hmac-sha2-512 qnxuser@10.42.0.21
+  648  ssh -m hmac-sha2-512 qnxuser@10.42.0.2
+  649  ssh -m hmac-sha2-512 qnxuser@10.42.0.14
+  650  source /home/cp/qnx800/qnxsdp-env.sh
+  651  ssh -m hmac-sha2-512 root@10.42.0.21
+  652  ssh -m hmac-sha2-512 qnxuser@10.42.0.21
+  653  ssh -m hmac-sha2-512 qnxuser@10.42.0.2
+  654  ssh -m hmac-sha2-512 qnxuser@10.42.0.14
+  655  cd RequirementPSM/
+  656  cd ../Appl_PSM/
+  657  git branch -a
+  658  git checkout main
+  659  git pull -r
+  660  git status
+  661  cd ..
+  662  source qnxsdp-env.sh 
+  663  make clean
+  664  make all
+  665  make clean
+  666  make all
+  667  repo sync .
+  668  repo sync
+  669  cd Appl_PSM/
+  670  cd ..
+  671  cd QNX_build/
+  672  git fetch
+  673  cd ..
+  674  make clean
+  675  make
+  676  dumpifs ~/qnx800/bsp/BSP_raspberrypi-bcm2712-rpi5_be-800_SVN1024006_JBN381/images/ifs-rpi5.bin 
+  677  dumpifs ~/qnx800/bsp/BSP_raspberrypi-bcm2712-rpi5_be-800_SVN1024006_JBN381/images/ifs-rpi5.bin > RequirementPSM/dumpifs.log
+  678  repo sync
+  679  cd Appl_PSM/
+  680  make clean
+  681  make all
+  682  pwd
+  683  cd ..
+  684  make clean
+  685  make all
+  686  cp ../qnx800/bsp/BSP_raspberrypi-bcm2712-rpi5_be-800_SVN1024006_JBN381/images/ifs-rpi5.bin /media/cp/bootfs/
+  687  cd Appl_PSM/
+  688  make ll
+  689  make
+  690  make clean
+  691  make all
+  692  scp out/appl qnxuser@10.42.0.14:/usr/bin/
+  693  pint 10.42.0.14
+  694  ping 10.42.0.14
+  695  scp out/appl qnxuser@10.42.0.14:/tmp/
+  696  cd ..
+  697  ./qnxsdp-env.sh 
+  698  source ./qnxsdp-env.sh 
+  699  make clean
+  700  make all
+  701  cp ~/qnx800/bsp/BSP_raspberrypi-bcm2712-rpi5_be-800_SVN1024006_JBN381/images/ifs-rpi5.bin /media/cp/bootfs/
+  702  cp ~/qnx800/bsp/BSP_raspberrypi-bcm2712-rpi5_be-800_SVN1024006_JBN381/images/ifs-rpi5.bin /media/cp/bootfs/ifs-rpi5.bin 
+  703  repo sync
+  704  cd Appl_PSM/
+  705  git status
+  706  make
+  707  git clean
+  708  make clean
+  709  make all
+  710  cd ..
+  711  repo sync
+  712  cd Appl_PSM/
+  713  code app1.c
+  714  code app2.c
+  715  make all
+  716  make clean
+  717  make all
+  718  make clean
+  719  make all
+  720  cd ..
+  721  source qnxsdp-env.sh 
+  722  make all
+  723  make clean
+  724  make all
+  725  make clean
+  726  make all
+  727  make clean
+  728  make all
+  729  flameshot gui
+  730  cd Appl_PSM/
+  731  git status
+  732  git restore Appl.c 
+  733  git status
+  734  git add .
+  735  git commit -m "Thread 101"
+  736  git push
+  737  cd ..
+  738  cd RequirementPSM/
+  739  git checkout main
+  740  git status
+  741  cd ..
+  742  repo status
+  743  repo sync
+  744  repo status
+  745  mkdir -p out && for f in *.heic *.HEIC; do [ -e "$f" ] && heif-convert -q 100 "$f" "out/${f%.*}.jpg"; done
+  746  cd ../puml/
+  747  mkdir -p out && for f in *.heic *.HEIC; do [ -e "$f" ] && heif-convert -q 100 "$f" "out/${f%.*}.jpg"; done
+  748  ls
+  749  cd OneDrive_1_8-20-2026\ \(1\)/
+  750  mkdir -p out && for f in *.heic *.HEIC; do [ -e "$f" ] && heif-convert -q 100 "$f" "out/${f%.*}.jpg"; done
+  751  flameshot gui
+  752  cd RequirementPSM/
+  753  ls
+  754  code sample.md
+  755  flameshot gui
+  756  code threads.md
+  757  code mutex.md
+  758  make all
+  759  source ../../qnxsdp-env.sh 
+  760  make
+  761  make clean
+  762  make
+  763  make rebuild
+  764  objdump -f build/x86_64-debug/DeamonExmp
+  765  objdump -d build/x86_64-debug/DeamonExmp
+  766  objdump -h build/x86_64-debug/DeamonExmp
+  767  objdump -s build/x86_64-debug/DeamonExmp
+  768  code Resume_FreeRtos.md
+  769  pandoc Resume_FreeRtos.md -o CV_Chaitanya_Priya.pdf   --pdf-engine=xelatex   -V geometry:"top=2cm, bottom=2cm, left=2.5cm, right=2.5cm"   -V colorlinks=true   -V linkcolor=NavyBlue   -V urlcolor=Teal   -V filecolor=Maroon
+  770  sudo apt install pandoc
+  771  pandoc Resume_FreeRtos.md -o CV_Chaitanya_Priya.pdf   --pdf-engine=xelatex   -V geometry:"top=2cm, bottom=2cm, left=2.5cm, right=2.5cm"   -V colorlinks=true   -V linkcolor=NavyBlue   -V urlcolor=Teal   -V filecolor=Maroon
+  772  sudo apt install xelatex
+  773  sudo apt update
+  774  sudo apt upgrade
+  775  sudo apt install texlive-xetex texlive-fonts-recommended texlive-plain-generic
+  776  pandoc Resume_FreeRtos.md -o CV_Chaitanya_Priya.pdf   --pdf-engine=xelatex   -V geometry:"top=2cm, bottom=2cm, left=2.5cm, right=2.5cm"   -V colorlinks=true   -V linkcolor=NavyBlue   -V urlcolor=Teal   -V filecolor=Maroon
+  777  sudo apt install wkhtmltopdf
+  778  pandoc Resume_FreeRtos.md -o CV_Chaitanya_Priya.pdf   --pdf-engine=wkhtmltopdf   -V geometry:"top=2cm, bottom=2cm, left=2.5cm, right=2.5cm"
+  779  pandoc Resume_FreeRtos.md -o CV_Chaitanya_Priya.pdf --pdf-engine=wkhtmltopdf
+  780  pandoc Resume_FreeRtos.md -o CV_Chaitanya_Priya.pdf   --pdf-engine=wkhtmltopdf   --pdf-engine-opt=--local-file-access   --pdf-engine-opt=--disable-javascript
+  781  pandoc Resume_FreeRtos.md -o CV_Chaitanya_Priya.pdf   --pdf-engine=wkhtmltopdf   --pdf-engine-opt=--local-file-access   --pdf-engine-opt=--disable-javascript
+  782  pandoc Resume_FreeRtos.md -o CV_Chaitanya_Priya.pdf   --pdf-engine=wkhtmltopdf   --metadata title="CV - Chaitanya Priya"
+  783  history >pndoccmd.txt
