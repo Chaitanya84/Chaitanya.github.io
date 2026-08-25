@@ -109,21 +109,22 @@ Model-based software developer with over 10 years of experience in MATLAB/Simuli
   </tr>
   <tr>
     <td colspan="2" class="project-row">
-      <strong>Project: OnOff for IVI Infotainment ECU</strong>
+      <strong><h3>Project: OnOff for IVI Infotainment ECU</h3></strong>
     </td>
   </tr>
   <tr>
     <td><strong>Core Focus:</strong> Power State Management (PSM)</td>
-    <td class="text-right"><strong>Key Tech:</strong> Aurix TCx, AUTOSAR, QNX, Linux, Hypervisor, AAOS</td>
+    <td class="text-right"><strong>Key Tech:</strong> Matlab/Simulink, DLT viewer, PlantUML, Doors NG, Aurix TCx, AUTOSAR, QNX, Linux, Hypervisor, AAOS</td>
   </tr>
   <tr>
     <td colspan="2" class="bullet-row">
-      <ul>
-        <li>Owned end-to-end PSM startup sequencing for safety-relevant power-state transitions.</li>
-        <li>Implemented deterministic handover across Aurix, QNX, and Linux via hypervisor in a three-OS architecture.</li>
-        <li>Aligned startup and shutdown logic with ASPICE SWE.1 to SWE.4 work-product expectations.</li>
-        <li>Partnered with architects to harden the "OnOff" concept for ASIL-relevant scenarios and edge cases.</li>
-        <li>Reduced recurring startup defects through structured debugging, trace analysis, and lifecycle issue closure.</li>
+    <p>
+        <strong>Project description: </strong> 
+    </p>
+    <p>This project aim at creating a control gateway enabling IVI ECU to wakeup. 
+    </p>
+    <p><strong>Individual contribution :</strong></p>    
+      <ul>        
         <li>Developed and maintained the <span class="highlight">Power State Manager (PSM)</span> for Aurix TCx-based boards and multi-OS SoCs (<span class="highlight">AUTOSAR</span>, <span class="highlight">QNX</span>, Linux via hypervisor), ensuring deterministic power state transitions in a safety-critical architecture.</li>
         <li>Leading migration of PSM from Linux to <span class="highlight">Android Automotive OS (AAOS)</span>, re-engineering power policy alignment across a three-OS architecture (Aurix/AUTOSAR, QNX, AAOS).</li>
         <li>Engineered multi-stage hardware initialization logic for seamless control handoff between Aurix, QNX, and Linux.</li>
@@ -157,12 +158,16 @@ Model-based software developer with over 10 years of experience in MATLAB/Simuli
   </tr>
   <tr>
     <td colspan="2" class="bullet-row">
-      <ul>
-        <li>Designed EV charging control software with AUTOSAR MCAL/BSW integration.</li>
-        <li>Implemented robust low-level driver architecture for charger ECU interfaces and boundary-condition handling.</li>
-        <li>Translated BMS constraints (SoC, current limits, protection thresholds) into safe charging behavior.</li>
-        <li>Strengthened SWE.4/SWE.5 verification with repeatable test evidence and static-analysis closure.</li>
-        <li>Improved audit readiness for ASPICE and ISO 26262/21434 compliance reviews.</li>
+    <p>
+        <strong>Project description: </strong> 
+    </p>
+    <p>
+    Designed EV charging control software with AUTOSAR MCAL/BSW integration.Implemented robust low-level driver architecture for charger ECU interfaces and boundary-condition handling.Translated BMS constraints (SoC, current limits, protection thresholds) into safe charging behavior.Strengthened SWE.4/SWE.5 verification with repeatable test evidence and static-analysis closure.Improved audit readiness for ASPICE and ISO 26262/21434 compliance reviews.
+    </p>
+    <p>
+    <strong> Individual contribution : </strong>
+    </p>
+      <ul>        
         <li>Led requirements elicitation in <span class="highlight">IBM DOORS NG</span> and authored comprehensive software design documentation for EV charging sequences, delivering ASPICE SWE.1-compliant work products.</li>
         <li>Analysed <span class="highlight">Battery Management System (BMS)</span> interface specifications defining SoC-dependent charge limits, cell voltage protection thresholds, and balancing status communicated via CAN; ensured EV charging software compliance with all battery management boundary conditions.</li>
         <li>Engineered complex <span class="highlight">device drivers</span> and designed robust low-level software architectures for EV charging ECUs.</li>
@@ -198,12 +203,14 @@ Model-based software developer with over 10 years of experience in MATLAB/Simuli
   </tr>
   <tr>
     <td colspan="2" class="bullet-row">
-      <ul>
-        <li>Delivered production-grade motor-control software for a P3 hybrid EDU.</li>
-        <li>Developed and validated Simulink/Stateflow logic for operating modes, shifting, and torque distribution.</li>
-        <li>Integrated diagnostics and safety paths with AUTOSAR-aligned interfaces and generated C code.</li>
-        <li>Improved model verification depth through MIL/SIL/HIL coverage expansion and targeted defect prevention.</li>
-        <li>Supported serial-production quality with ASPICE-aligned reviews and corrective-action follow-through.</li>
+    <p>
+    <strong>Project description :</strong>
+    </p>
+    <p>
+    Delivered production-grade motor-control software for a P3 hybrid EDU. Developed and validated Simulink/Stateflow logic for operating modes, shifting, and torque distribution. Integrated diagnostics and safety paths with AUTOSAR-aligned interfaces and generated C code. Improved model verification depth through MIL/SIL/HIL coverage expansion and targeted defect prevention.Supported serial-production quality with ASPICE-aligned reviews and corrective-action follow-through.
+    </p>
+    <p><strong>Individual contribution :</strong></p>
+      <ul>        
         <li>Developed <span class="highlight">MATLAB/Simulink</span> models for the Motor Control ECU of AAM's rear Electric Drive Unit (EDU) powering the <span class="highlight">Mercedes-AMG GT 63 S E PERFORMANCE</span> PHEV — a 150 kW / 204 hp P3 hybrid e-Drive system and 2022 Automotive News PACE Award finalist; led a sub-team of 7 engineers across 3 major Simulink subsystems.</li>
         <li>Designed <span class="highlight">Stateflow</span> state machines to manage motor operating modes, 2-speed electromechanical gearbox shift logic, and eLSD torque distribution state transitions.</li>
         <li>Implemented <span class="highlight">Battery Management System (BMS)</span> interface logic in Simulink to receive and process battery State of Charge (SoC), discharge current limits, and high-voltage cell protection thresholds via <span class="highlight">CAN FD</span>, ensuring motor torque output remained within battery-safe operating boundaries.</li>
@@ -241,10 +248,14 @@ Model-based software developer with over 10 years of experience in MATLAB/Simuli
   </tr>
   <tr>
     <td colspan="2" class="bullet-row">
+    <p>
+    <strong>Project description :</strong>
+    </p>
+    <p>
+    Led migration from 16-bit hardware to a 32-bit Renesas ECU. Preserved machine behavior and safety timing while refactoring model and application-layer architecture.Implemented and stabilized CAN/SPI/I2C communication pathways for control and telemetry functions.
+    </p>
+    <p><strong>Individual contribution :</strong></p>
       <ul>
-        <li>Led migration from 16-bit hardware to a 32-bit Renesas ECU.</li>
-        <li>Preserved machine behavior and safety timing while refactoring model and application-layer architecture.</li>
-        <li>Implemented and stabilized CAN/SPI/I2C communication pathways for control and telemetry functions.</li>
         <li>Integrated features into JDOS RTOS with priority-aware scheduling for safety-critical tasks.</li>
         <li>Improved field reliability via 8D/DFMEA-driven root-cause elimination and preventive actions.</li>
         <li>Developed powertrain and transmission application software for agricultural equipment (tractors) using <span class="highlight">MATLAB/Simulink</span>, applying model-based development (MBD) principles across the full V-cycle from functional requirements to validated production code.</li>
@@ -281,12 +292,14 @@ Model-based software developer with over 10 years of experience in MATLAB/Simuli
   </tr>
   <tr>
     <td colspan="2" class="bullet-row">
+     <p>
+    <strong>Project description :</strong>
+    </p>
+    <p>
+    Implemented STM32/Silicon Labs firmware for industrial ramp-soak controllers.Built profile state machines with PID and Servo Start behavior for controlled thermal transitions.Implemented HMI workflows (LCD/keypad) and resilient parameter retention across power cycles. Added signal-conditioning and fault logic for thermocouple integrity and process safety interlocks. Scaled RS-485 master/slave orchestration for multi-zone and multi-device deployments.
+    </p>
+    <p><strong>Individual contribution :</strong></p>
       <ul>
-        <li>Implemented STM32/Silicon Labs firmware for industrial ramp-soak controllers.</li>
-        <li>Built profile state machines with PID and Servo Start behavior for controlled thermal transitions.</li>
-        <li>Implemented HMI workflows (LCD/keypad) and resilient parameter retention across power cycles.</li>
-        <li>Added signal-conditioning and fault logic for thermocouple integrity and process safety interlocks.</li>
-        <li>Scaled RS-485 master/slave orchestration for multi-zone and multi-device deployments.</li>
         <li>Developed PLC-side control logic in Structured Text and Instruction List.</li>
         <li>Coordinated high-pressure leak-test sequencing with deterministic machine-state transitions.</li>
         <li>Integrated protocol communication across Modbus RTU (PC link) and PROFINET (detector link).</li>
@@ -323,6 +336,13 @@ Model-based software developer with over 10 years of experience in MATLAB/Simuli
   </tr>
   <tr>
     <td colspan="2" class="bullet-row">
+         <p>
+    <strong>Project description :</strong>
+    </p>
+    <p>
+    Teaching
+    </p>
+    <p><strong>Individual contribution :</strong></p>
       <ul>
         <li>Created structured lessons on microcontroller architectures, memory maps, and register-level programming.</li>
         <li>Conducted live sessions on "board bring-up," where trainees learn to initialize hardware from scratch.</li>
